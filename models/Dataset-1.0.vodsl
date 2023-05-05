@@ -3,7 +3,7 @@ model ds (1.0) "This document provides a data model describing the structure and
 "
      
  author "Mark Cresitello-Dittmar, Francois Bonnarel, Omar Laurino, Gerard Lemson, Mireille Louys, Arnold Rots, Doug Tody, and the IVOA Data Model Working Group."
-       include "IVOA-v1.vodsl"
+       include "IVOA-v1.0.vodsl"
      
        include "Meas-v1.0.vodsl"
      
