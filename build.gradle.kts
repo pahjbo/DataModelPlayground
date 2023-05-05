@@ -5,7 +5,7 @@ plugins {
 
 vodml {
     vodmlDir.set(file("vo-dml"))
-    vodslDir.set(file("model"))
+    vodslDir.set(file("models"))
     bindingFiles.setFrom(file("vo-dml/*.vodml-binding.xml")
     )
 
