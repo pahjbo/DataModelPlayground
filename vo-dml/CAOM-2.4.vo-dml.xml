@@ -62,7 +62,7 @@
     
     <import>
         <name>ivoa</name>
-        <url>https://www.ivoa.net/xml/VODML/IVOA-v1.vo-dml.xml</url>
+        <url>IVOA-v1.0.vo-dml.xml</url>
         <documentationURL>https://www.ivoa.net/documents/VODML/</documentationURL>
     </import>
     
@@ -1331,7 +1331,7 @@
                 <description>spatial WCS description of the data array or subsection thereof; if positionAxis1 and positionAxis2 indices are null
                     or have values above {naxis}, then the spatial WCS is metadata only (usually the degenerate case of one spatial pixel)</description>
                 <datatype>
-                    <vodml-ref>caom2:SpatialWCS</vodml-ref>
+                    <vodml-ref>caom2:wcs.SpatialWCS</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1344,7 +1344,7 @@
                 <description>spectral WCS description of the data array or subsection thereof; if energyAxis index is null or has a value
                     above {naxis}, then the spectral WCS is metadata only (usually the degenerate case of one spectral pixel)</description>
                 <datatype>
-                    <vodml-ref>caom2:SpectralWCS</vodml-ref>
+                    <vodml-ref>caom2:wcs.SpectralWCS</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1357,7 +1357,7 @@
                 <description>temporal WCS description of the data array or subsection thereof; if timeAxis index is null or has a value
                     above {naxis}, then the time WCS is metadata only (usually the degenerate case of one time pixel for the whole data array)</description>
                 <datatype>
-                    <vodml-ref>caom2:TemporalWCS</vodml-ref>
+                    <vodml-ref>caom2:wcs.TemporalWCS</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1370,7 +1370,7 @@
                 <description>polarization WCS description of the data array or subsection thereof; if polarizationAxis index is null or has a value
                     above {naxis}, then the polarization WCS is metadata only (usually the degenerate case of one polarization pixel)</description>
                 <datatype>
-                    <vodml-ref>caom2:PolarizationWCS</vodml-ref>
+                    <vodml-ref>caom2:wcs.PolarizationWCS</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1383,7 +1383,7 @@
                 <description>custom WCS description of the data array or subsection thereof; if customAxis index is null or has a value
                     above {naxis}, then the custom WCS is metadata only (usually the degenerate case of one custom pixel)</description>
                 <datatype>
-                    <vodml-ref>caom2:CustomWCS</vodml-ref>
+                    <vodml-ref>caom2:wcs.CustomWCS</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1396,7 +1396,7 @@
                 <description>observable description of the data array or subsection thereof; if observableAxis index is null or has a value
                     above {naxis}, then the observable axis is metadata only (usually the degenerate case of one observable for the whole data array)</description>
                 <datatype>
-                    <vodml-ref>caom2:ObservableAxis</vodml-ref>
+                    <vodml-ref>caom2:wcs.ObservableAxis</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -1824,7 +1824,7 @@
                 <name>coordinates</name>
                 <description>the coordinates</description>
                 <datatype>
-                    <vodml-ref>caom2:Point</vodml-ref>
+                    <vodml-ref>caom2:types.Point</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>1</minOccurs>
@@ -2093,7 +2093,7 @@
                 <name>bounds</name>
                 <description>spatial boundary that includes the data</description>
                 <datatype>
-                    <vodml-ref>caom2:Shape</vodml-ref>
+                    <vodml-ref>caom2:types.Shape</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2105,7 +2105,7 @@
                 <name>dimension</name>
                 <description>number of separate measurements (pixels) along each axis</description>
                 <datatype>
-                    <vodml-ref>caom2:Dimension2D</vodml-ref>
+                    <vodml-ref>caom2:wcs.Dimension2D</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2129,7 +2129,7 @@
                 <name>resolutionBounds</name>
                 <description>range of resolution within the bounds</description>
                 <datatype>
-                    <vodml-ref>caom2:Interval</vodml-ref>
+                    <vodml-ref>caom2:types.Interval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2173,7 +2173,7 @@
                 <name>bounds</name>
                 <description>energy bounds that include the data (barycentric vacuum wavelength)</description>
                 <datatype>
-                    <vodml-ref>caom2:SampledInterval</vodml-ref>
+                    <vodml-ref>caom2:types.SampledInterval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2222,7 +2222,7 @@
                 <name>resolvingPowerBounds</name>
                 <description>range of resolving power within the bounds</description>
                 <datatype>
-                    <vodml-ref>caom2:Interval</vodml-ref>
+                    <vodml-ref>caom2:types.Interval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2258,7 +2258,7 @@
                 <name>transition</name>
                 <description>target energy transition for this data</description>
                 <datatype>
-                    <vodml-ref>caom2:EnergyTransition</vodml-ref>
+                    <vodml-ref>caom2:wcs.EnergyTransition</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2288,7 +2288,7 @@
                 <name>bounds</name>
                 <description>time bounds that include the data</description>
                 <datatype>
-                    <vodml-ref>caom2:SampledInterval</vodml-ref>
+                    <vodml-ref>caom2:types.SampledInterval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2324,7 +2324,7 @@
                 <name>resolutionBounds</name>
                 <description>range of resolution within the bounds</description>
                 <datatype>
-                    <vodml-ref>caom2:Interval</vodml-ref>
+                    <vodml-ref>caom2:types.Interval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2408,7 +2408,7 @@
                 <name>bounds</name>
                 <description>custom coordinate bounds</description>
                 <datatype>
-                    <vodml-ref>caom2:SampledInterval</vodml-ref>
+                    <vodml-ref>caom2:types.SampledInterval</vodml-ref>
                 </datatype>
                 <multiplicity>
                     <minOccurs>0</minOccurs>
@@ -2465,7 +2465,7 @@
                 <vodml-id>Vertex</vodml-id>
                 <name>Vertex</name>
                 <extends>
-                    <vodml-ref>caom2:Point</vodml-ref>
+                    <vodml-ref>caom2:types.Point</vodml-ref>
                 </extends>
                 <attribute>
                     <vodml-id>Vertex.type</vodml-id>
@@ -2492,13 +2492,13 @@
                 <name>Circle</name>
                 <description>a circular region on the sky</description>
                 <extends>
-                    <vodml-ref>caom2:Shape</vodml-ref>
+                    <vodml-ref>caom2:types.Shape</vodml-ref>
                 </extends>
                 <attribute>
                     <vodml-id>Shape.center</vodml-id>
                     <name>center</name>
                     <datatype>
-                        <vodml-ref>caom2:Point</vodml-ref>
+                        <vodml-ref>caom2:types.Point</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2528,7 +2528,7 @@
                     <vodml-id>MultiPolygon.vertices</vodml-id>
                     <name>vertices</name>
                     <datatype>
-                        <vodml-ref>caom2:Vertex</vodml-ref>
+                        <vodml-ref>caom2:types.Vertex</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>3</minOccurs>
@@ -2542,13 +2542,13 @@
                 <name>Polygon</name>
                 <description>a simple polygon region on the sky defined a sequence of points connected by great-circle segments</description>
                 <extends>
-                    <vodml-ref>caom2:Shape</vodml-ref>
+                    <vodml-ref>caom2:types.Shape</vodml-ref>
                 </extends>
                 <attribute>
                     <vodml-id>Polygon.points</vodml-id>
                     <name>points</name>
                     <datatype>
-                        <vodml-ref>caom2:Point</vodml-ref>
+                        <vodml-ref>caom2:types.Point</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>3</minOccurs>
@@ -2559,7 +2559,7 @@
                     <vodml-id>Polygon.samples</vodml-id>
                     <name>samples</name>
                     <datatype>
-                        <vodml-ref>caom2:MultiPolygon</vodml-ref>
+                        <vodml-ref>caom2:types.MultiPolygon</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2629,7 +2629,7 @@
                     one sample that is identical to the outer interval; samples within an interval are not allowed to overlap 
                         (TBD: the bounds of adjacent samples may be equal?)</description>
                     <datatype>
-                        <vodml-ref>caom2:Interval</vodml-ref>
+                        <vodml-ref>caom2:types.Interval</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2823,7 +2823,7 @@
                     <vodml-id>Coord2D.coord1</vodml-id>
                     <name>coord1</name>
                     <datatype>
-                        <vodml-ref>caom2:RefCoord</vodml-ref>
+                        <vodml-ref>caom2:wcs.RefCoord</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2834,7 +2834,7 @@
                     <vodml-id>Coord2D.coord2</vodml-id>
                     <name>coord2</name>
                     <datatype>
-                        <vodml-ref>caom2:RefCoord</vodml-ref>
+                        <vodml-ref>caom2:wcs.RefCoord</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2851,7 +2851,7 @@
                     <vodml-id>CoordRange1D.start</vodml-id>
                     <name>start</name>
                     <datatype>
-                        <vodml-ref>caom2:RefCoord</vodml-ref>
+                        <vodml-ref>caom2:wcs.RefCoord</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2862,7 +2862,7 @@
                     <vodml-id>CoordRange1D.end</vodml-id>
                     <name>end</name>
                     <datatype>
-                        <vodml-ref>caom2:RefCoord</vodml-ref>
+                        <vodml-ref>caom2:wcs.RefCoord</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2879,7 +2879,7 @@
                     <vodml-id>CoordBounds1D.samples</vodml-id>
                     <name>vertices</name>
                     <datatype>
-                        <vodml-ref>caom2:CoordRange1D</vodml-ref>
+                        <vodml-ref>caom2:wcs.CoordRange1D</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2909,7 +2909,7 @@
                     <name>refCoord</name>
                     <description>the reference pixel and world coordinate values</description>
                     <datatype>
-                        <vodml-ref>caom2:RefCoord</vodml-ref>
+                        <vodml-ref>caom2:wcs.RefCoord</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -2967,7 +2967,7 @@
                     <name>range</name>
                     <description>pixel and world coordinate values covered by this axis (min,max)</description>
                     <datatype>
-                        <vodml-ref>caom2:CoordRange1D</vodml-ref>
+                        <vodml-ref>caom2:wcs.CoordRange1D</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>0</minOccurs>
@@ -3060,7 +3060,7 @@
                     <name>dimension</name>
                     <description>number of pixels along each axis of the two-dimensional space (FITS: NAXISi)</description>
                     <datatype>
-                        <vodml-ref>caom2:Dimension2D</vodml-ref>
+                        <vodml-ref>caom2:wcs.Dimension2D</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>1</minOccurs>
@@ -3407,7 +3407,7 @@
                     <name>transition</name>
                     <description>description of the energy transition observed</description>
                     <datatype>
-                        <vodml-ref>caom2:EnergyTransition</vodml-ref>
+                        <vodml-ref>caom2:wcs.EnergyTransition</vodml-ref>
                     </datatype>
                     <multiplicity>
                         <minOccurs>0</minOccurs>
