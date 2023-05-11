@@ -76,11 +76,7 @@
         </extends>
     </primitiveType>
     
-    <package>
-        <vodml-id>caom2</vodml-id>
-        <name>caom2</name>
-        <description>this package contains the CAOM object types and enumerations</description>
-        
+
         <!-- caom2 specific primitiveTypes -->
         <primitiveType>
             <vodml-id>ObservationURI</vodml-id>
@@ -3579,6 +3575,6 @@
             </objectType>
         </package>
         
-    </package>
+
     
 </vo-dml:model>
