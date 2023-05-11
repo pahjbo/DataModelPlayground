@@ -602,7 +602,7 @@ Allows coarse description of the provenance.</description>
     </extends>
     <constraint xsi:type="vo-dml:SubsettedRole">
       <role>
-        <vodml-ref>voprov:ValueEntity</vodml-ref>
+        <vodml-ref>voprov:Entity.entityDescription</vodml-ref>
       </role>
       <datatype>
         <vodml-ref>voprov:ValueDescription</vodml-ref>
@@ -631,7 +631,7 @@ Allows coarse description of the provenance.</description>
     </extends>
     <constraint xsi:type="vo-dml:SubsettedRole">
       <role>
-        <vodml-ref>voprov:DatasetEntity</vodml-ref>
+        <vodml-ref>voprov:Entity.entityDescription</vodml-ref>
       </role>
       <datatype>
         <vodml-ref>voprov:DatasetDescription</vodml-ref>
