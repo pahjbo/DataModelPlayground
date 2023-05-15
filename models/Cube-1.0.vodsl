@@ -75,7 +75,7 @@ otype VirtualMeasure  -> meas:Measure ""
   {   
         result_type: ivoa:string   "";
         source  @+  references meas:Measure "";
-        transform  references trans:TMapping "";
+        transform  references trans:Mapping "";
         result_frame  @?  references coords:CoordFrame "";
   }
 
@@ -83,11 +83,11 @@ otype VirtualImageAxis  -> ImageAxis ""
   {   
         result_type: ivoa:string   "";
         source  @+  references ImageAxis "";
-        transform  references trans:TMapping "";
+        transform  references trans:Mapping "";
         result_frame  @?  references coords:CoordFrame "";
   }
 
 otype Mappings  ""
   {   
-        transform : trans:TMapping @+  as composition "";
+        transform : trans:Mapping @+  as composition "";
   }

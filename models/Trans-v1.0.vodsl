@@ -272,7 +272,7 @@ otype PolyCoeff1D  "A term of the polynomial expression. This object provides th
 ";
   }
 
-otype Polynomial2D  -> Polynomial "A 2-Dimensional Polynomial transform represented by the expression: X' = SUMi,j( Cij*X**i*Y**j), i+j<=order. Each term is provided by a PolyCoeff2D object. Missing terms are considered to have a coefficient of 0.0.
+otype Polynomial2D  -> Polynomial "A 2-Dimensional Polynomial transform represented by the expression: X' = SUMi,j( Cij*X**i*Y**j), i+j lte order. Each term is provided by a PolyCoeff2D object. Missing terms are considered to have a coefficient of 0.0.
 "
   {   
         term : PolyCoeff2D @+  as composition "A term in the polynomial expression.";
