@@ -13,27 +13,27 @@
   <lastModified>2019-09-26T10:51:48</lastModified>
   <import>
     <name>ivoa</name>
-    <url>http://www.ivoa.net/xml/VODML/IVOA-v1.vo-dml.xml</url>
+    <url>IVOA-v1.0.vo-dml.xml</url>
     <documentationURL>https://volute.g-vo.org/svn/trunk/projects/dm/vo-dml/models/ivoa/vo-dml/IVOA-v1.0.html</documentationURL>
   </import>
   <import>
     <name>ds</name>
-    <url>https://volute.g-vo.org/svn/trunk/projects/dm/DatasetMetadata/vo-dml/DatasetMetadata-1.0.vo-dml.xml</url>
-    <documentationURL>https://volute.g-vo.org/svn/trunk/projects/dm/DatasetMetadata/vo-dml/DatasetMetadata-1.0.html</documentationURL>
+    <url>Dataset-1.0.vo-dml.xml</url>
+    <documentationURL>https://volute.g-vo.org/svn/trunk/projects/dm/DatasetMetadata/vo-dml/Dataset-1.0.html</documentationURL>
   </import>
   <import>
     <name>coords</name>
-    <url>http://www.ivoa.net/xml/STC/STC_coords-v1.0.vo-dml.xml</url>
+    <url>Coords-v1.0.vo-dml.xml</url>
     <documentationURL>https://volute.g-vo.org/svn/trunk/projects/dm/STC/Coords/vo-dml/STC_coords-v1.0.html</documentationURL>
   </import>
   <import>
     <name>meas</name>
-    <url>http://www.ivoa.net/xml/Meas/STC_meas-v1.0.vo-dml.xml</url>
+    <url>Meas-v1.0.vo-dml.xml</url>
     <documentationURL>https://volute.g-vo.org/svn/trunk/projects/dm/STC/Meas/vo-dml/STC_meas-v1.0.html</documentationURL>
   </import>
   <import>
     <name>trans</name>
-    <url>https://github.com/ivoa-std/TransformDM/blob/master/vo-dml/Trans-v1.0.vo-dml.xml</url>
+    <url>Trans-v1.0.vo-dml.xml</url>
     <documentationURL>https://github.com/ivoa-std/TransformDM/blob/master/vo-dml/Trans-v1.0.html</documentationURL>
   </import>
   <objectType>
