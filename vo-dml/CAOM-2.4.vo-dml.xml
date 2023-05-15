@@ -369,7 +369,7 @@
             </attribute>
             <attribute>
                 <vodml-id>VocabularyTerm.base</vodml-id>
-                <name>term</name>
+                <name>base</name>
                 <description>flag indicating of the vocabulary namespace is a base vocabulary</description>
                 <datatype>
                     <vodml-ref>ivoa:boolean</vodml-ref>
@@ -2451,7 +2451,7 @@
                 </attribute>
                 <attribute>
                     <vodml-id>Point.cval2</vodml-id>
-                    <name>cval1</name>
+                    <name>cval2</name>
                     <datatype>
                         <vodml-ref>ivoa:real</vodml-ref>
                     </datatype>
@@ -2661,7 +2661,7 @@
                 </attribute>
                 <attribute>
                     <vodml-id>Axis.cunit</vodml-id>
-                    <name>ctype</name>
+                    <name>cunit</name>
                     <datatype>
                         <vodml-ref>ivoa:string</vodml-ref>
                     </datatype>
