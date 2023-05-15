@@ -1,13 +1,16 @@
+import org.gradle.kotlin.dsl.vodml
+
 plugins {
-    id("net.ivoa.vo-dml.vodmltools") version "0.3.19"
+    id("net.ivoa.vo-dml.vodmltools") version "0.3.20"
     application
 }
 
 vodml {
     vodmlDir.set(file("vo-dml"))
     vodslDir.set(file("models"))
-    bindingFiles.setFrom(file("vo-dml/*.vodml-binding.xml")
-    )
+//    vodmlFiles.setFrom(project.files (vodmlDir.file("CAOM-2.4.vo-dml.xml"))) // if you want to operate on single model
+    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("*.vodml-binding.xml"))))
+    outputDocDir.set(layout.projectDirectory.dir("doc/generated"))
 
 }
 /* uncomment below to run the generation of vodml from vodsl automatically */

@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.ivoa.net/xml/VODML/v1 https://www.ivoa.net/xml/VODML/vo-dml-v1.xsd" 
+              vodmlVersion="1.1">	<!-- file generated from VODSL - needs validatate against v1.1 of schema  --> 
+      <name>SIA</name>
+      <description>
+              Implementation of an XML Schema describing a Simple Image
+              Access Service.   Based on the Simple Image Access Specification
+              by Doug Tody et al.
+            </description> 
+      <uri/>
+      <title>TBD</title>
+      <version>1.2</version>
+      <lastModified>2023-05-15T11:31:17Z</lastModified>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>IVOA-v1.0.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>VOResource-v1.1.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+            <enumeration>
+               <vodml-id>ImageServiceType</vodml-id>
+               <name>ImageServiceType</name>
+               <description>
+                      The class of image service: Cutout, Mosaic, Atlas, Pointed
+                        </description>	    
+                  <literal>
+                    <vodml-id>ImageServiceType.Cutout</vodml-id>
+                    <name>Cutout</name>
+                    <description>
+                             This is a service which extracts or “cuts out” rectangular
+                             regions of some larger image, returning an image of the
+                             requested size to the client. Such images are usually drawn
+                             from a database or a collection of survey images that cover
+                             some large portion of the sky. To be considered a cutout
+                             service, the returned image should closely approximate (or at
+                             least not exceed) the size of the requested region; however,
+                             a cutout service will not normally resample (rescale or
+                             reproject) the pixel data. A cutout service may mosaic image
+                             segments to cover a large region but is still considered a
+                             cutout service if it does not resample the data.  Image
+                             cutout services are fast and avoid image degredation due to
+                             resampling.  
+                                   </description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>ImageServiceType.Mosaic</vodml-id>
+                    <name>Mosaic</name>
+                    <description>
+                                      This service is similar to the image cutout service
+                                      but adds the capability to compute an image of the
+                                      size, scale, and projection specified by the
+                                      client. Mosaic services include services which
+                                      resample and reproject existing image data, as well
+                                      as services which generate pixels from some more
+                                      fundamental dataset, e.g., a high energy event list
+                                      or a radio astronomy measurement set. Image mosaics
+                                      can be expensive to generate for large regions but
+                                      they make it easier for the client to overlay image
+                                      data from different sources. Image mosaicing
+                                      services which resample already pixelated data will
+                                      degrade the data slightly, unlike the simpler cutout
+                                      service which returns the data unchanged.  
+                                   </description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>ImageServiceType.Atlas</vodml-id>
+                    <name>Atlas</name>
+                    <description>
+                                      This category of service provides access to
+                                      pre-computed images that make up a survey of some
+                                      large portion of the sky. The service, however, is
+                                      not capable of dynamically cutting out requested
+                                      regions, and the size of atlas images is
+                                      predetermined by the survey. Atlas images may range
+                                      in size from small cutouts of extended objects to
+                                      large calibrated survey data frames. 
+                                   </description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>ImageServiceType.Pointed</vodml-id>
+                    <name>Pointed</name>
+                    <description>
+                                      This category of service provides access to
+                                      collections of images of many small, “pointed”
+                                      regions of the sky. “Pointed” images normally focus
+                                      on specific sources in the sky as opposed to being
+                                      part of a sky survey. This type of service usually
+                                      applies to instrumental archives from observatories
+                                      with guest observer programs (e.g., the HST archive)
+                                      and other general purpose image archives (e.g., the
+                                      ADIL). If a service provides access to both survey
+                                      and pointed images, then it should be considered a
+                                      Pointed Image Archive for the purposes of this
+                                      specification; if a differentiation between the
+                                      types of data is desired the pointed and survey data
+                                      collections should be registered as separate image
+                                      services.  
+                                   </description>	    
+                  </literal>	
+            </enumeration>
+            <objectType>
+               <vodml-id>SimpleImageAccess</vodml-id>
+               <name>SimpleImageAccess</name>
+               <description>
+                           The capabilities of an SIA implementation.  
+                        </description>	    
+               <extends>
+                  <vodml-ref>VOResource:Capability</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>SimpleImageAccess.imageServiceType</vodml-id>
+                 <name>imageServiceType</name>
+                 <description>
+                                    The class of image service: Cutout, Mosaic, Atlas, Pointed
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:ImageServiceType</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>SimpleImageAccess.maxImageSize</vodml-id>
+                 <name>maxImageSize</name>
+                 <description>
+                                          A measure of the largest image the service
+                                          can produce given as the maximum number of
+                                          pixels along the first or second axes.
+                                          Not providing a value indicates that there is 
+                                          no effective limit to the size of the images 
+                                          that can be returned.  
+                                       
+                                          This is primarily relevant when the imageServiceType
+                                          is “Cutout” or “Mosaic”, indicating the largest 
+                                          image that can be created.  When the imageServiceType 
+                                          is “Atlas” or “Pointed”, this should be specified only
+                                          when there are static images in the archive that can 
+                                          be searched for but not returned because they are 
+                                          too big.  
+                                       
+                                          When a service is more fundementally limited
+                                          by the total number of pixels in the image, this 
+                                          value should be set to the square-root of that
+                                          number.  This number will then represent a
+                                          lower limit on the maximum length of a side.  
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:integer</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>SimpleImageAccess.maxFileSize</vodml-id>
+                 <name>maxFileSize</name>
+                 <description>
+                                         The maximum image file size in bytes.  Not providing 
+                                         a value indicates that there is no effective limit 
+                                         the size of files that can be returned.  
+                                       
+                                         This is primarily relevant when the imageServiceType
+                                         is “Cutout” or “Mosaic”, indicating the largest 
+                                         files that can be created.  When the imageServiceType 
+                                         is “Atlas” or “Pointed”, this should be specified only
+                                         when there are static images in the archive that can 
+                                         be searched for but not returned because they are 
+                                         too big.  
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:integer</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>SimpleImageAccess.maxRecords</vodml-id>
+                 <name>maxRecords</name>
+                 <description>
+                                         The largest number of records that the Image Query web
+                                         method will return. Not providing this value means that
+                                         there is no effective limit.  
+                                       
+                                         This does not refer to the total number of images in 
+                                         the archive but rather maximum number of records the 
+                                         service is capable of returning.  A limit that is 
+                                         greater than the number of images available in the 
+                                         archive is equivalent to their being no effective 
+                                         limit.  (See RM, Hanisch 2007.)
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:integer</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>SimpleImageAccess.maxQueryRegionSize</vodml-id>
+                 <name>maxQueryRegionSize</name>
+                 <description>
+                                          The maximum image query region size, expressed in 
+                                          decimal degrees.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no limit and the entire data collection 
+                                          (entire sky) can be queried. 
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:SkySize</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>SimpleImageAccess.maxImageExtent</vodml-id>
+                 <name>maxImageExtent</name>
+                 <description>
+                                          An upper bound on a region of the sky that can 
+                                          be covered by returned images.  That is, no image
+                                          returned by this service will cover more than 
+                                          this limit.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no fundamental limit to the region covered 
+                                          by a returned image.  
+                                       
+                                          When the imageServiceType is “Cutout” or “Mosaic”, 
+                                          this represents the largest area that can be requested.
+                                          In this case, the “no limit” value means that all-sky
+                                          images can be requested.  When the type is “Atlas” or
+                                          “Pointed”, it should be a region that most closely 
+                                          encloses largest images in the archive, and the ”no
+                                          limit” value means that the archive contains all-sky 
+                                          (or nearly so) images.  
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:SkySize</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>SimpleImageAccess.testQuery</vodml-id>
+                 <name>testQuery</name>
+                 <description>
+                                         a set of query parameters that is expected
+                                         to produce at least one matched record which
+                                         can be used to test the service.  
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:Query</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>SkySize</vodml-id>
+               <name>SkySize</name>
+               <description></description>	    
+               <attribute>
+                 <vodml-id>SkySize.long</vodml-id>
+                 <name>long</name>
+                 <description>
+                                  The maximum size in the longitude (R.A.) direction
+                                  given in degrees
+                               </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:real</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>SkySize.lat</vodml-id>
+                 <name>lat</name>
+                 <description>
+                                  The maximum size in the latitude (Dec.) direction 
+                                  given in degrees
+                               </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:real</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>SkyPos</vodml-id>
+               <name>SkyPos</name>
+               <description></description>	    
+               <attribute>
+                 <vodml-id>SkyPos.long</vodml-id>
+                 <name>long</name>
+                 <description>
+                                  The sky position in the longitude (R.A.) direction 
+                               </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:real</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>SkyPos.lat</vodml-id>
+                 <name>lat</name>
+                 <description>
+                                  The sky position in the latitude (Dec.) direction 
+                               </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:real</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>Query</vodml-id>
+               <name>Query</name>
+               <description>
+                           A query to be sent to the service
+                        </description>	    
+               <attribute>
+                 <vodml-id>Query.verb</vodml-id>
+                 <name>verb</name>
+                 <description>
+                                    the verbosity level to use where 0 means the bare
+                                    minimum set of columns and 3 means the full set of 
+                                    available columns.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:integer</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Query.extras</vodml-id>
+                 <name>extras</name>
+                 <description>
+                                    any extra (particularly non-standard) parameters that must 
+                                    be provided (apart from what is part of base URL given by 
+                                    the accessURL element).
+                                 
+                                    this value should be in the form of name=value
+                                    pairs delimited with ampersands.  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>Query.pos</vodml-id>
+                 <name>pos</name>
+                 <description>
+                                    the center position of the rectangular region that 
+                                    should be used as part of the query to the SIA service. 
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:SkyPos</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>Query.size</vodml-id>
+                 <name>size</name>
+                 <description>
+                                    the rectangular size of the region that should be 
+                                    used as part of the query to the SIA service.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>SIA:SkySize</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+</vo-dml:model>

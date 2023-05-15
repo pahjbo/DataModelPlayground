@@ -1,0 +1,1898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.ivoa.net/xml/VODML/v1 https://www.ivoa.net/xml/VODML/vo-dml-v1.xsd" 
+              vodmlVersion="1.1">	<!-- file generated from VODSL - needs validatate against v1.1 of schema  --> 
+      <name>VODataService</name>
+      <description>
+              An extension to the core resource metadata (VOResource) for 
+              describing data collections and services.
+            </description> 
+      <uri/>
+      <title>TBD</title>
+      <version>1.2</version>
+      <lastModified>2023-05-14T16:37:17Z</lastModified>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>IVOA-v1.0.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>VOResource-v1.1.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+      <primitiveType>
+        <vodml-id>ArrayShape</vodml-id>
+        <name>ArrayShape</name>
+        <description>
+                    An expression of a the shape of a multi-dimensional array
+                    of the form LxNxM... where each value between gives the
+                    integer length of the array along a dimension.  An
+                    asterisk (*) as the last dimension of the shape indicates 
+                    that the length of the last axis is variable or
+                    undetermined. 
+                 </description>	    
+      </primitiveType>
+      <primitiveType>
+        <vodml-id>FloatInterval</vodml-id>
+        <name>FloatInterval</name>
+        <description>
+                    An interval of floating point numbers.
+                  
+                    This uses VOTable TABLEDATA serialisation, i.e., simply
+                    a pair of XSD floating point numbers separated by whitespace;
+                    note that software utilising non-XSD aware parsers has to 
+                    perform whitespace normalisation itself here (in particular, 
+                    for the internal whitespace).
+                 </description>	    
+      </primitiveType>
+            <enumeration>
+               <vodml-id>SimpleDataType_enum</vodml-id>
+               <name>SimpleDataType_enum</name>
+               <description></description>	    
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.integer</vodml-id>
+                    <name>integer</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.real</vodml-id>
+                    <name>real</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.complex</vodml-id>
+                    <name>complex</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.boolean</vodml-id>
+                    <name>boolean</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.char</vodml-id>
+                    <name>char</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>SimpleDataType_enum.string</vodml-id>
+                    <name>string</name>
+                    <description></description>	    
+                  </literal>	
+            </enumeration>
+            <enumeration>
+               <vodml-id>VOTableType_enum</vodml-id>
+               <name>VOTableType_enum</name>
+               <description></description>	    
+                  <literal>
+                    <vodml-id>VOTableType_enum.boolean</vodml-id>
+                    <name>boolean</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.bit</vodml-id>
+                    <name>bit</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.unsignedByte</vodml-id>
+                    <name>unsignedByte</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.short</vodml-id>
+                    <name>short</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.int</vodml-id>
+                    <name>int</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.long</vodml-id>
+                    <name>long</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.char</vodml-id>
+                    <name>char</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.unicodeChar</vodml-id>
+                    <name>unicodeChar</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.float</vodml-id>
+                    <name>float</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.double</vodml-id>
+                    <name>double</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.floatComplex</vodml-id>
+                    <name>floatComplex</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>VOTableType_enum.doubleComplex</vodml-id>
+                    <name>doubleComplex</name>
+                    <description></description>	    
+                  </literal>	
+            </enumeration>
+            <enumeration>
+               <vodml-id>TAPType_enum</vodml-id>
+               <name>TAPType_enum</name>
+               <description></description>	    
+                  <literal>
+                    <vodml-id>TAPType_enum.BOOLEAN</vodml-id>
+                    <name>BOOLEAN</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.SMALLINT</vodml-id>
+                    <name>SMALLINT</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.INTEGER</vodml-id>
+                    <name>INTEGER</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.BIGINT</vodml-id>
+                    <name>BIGINT</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.REAL</vodml-id>
+                    <name>REAL</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.DOUBLE</vodml-id>
+                    <name>DOUBLE</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.TIMESTAMP</vodml-id>
+                    <name>TIMESTAMP</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.CHAR</vodml-id>
+                    <name>CHAR</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.VARCHAR</vodml-id>
+                    <name>VARCHAR</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.BINARY</vodml-id>
+                    <name>BINARY</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.VARBINARY</vodml-id>
+                    <name>VARBINARY</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.POINT</vodml-id>
+                    <name>POINT</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.REGION</vodml-id>
+                    <name>REGION</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.CLOB</vodml-id>
+                    <name>CLOB</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>TAPType_enum.BLOB</vodml-id>
+                    <name>BLOB</name>
+                    <description></description>	    
+                  </literal>	
+            </enumeration>
+            <enumeration>
+               <vodml-id>HTTPQueryType</vodml-id>
+               <name>HTTPQueryType</name>
+               <description>
+                          The type of HTTP request, either GET or POST.
+                        </description>	    
+                  <literal>
+                    <vodml-id>HTTPQueryType.GET</vodml-id>
+                    <name>GET</name>
+                    <description></description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>HTTPQueryType.POST</vodml-id>
+                    <name>POST</name>
+                    <description></description>	    
+                  </literal>	
+            </enumeration>
+            <enumeration>
+               <vodml-id>ParamUse</vodml-id>
+               <name>ParamUse</name>
+               <description></description>	    
+                  <literal>
+                    <vodml-id>ParamUse.required</vodml-id>
+                    <name>required</name>
+                    <description>
+                                      The parameter is required for the application or
+                                      service to work properly.  
+                                   </description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>ParamUse.optional</vodml-id>
+                    <name>optional</name>
+                    <description>
+                                      The parameter is optional but supported by the application or
+                                      service.
+                                   </description>	    
+                  </literal>	
+                  <literal>
+                    <vodml-id>ParamUse.ignored</vodml-id>
+                    <name>ignored</name>
+                    <description>
+                                      The parameter is not supported and thus is ignored by the 
+                                      application or service.
+                                   </description>	    
+                  </literal>	
+            </enumeration>
+            <dataType>
+              <vodml-id>SpatialCoverage</vodml-id>
+              <name>SpatialCoverage</name>
+              <description>
+                          A coverage on a sphere.  By default, this refers to the
+                          celestial sphere in the ICRS frame.  Non-celestial frames
+                          are indicated by non-NULL values of the frame attribute.
+                       </description>	    
+            <attribute>
+              <vodml-id>SpatialCoverage.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>SpatialCoverage.frame</vodml-id>
+              <name>frame</name>
+              <description>
+                                   When present, the MOC is written in a non-celestial (e.g., 
+                                   planetary) frame.  Note that for celestial coverages,
+                                   ICRS must be used.
+                                 
+                                   VODataService 1.2 does not prescribe a vocabulary for 
+                                   what values are allowed here.  As
+                                   long as no such vocabulary is agreed upon, the frame
+                                   attribute should not be set.
+                                </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>ServiceReference</vodml-id>
+              <name>ServiceReference</name>
+              <description>
+                         The service URL for a potentially registered service.  That is,
+                         if an IVOA identifier is also provided, then the service is 
+                         described in a registry.
+                       </description>	    
+            <attribute>
+              <vodml-id>ServiceReference.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:anyURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>ServiceReference.ivoid</vodml-id>
+              <name>ivoid</name>
+              <description>
+                                 The URI form of the IVOA identifier for the service 
+                                 describing the capability refered to by this element.
+                               </description>	    
+              <datatype>
+                 <vodml-ref>VOResource:IdentifierURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>Format</vodml-id>
+              <name>Format</name>
+              <description></description>	    
+            <attribute>
+              <vodml-id>Format.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>Format.isMIMEType</vodml-id>
+              <name>isMIMEType</name>
+              <description>
+                               If true, the content of the element is an RFC 
+                               2046-compliant media time.
+                             </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:boolean</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>DataType</vodml-id>
+              <name>DataType</name>
+              <description>
+                          A type (in the computer language sense) associated with a 
+                          parameter with an arbitrary name
+                        
+                          This XML type is used as a parent for defining data types
+                          with a restricted set of names.
+                       </description>	    
+            <attribute>
+              <vodml-id>DataType.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>DataType.arraysize</vodml-id>
+              <name>arraysize</name>
+              <description>
+                                   The shape of the array that constitutes the value.
+                                 
+                                   Leave arraysize empty for scalar values.  In version 1.1,
+                                   this defaulted to 1, which was intended to indicate
+                                   a scalar.  This is now deprecated; an arraysize of 1 should
+                                   be avoided now, the future interpretation, in accord with
+                                   VOTable, will be “array of size 1”.
+                                </description>	    
+              <datatype>
+                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>DataType.delim</vodml-id>
+              <name>delim</name>
+              <description>
+                                   A string that is used to delimit elements of an array
+                                   value in InputParams.
+                                 
+                                   Unless specifically disallowed by the context, 
+                                   applications should allow optional spaces to 
+                                   appear in an actual data value before and after 
+                                   the delimiter (e.g., “1, 5” when delim=“,”).
+                                 
+                                   This should not be used for VOTable types; there,
+                                   VOTable (typcially TABLEDATA) conventions for writing
+                                   arrays are binding.
+                                </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>DataType.extendedType</vodml-id>
+              <name>extendedType</name>
+              <description>
+                                   The data value represented by this type can be
+                                   interpreted as of a custom type identified by 
+                                   the value of this attribute.
+                                 
+                                   If an application does not recognize this
+                                   extendedType, it should attempt to handle the value
+                                   assuming the type given by the element's value.
+                                   string is a recommended default type.
+                                 
+                                   This element may make use of the extendedSchema
+                                   attribute to refine the identification of the 
+                                   type.  extendedTypes without an extendedSchema 
+                                   mean VOTable xtypes as defined by DALI.
+                                </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>DataType.extendedSchema</vodml-id>
+              <name>extendedSchema</name>
+              <description>
+                                   An identifier for the schema that the value given
+                                   by the extended attribute is drawn from.
+                                 
+                                   This attribute is normally ignored if the
+                                   extendedType attribute is not present.  A missing
+                                   extendedSchema indicates that extendedType is a
+                                   VOTable xtype.
+                                </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:anyURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>SimpleDataType</vodml-id>
+              <name>SimpleDataType</name>
+              <description>
+                          A data type restricted to a small set of names which is 
+                          imprecise as to the format of the individual values.
+                        
+                          This set is intended for describing simple input parameters to 
+                          a service or function.
+                       </description>	    
+               <extends>
+                  <vodml-ref>VODataService:DataType</vodml-ref>
+               </extends>
+            <attribute>
+              <vodml-id>SimpleDataType.val</vodml-id>
+              <name>val</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:SimpleDataType_enum</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>SimpleDataType.arraysize</vodml-id>
+              <name>arraysize</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>SimpleDataType.delim</vodml-id>
+              <name>delim</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>SimpleDataType.extendedType</vodml-id>
+              <name>extendedType</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>SimpleDataType.extendedSchema</vodml-id>
+              <name>extendedSchema</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:anyURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType abstract='true'>
+              <vodml-id>TableDataType</vodml-id>
+              <name>TableDataType</name>
+              <description>
+                          An abstract parent for a class of data types that can be
+                          used to specify the data type of a table column.
+                       </description>	    
+            <attribute>
+              <vodml-id>TableDataType.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:DataType</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>VOTableType</vodml-id>
+              <name>VOTableType</name>
+              <description>
+                          A data type supported explicitly by the VOTable format
+                       </description>	    
+               <extends>
+                  <vodml-ref>VODataService:TableDataType</vodml-ref>
+               </extends>
+            <attribute>
+              <vodml-id>VOTableType.val</vodml-id>
+              <name>val</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:VOTableType_enum</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>VOTableType.arraysize</vodml-id>
+              <name>arraysize</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>VOTableType.delim</vodml-id>
+              <name>delim</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>VOTableType.extendedType</vodml-id>
+              <name>extendedType</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>VOTableType.extendedSchema</vodml-id>
+              <name>extendedSchema</name>
+              <description>See vs:DataType.</description>	    
+              <datatype>
+                 <vodml-ref>ivoa:anyURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType abstract='true'>
+              <vodml-id>TAPDataType</vodml-id>
+              <name>TAPDataType</name>
+              <description>
+                          An abstract parent for the specific data types supported 
+                          by the Table Access Protocol.
+                       </description>	    
+            <attribute>
+              <vodml-id>TAPDataType.value</vodml-id>
+              <name>value</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:TableDataType</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPDataType.size</vodml-id>
+              <name>size</name>
+              <description>
+                                  The length of the fixed-length value
+                                
+                                  This corresponds to the size Column attribute in
+                                  the TAP_SCHEMA and can be used with data types
+                                  that are defined with a length (CHAR, BINARY).  
+                               </description>	    
+              <datatype>
+                 <vodml-ref>ivoa:integer</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <dataType>
+              <vodml-id>TAPType</vodml-id>
+              <name>TAPType</name>
+              <description>
+                          A data type supported explicitly by the Table Access 
+                          Protocol (v1.0).  This is deprecated in VODataService 1.2,
+                          and even TAP 1.0 services are encouraged to declare
+                          their columns using VOTableType.
+                       </description>	    
+               <extends>
+                  <vodml-ref>VODataService:TAPDataType</vodml-ref>
+               </extends>
+            <attribute>
+              <vodml-id>TAPType.val</vodml-id>
+              <name>val</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:TAPType_enum</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPType.arraysize</vodml-id>
+              <name>arraysize</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPType.delim</vodml-id>
+              <name>delim</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPType.extendedType</vodml-id>
+              <name>extendedType</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:string</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPType.extendedSchema</vodml-id>
+              <name>extendedSchema</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:anyURI</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            <attribute>
+              <vodml-id>TAPType.size</vodml-id>
+              <name>size</name>
+              <description></description>	    
+              <datatype>
+                 <vodml-ref>ivoa:integer</vodml-ref>
+              </datatype>
+              <multiplicity>
+                <minOccurs>1</minOccurs>
+                <maxOccurs>1</maxOccurs>
+              </multiplicity>
+            </attribute>
+            </dataType>
+            <objectType>
+               <vodml-id>DataCollection</vodml-id>
+               <name>DataCollection</name>
+               <description>
+                          A logical grouping of data which, in general, is composed of one 
+                          or more accessible datasets.  A collection can contain any
+                          combination of images, spectra, catalogues, or other data.   
+                         
+                          (A dataset is a collection of digitally-encoded data that 
+                          is normally accessible as a single unit, e.g., a file.)
+                         
+                           This type is deprecated.  Resource record authors should
+                           use vs:CatalogResource instead.  This type will be removed
+                           from the schema when no resource record using it remains in
+                           the registry.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VOResource:Resource</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>DataCollection.facility</vodml-id>
+                 <name>facility</name>
+                 <description>
+                                      the observatory or facility used to collect the data 
+                                      contained or managed by this resource.  
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:ResourceName</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>DataCollection.instrument</vodml-id>
+                 <name>instrument</name>
+                 <description>
+                                      the Instrument used to collect the data contain or 
+                                      managed by a resource.  
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:ResourceName</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>DataCollection.rights</vodml-id>
+                 <name>rights</name>
+                 <description>
+                                       Information about rights held in and over the resource.
+                                      
+                                       This should be repeated for all Rights values that apply.
+                                     </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:Rights</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>DataCollection.format</vodml-id>
+                 <name>format</name>
+                 <description>
+                                       The physical or digital manifestation of the information 
+                                       supported by a resource.
+                                      
+                                       This should use RFC 2046 media (“MIME”) types for 
+                                       network-retrievable, digital data.  
+                                       Non-RFC 2046 values could be used for media that cannot
+                                       be retrieved over the network.
+                                     </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:Format</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>DataCollection.accessURL</vodml-id>
+                 <name>accessURL</name>
+                 <description>
+                                      The URL that can be used to download the data contained in 
+                                      this data collection.
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:AccessURL</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>DataCollection.coverage</vodml-id>
+                 <name>coverage</name>
+                 <description>
+                                      Extent of the content of the resource over space, time, 
+                                      and frequency.
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:Coverage</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>DataCollection.tableset</vodml-id>
+                 <name>tableset</name>
+                 <description>
+                                      A description of the tables that are part of this
+                                      collection. 
+                                     
+                                      Each schema name must be
+                                      unique within a tableset.
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:TableSet</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>Coverage</vodml-id>
+               <name>Coverage</name>
+               <description>
+                          A description of how a resource's contents or behavior maps
+                          to the sky, to time, and to frequency space, including
+                          coverage and resolution. 
+                        </description>	    
+               <attribute>
+                 <vodml-id>Coverage.spatial</vodml-id>
+                 <name>spatial</name>
+                 <description>
+                                   An ASCII-serialized MOC defining the spatial coverage 
+                                   of the resource.
+                                 
+                                   The MOC is to be understood in the ICRS reference frame 
+                                   unless a frame attribute is given.
+                                   Resources should give the coverage at least to order 6
+                                   (a resolution of about one degree).  The order should be
+                                   chosen so as to keep the resulting MOC smaller than a few
+                                   dozens of kB.  If desired, a more precise MOC can be provided
+                                   on a dedicated endpoint declared in the footprint element.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:SpatialCoverage</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Coverage.temporal</vodml-id>
+                 <name>temporal</name>
+                 <description>
+                                   A pair of lower, upper limits of a time interval 
+                                   for which the resource offers data.
+                                 
+                                   This is written as for VOTable tabledata (i.e., 
+                                   whitespace-separated C-style floating point literals), as
+                                   in “47847.2 51370.2”.
+                                   The limits must be given as MJD.  While they
+                                   are not intended to be precise, they are to be understood
+                                   in TDB for the solar system barycenter.  The total coverage
+                                   of the resource is the union of all such intervals.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:FloatInterval</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Coverage.spectral</vodml-id>
+                 <name>spectral</name>
+                 <description>
+                                   A pair of lower, upper limits of a spectral interval 
+                                   for which the resource offers data.
+                                 
+                                   This is written as for VOTable tabledata (i.e., 
+                                   whitespace-separated C-style floating point literals).
+                                   The limits must be given in Joules of particle
+                                   energies.  While the limits are not intended 
+                                   to be precise, they are to be understood for the
+                                   solar system barycenter.
+                                 
+                                   For instance, the Johnson V waveband (480 .. 730 nm)
+                                   would be specified as “2.72e-19 4.14e-19”
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:FloatInterval</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Coverage.footprint</vodml-id>
+                 <name>footprint</name>
+                 <description>
+                                   A reference to a footprint service for retrieving 
+                                   precise and up-to-date description of coverage.  
+                                 
+                                   The ivoid attribute here refers to the standard in which
+                                   the footprint is given.  The only value defined by 
+                                   VODataService at this point is ivo://ivoa.net/std/moc, 
+                                   which indicates that retrieving the footprint URL will return
+                                   a MOC (any IVOA-approved serialisation is legal).  Note that
+                                   the ivoid attribute was intended to have a different
+                                   function in VODataService 1.1.  The current meaning is what
+                                   implementors actually adopted.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:ServiceReference</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Coverage.waveband</vodml-id>
+                 <name>waveband</name>
+                 <description>
+                                   A name of a messenger that the resource is relevant for
+                                   (e.g., was used in the measurements).  Terms must
+                                   be taken from the vocabulary at 
+                                   http://www.ivoa.net/rdf/messenger.
+                                 
+                                   It is a bit unfortunate that the element is still called
+                                   waveband when it is now also covers non-electromagnetic
+                                   messengers.  It was deemed that this slight notional
+                                   sloppiness is preferable to introducing new and
+                                   deprecating old elements.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Coverage.regionOfRegard</vodml-id>
+                 <name>regionOfRegard</name>
+                 <description>
+                                   A single numeric value representing the angle, given
+                                   in decimal degrees, by which a positional query
+                                   against this resource should be “blurred” in order
+                                   to get an appropriate match. 
+                                 
+                                   In the case of image repositories, it might refer to
+                                   a typical field-of-view size, or the primary beam
+                                   size for radio aperture synthesis data.  In the case
+                                   of object catalogues RoR should normally be the
+                                   largest of the typical size of the objects, the
+                                   astrometric errors in the positions, or the
+                                   resolution of the data.  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:real</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>TableSet</vodml-id>
+               <name>TableSet</name>
+               <description>
+                          The set of tables hosted by a resource.
+                        </description>	    
+               <composition>
+                 <vodml-id>TableSet.schema</vodml-id>
+                 <name>schema</name>
+                 <description>
+                                 A named description of a group of logically related tables.
+                                
+                                 The name given by the “name” child element must
+                                 be unique within this TableSet instance.  If there is
+                                 only one schema in this set and/or there is no locally
+                                 appropriate name to provide, the name can be set to
+                                 “default”.  
+                                
+                                 This aggregation does not need to map to an
+                                 actual database, catalogue, or schema, though the
+                                 publisher may choose to aggregate along such
+                                 designations.  Particular service protocols may
+                                 require stricter patterns.
+                               </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:TableSchema</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>TableSchema</vodml-id>
+               <name>TableSchema</name>
+               <description>
+                          A detailed description of a logically related group of tables.
+                        </description>	    
+               <attribute>
+                 <vodml-id>TableSchema.name</vodml-id>
+                 <name>name</name>
+                 <description>
+                                A name for the group of tables.  
+                               
+                                This is used to uniquely identify the group of tables among
+                                several groups.  If no title is given, this
+                                name can be used for display purposes.
+                               
+                                If there is no appropriate logical name associated with
+                                this group, the name should be explicitly set to
+                                “default”.  
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>TableSchema.title</vodml-id>
+                 <name>title</name>
+                 <description>
+                                   A descriptive, human-interpretable name for the group of 
+                                   tables.
+                                 
+                                   This is used for display purposes.  There is no requirement
+                                   regarding uniqueness.  It is useful when there are
+                                   multiple schemas in the context (e.g., within a
+                                   tableset; otherwise, the resource title could be
+                                   used instead).
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>TableSchema.description</vodml-id>
+                 <name>description</name>
+                 <description>
+                                A free text description of the group of tables that should
+                                explain in general how all of the tables in the group are 
+                                related.
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>TableSchema.utype</vodml-id>
+                 <name>utype</name>
+                 <description>
+                                   An identifier for a concept in a data model that
+                                   the data in this schema as a whole represent.  
+                                 
+                                   The form of the utype string depends on the data
+                                   model; common forms are sequences of dotted identifiers
+                                   (e.g., in SSA) or URIs (e.g., in RegTAP).
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>TableSchema.table</vodml-id>
+                 <name>table</name>
+                 <description>
+                                A description of one table.
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:Table</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>DataResource</vodml-id>
+               <name>DataResource</name>
+               <description>
+                          A resource publishing astronomical data.
+                         
+                           This resource type should only be used if the resource has no
+                           common underlying tabular schema (e.g., an inhomogeneous archive).
+                           Use CatalogResource otherwise.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VOResource:Service</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>DataResource.facility</vodml-id>
+                 <name>facility</name>
+                 <description>
+                                      The observatory or facility used to collect the data 
+                                      contained or managed by this resource.  
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:ResourceName</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>DataResource.instrument</vodml-id>
+                 <name>instrument</name>
+                 <description>
+                                      The instrument used to collect the data contain or 
+                                      managed by a resource.  
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:ResourceName</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>DataResource.coverage</vodml-id>
+                 <name>coverage</name>
+                 <description>
+                                      Extent of the content of the resource over space, time, 
+                                      and frequency.
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:Coverage</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>DataService</vodml-id>
+               <name>DataService</name>
+               <description>
+                           A service for accessing astronomical data.
+                         
+                           This resource type should only be used if the service has no
+                           common underlying tabular schema (e.g., a storage service) or 
+                           if it is not explicitly accessible (e.g., an ftp server with 
+                           images).  Use CatalogService otherwise.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VODataService:DataResource</vodml-ref>
+               </extends>
+            </objectType>
+            <objectType>
+               <vodml-id>ParamHTTP</vodml-id>
+               <name>ParamHTTP</name>
+               <description>
+                          A service invoked via an HTTP Query (either Get or Post)
+                          with a set of arguments consisting of keyword name-value pairs.
+                        
+                          Note that the URL for help with this service can be put into
+                          the service/referenceURL element.
+                       </description>	    
+               <extends>
+                  <vodml-ref>VOResource:Interface</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>ParamHTTP.queryType</vodml-id>
+                 <name>queryType</name>
+                 <description>
+                                        The type of HTTP request, either GET or POST.
+                                       
+                                        The service may indicate support for both GET
+                                        and POST by providing 2 queryType elements, one
+                                        with GET and one with POST.  Since the IVOA standard
+                                        DALI requires standard services to support both
+                                        GET and POST, this piece of metadata is not
+                                        useful in the description of standard DAL services
+                                        and does not need to be given for those.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:HTTPQueryType</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>2</minOccurs>
+                   <maxOccurs>2</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>ParamHTTP.resultType</vodml-id>
+                 <name>resultType</name>
+                 <description>
+                                        The MIME media type of a document returned in 
+                                        the HTTP response.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>ParamHTTP.testQuery</vodml-id>
+                 <name>testQuery</name>
+                 <description>
+                                        An ampersand-delimited list of arguments that
+                                        can be used to test this service interface; 
+                                        when provided as the input to this interface,
+                                        it will produce a legal, non-null response.
+                                      
+                                        When the interface supports GET, then the full 
+                                        query URL is formed by the concatenation of the 
+                                        base URL (given by the accessURL) and the value 
+                                        given by this testQuery element.  
+                                     </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>ParamHTTP.param</vodml-id>
+                 <name>param</name>
+                 <description>
+                                        A description of a input parameter that can be 
+                                        provided as a name=value argument to the service.  
+                                     </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:InputParam</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>CatalogResource</vodml-id>
+               <name>CatalogResource</name>
+               <description>
+                           A resource giving astronomical data in tabular form.
+                         
+                           While this includes classical astronomical catalogues,
+                           this resource is also appropriate for collections of observations
+                           or simulation results provided their metadata are available
+                           in a sufficiently structured form (e.g., Obscore, SSAP, etc).
+                        </description>	    
+               <extends>
+                  <vodml-ref>VODataService:DataResource</vodml-ref>
+               </extends>
+               <composition>
+                 <vodml-id>CatalogResource.tableset</vodml-id>
+                 <name>tableset</name>
+                 <description>
+                                        A description of the tables that are accessible
+                                        through this service.
+                                       
+                                      	Each schema name must be unique within a tableset.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:TableSet</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>CatalogService</vodml-id>
+               <name>CatalogService</name>
+               <description>
+                           A service that interacts with astronomical data
+                           through one or more specified tables.
+                         
+                           This is the appropriate resource type for normal VO services,
+                           e.g., TAP, SSAP, SIAP, ConeSearch.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VODataService:CatalogResource</vodml-ref>
+               </extends>
+            </objectType>
+            <objectType>
+               <vodml-id>Table</vodml-id>
+               <name>Table</name>
+               <description></description>	    
+               <attribute>
+                 <vodml-id>Table.name</vodml-id>
+                 <name>name</name>
+                 <description>
+                                   The fully qualified name of the table.  This name 
+                                   should include all catalogue or schema prefixes
+                                   needed to sufficiently uniquely distinguish it in a
+                                   query.  
+                                 
+                                   In general, the format of the qualified name may
+                                   depend on the context; however, when the
+                                   table is intended to be queryable via ADQL, then the
+                                   catalogue and schema qualifiers are delimited from the
+                                   table name with dots (.).  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Table.title</vodml-id>
+                 <name>title</name>
+                 <description>
+                                   A descriptive, human-interpretable name for the table.
+                                 
+                                   This is used for display purposes.  There is no requirement
+                                   regarding uniqueness.  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Table.description</vodml-id>
+                 <name>description</name>
+                 <description>
+                                   A free-text description of the table's contents
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Table.utype</vodml-id>
+                 <name>utype</name>
+                 <description>
+                                   An identifier for a concept in a data model that
+                                   the data in this table represent.  
+                                 
+                                   The form of the utype string depends on the data
+                                   model; common forms are sequences of dotted identifiers
+                                   (e.g., in SSA) or URIs (e.g., in RegTAP).
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Table.nrows</vodml-id>
+                 <name>nrows</name>
+                 <description>
+                                   The approximate size of the table in rows.
+                                 
+                                   This is not expected to be exact.  For instance, the
+                                   estimates on table sizes databases keep for query
+                                   planning purposes are suitable for this field.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:nonnegativeInteger</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Table.type</vodml-id>
+                 <name>type</name>
+                 <description>
+                                A name for the role this table plays.  Recognized
+                                values include “output”, indicating this table is output 
+                                from a query; “base_table”, indicating a table
+                                whose records represent the main subjects of its
+                                schema; and “view”, indicating that the table represents
+                                a useful combination or subset of other tables.  Other 
+                                values are allowed.  
+                             </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>Table.column</vodml-id>
+                 <name>column</name>
+                 <description>
+                                   A description of a table column.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:TableParam</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>Table.foreignKey</vodml-id>
+                 <name>foreignKey</name>
+                 <description>
+                                   A description of a foreign keys, one or more columns
+                                   from the current table that can be used to join with 
+                                   another table.  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:ForeignKey</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>BaseParam</vodml-id>
+               <name>BaseParam</name>
+               <description>
+                           A description of a parameter that places no restriction on 
+                           the parameter's data type.
+                         
+                           As the parameter's data type is usually important, schemas
+                           normally employ a sub-class of this type
+                           rather than this type directly.
+                        </description>	    
+               <attribute>
+                 <vodml-id>BaseParam.name</vodml-id>
+                 <name>name</name>
+                 <description>
+                                   The name of the parameter or column.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>BaseParam.description</vodml-id>
+                 <name>description</name>
+                 <description>
+                                   A free-text description of a parameter's or column's 
+                                   contents.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>BaseParam.unit</vodml-id>
+                 <name>unit</name>
+                 <description>
+                                   The unit associated with the values in the parameter
+                                   or column.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>BaseParam.ucd</vodml-id>
+                 <name>ucd</name>
+                 <description>
+                                   The name of a unified content descriptor that
+                                   describes the scientific content of the parameter.
+                                 
+                                   There are no requirements for compliance with any 
+                                   particular UCD standard.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>BaseParam.utype</vodml-id>
+                 <name>utype</name>
+                 <description>
+                                   An identifier for a concept in a data model that
+                                   the data in this schema represent.  
+                                 
+                                   The form of the utype string depends on the data
+                                   model; common forms are sequences of dotted identifiers
+                                   (e.g., in SSA) or URIs (e.g., in RegTAP).
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>TableParam</vodml-id>
+               <name>TableParam</name>
+               <description>
+                           A description of a table parameter having a fixed data type.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VODataService:BaseParam</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>TableParam.dataType</vodml-id>
+                 <name>dataType</name>
+                 <description>
+                                         A type of data contained in the column
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:TableDataType</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>TableParam.flag</vodml-id>
+                 <name>flag</name>
+                 <description>
+                                         A keyword representing traits of the column.  
+                                         Recognized values include “indexed”, “primary”, and
+                                         “nullable”.  
+                                       
+                                      	While other values are allowed, the following semantics
+                                      	is defined by this specification: indexed – The column
+                                      	has an index on it for faster search against its values;
+                                      	primary – The values column in the column represent in
+                                      	total or in part a primary key for its table; nullable –
+                                      	the column may contain null or empty values. 
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>TableParam.std</vodml-id>
+                 <name>std</name>
+                 <description>
+                                      If true, the meaning and use of this parameter is
+                                      reserved and defined by a standard model.  If false, 
+                                      it represents a parameter specific to the data described 
+                                      If not provided, then the value is unknown.
+                                   </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:boolean</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>InputParam</vodml-id>
+               <name>InputParam</name>
+               <description>
+                           A description of a service or function parameter having a
+                           fixed data type. 
+                         
+                        	DALI-compliant services should use VOTableType here, others
+                        	should use SimpleDataType.
+                        </description>	    
+               <extends>
+                  <vodml-ref>VODataService:BaseParam</vodml-ref>
+               </extends>
+               <attribute>
+                 <vodml-id>InputParam.dataType</vodml-id>
+                 <name>dataType</name>
+                 <description>
+                                         A type of data contained in the parameter.
+                                      </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:DataType</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>InputParam.use</vodml-id>
+                 <name>use</name>
+                 <description>
+                                      An indication of whether this parameter is
+                                      required to be provided for the application
+                                      or service to work properly.  
+                                   </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:ParamUse</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>InputParam.std</vodml-id>
+                 <name>std</name>
+                 <description>
+                                      If true, the meaning and behavior of this parameter is
+                                      reserved and defined by a standard interface.  If
+                                      false, it represents an implementation-specific
+                                      parameter that effectively extends the behavior of the 
+                                      service or application.  
+                                   </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:boolean</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>ForeignKey</vodml-id>
+               <name>ForeignKey</name>
+               <description>
+                          A description of the mapping a foreign key -- a set of 
+                          columns from one table -- to columns in another table.  
+                         
+                           When foreign keys are declared in this way, clients can expect
+                           that joins constrained with the foreign keys are preformed
+                           efficiently (e.g., using an index).
+                        </description>	    
+               <attribute>
+                 <vodml-id>ForeignKey.targetTable</vodml-id>
+                 <name>targetTable</name>
+                 <description>
+                                The fully qualified name (including catalogue and schema, as
+                                applicable) of the table that can be joined with the 
+                                table containing this foreign key.
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>ForeignKey.description</vodml-id>
+                 <name>description</name>
+                 <description>
+                                   A free-text description of what this key points to
+                                   and what the relationship means.  
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>ForeignKey.utype</vodml-id>
+                 <name>utype</name>
+                 <description>
+                                   An identifier for a concept in a data model that
+                                   the association enabled by this key represents.  
+                                 
+                                   The form of the utype string depends on the data
+                                   model; common forms are sequences of dotted identifiers
+                                   (e.g., in SSA) or URIs (e.g., in RegTAP).
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <composition>
+                 <vodml-id>ForeignKey.fkColumn</vodml-id>
+                 <name>fkColumn</name>
+                 <description>
+                                A pair of column names, one from this table and one
+                                from the target table that should be used to join the
+                                tables in a query.  
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>VODataService:FKColumn</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>FKColumn</vodml-id>
+               <name>FKColumn</name>
+               <description>
+                          A pair of columns that are used to join two tables.  
+                         
+                          To do an inner join of data from the two tables, a query should 
+                          include a constraint that sets the value from the first column equal
+                          to the value in the second column.
+                         
+                          This type assumes that it is used in the context of 
+                          implied source (i.e., current) and target tables, as in
+                          the ForeignKey type's fkColumn.
+                        </description>	    
+               <attribute>
+                 <vodml-id>FKColumn.fromColumn</vodml-id>
+                 <name>fromColumn</name>
+                 <description>
+                                The unqualified name of the column from the current table.
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>FKColumn.targetColumn</vodml-id>
+                 <name>targetColumn</name>
+                 <description>
+                                The unqualified name of the column from the target table.
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+</vo-dml:model>
