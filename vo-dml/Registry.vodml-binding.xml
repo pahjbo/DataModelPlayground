@@ -1,0 +1,30 @@
+<m:mappedModels xmlns:m="http://www.ivoa.net/xml/vodml-binding/v0.9.1">
+    <!-- ========================================
+    This binding covers all of the registry models
+     -->
+
+    <model>
+        <name>VOResource</name>
+        <file>VOResource-v1.1.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.registry.voresource</java-package>
+        <xml-targetnamespace prefix="vr">http://ivoa.net/dm/models/vo-dml/experiment/voresource</xml-targetnamespace>
+    </model>
+    <model>
+        <name>VODataService</name>
+        <file>VODataService-v1.2.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.registry.vodataservice</java-package>
+        <xml-targetnamespace prefix="ds">http://ivoa.net/dm/models/vo-dml/experiment/vodataservice</xml-targetnamespace>
+    </model>
+    <model>
+        <name>SIA</name>
+        <file>SIA-v1.2.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.registry.sia</java-package>
+        <xml-targetnamespace prefix="sia">http://ivoa.net/dm/models/vo-dml/experiment/sia</xml-targetnamespace>
+    </model>
+    <model>
+        <name>TAPRegExt</name>
+        <file>TAPRegExt-v1.0.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.registry.tap</java-package>
+        <xml-targetnamespace prefix="tap">http://ivoa.net/dm/models/vo-dml/experiment/tapregext</xml-targetnamespace>
+    </model>
+</m:mappedModels>

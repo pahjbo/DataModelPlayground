@@ -1,0 +1,215 @@
+
+model SIA (1.2) 
+	   "
+        Implementation of an XML Schema describing a Simple Image
+        Access Service.   Based on the Simple Image Access Specification
+        by Doug Tody et al.
+      "
+      include "IVOA-v1.0.vodsl"
+      include "VOResource-v1.1.vodsl"
+     
+otype SimpleImageAccess  -> VOResource:Capability "
+            The capabilities of an SIA implementation.  
+         "
+  {   
+        imageServiceType: ImageServiceType   "
+                   The class of image service: Cutout, Mosaic, Atlas, Pointed
+                     ";
+        maxQueryRegionSize: SkySize  @?   as composition  "
+                         The maximum image query region size, expressed in 
+                         decimal degrees.  Not providing this element or 
+                         specifying a value of 360 degrees indicates that 
+                         there is no limit and the entire data collection 
+                         (entire sky) can be queried. 
+                      
+                         Not providing a value is the prefered way to indicate
+                         that there is no limit.
+                     ";
+        maxImageExtent: SkySize  @?   as composition  "
+                         An upper bound on a region of the sky that can 
+                         be covered by returned images.  That is, no image
+                         returned by this service will cover more than 
+                         this limit.  Not providing this element or 
+                         specifying a value of 360 degrees indicates that 
+                         there is no fundamental limit to the region covered 
+                         by a returned image.  
+                      
+                         When the imageServiceType is “Cutout” or “Mosaic”, 
+                         this represents the largest area that can be requested.
+                         In this case, the “no limit” value means that all-sky
+                         images can be requested.  When the type is “Atlas” or
+                         “Pointed”, it should be a region that most closely 
+                         encloses largest images in the archive, and the ”no
+                         limit” value means that the archive contains all-sky 
+                         (or nearly so) images.  
+                      
+                         Not providing a value is the prefered way to indicate
+                         that there is no limit.
+                     ";
+        maxImageSize: ivoa:integer  @?   "
+                         A measure of the largest image the service
+                         can produce given as the maximum number of
+                         pixels along the first or second axes.
+                         Not providing a value indicates that there is 
+                         no effective limit to the size of the images 
+                         that can be returned.  
+                      
+                         This is primarily relevant when the imageServiceType
+                         is “Cutout” or “Mosaic”, indicating the largest 
+                         image that can be created.  When the imageServiceType 
+                         is “Atlas” or “Pointed”, this should be specified only
+                         when there are static images in the archive that can 
+                         be searched for but not returned because they are 
+                         too big.  
+                      
+                         When a service is more fundementally limited
+                         by the total number of pixels in the image, this 
+                         value should be set to the square-root of that
+                         number.  This number will then represent a
+                         lower limit on the maximum length of a side.  
+                     ";
+        maxFileSize: ivoa:integer  @?   "
+                        The maximum image file size in bytes.  Not providing 
+                        a value indicates that there is no effective limit 
+                        the size of files that can be returned.  
+                      
+                        This is primarily relevant when the imageServiceType
+                        is “Cutout” or “Mosaic”, indicating the largest 
+                        files that can be created.  When the imageServiceType 
+                        is “Atlas” or “Pointed”, this should be specified only
+                        when there are static images in the archive that can 
+                        be searched for but not returned because they are 
+                        too big.  
+                     ";
+        maxRecords: ivoa:integer  @?   "
+                        The largest number of records that the Image Query web
+                        method will return. Not providing this value means that
+                        there is no effective limit.  
+                      
+                        This does not refer to the total number of images in 
+                        the archive but rather maximum number of records the 
+                        service is capable of returning.  A limit that is 
+                        greater than the number of images available in the 
+                        archive is equivalent to their being no effective 
+                        limit.  (See RM, Hanisch 2007.)
+                     ";
+        testQuery: Query  @?   as composition  "
+                        a set of query parameters that is expected
+                        to produce at least one matched record which
+                        can be used to test the service.  
+                     ";
+  }
+
+otype SkySize  "" 
+  {   
+        long: ivoa:real   "
+                 The maximum size in the longitude (R.A.) direction
+                 given in degrees
+              ";
+        lat: ivoa:real   "
+                 The maximum size in the latitude (Dec.) direction 
+                 given in degrees
+              ";
+  }
+
+otype SkyPos  "" 
+  {   
+        long: ivoa:real   "
+                 The sky position in the longitude (R.A.) direction 
+              ";
+        lat: ivoa:real   "
+                 The sky position in the latitude (Dec.) direction 
+              ";
+  }
+
+enum ImageServiceType  "
+       The class of image service: Cutout, Mosaic, Atlas, Pointed
+         "
+{
+Cutout  "
+         This is a service which extracts or “cuts out” rectangular
+         regions of some larger image, returning an image of the
+         requested size to the client. Such images are usually drawn
+         from a database or a collection of survey images that cover
+         some large portion of the sky. To be considered a cutout
+         service, the returned image should closely approximate (or at
+         least not exceed) the size of the requested region; however,
+         a cutout service will not normally resample (rescale or
+         reproject) the pixel data. A cutout service may mosaic image
+         segments to cover a large region but is still considered a
+         cutout service if it does not resample the data.  Image
+         cutout services are fast and avoid image degredation due to
+         resampling.  
+               ",
+Mosaic  "
+                  This service is similar to the image cutout service
+                  but adds the capability to compute an image of the
+                  size, scale, and projection specified by the
+                  client. Mosaic services include services which
+                  resample and reproject existing image data, as well
+                  as services which generate pixels from some more
+                  fundamental dataset, e.g., a high energy event list
+                  or a radio astronomy measurement set. Image mosaics
+                  can be expensive to generate for large regions but
+                  they make it easier for the client to overlay image
+                  data from different sources. Image mosaicing
+                  services which resample already pixelated data will
+                  degrade the data slightly, unlike the simpler cutout
+                  service which returns the data unchanged.  
+               ",
+Atlas  "
+                  This category of service provides access to
+                  pre-computed images that make up a survey of some
+                  large portion of the sky. The service, however, is
+                  not capable of dynamically cutting out requested
+                  regions, and the size of atlas images is
+                  predetermined by the survey. Atlas images may range
+                  in size from small cutouts of extended objects to
+                  large calibrated survey data frames. 
+               ",
+Pointed  "
+                  This category of service provides access to
+                  collections of images of many small, “pointed”
+                  regions of the sky. “Pointed” images normally focus
+                  on specific sources in the sky as opposed to being
+                  part of a sky survey. This type of service usually
+                  applies to instrumental archives from observatories
+                  with guest observer programs (e.g., the HST archive)
+                  and other general purpose image archives (e.g., the
+                  ADIL). If a service provides access to both survey
+                  and pointed images, then it should be considered a
+                  Pointed Image Archive for the purposes of this
+                  specification; if a differentiation between the
+                  types of data is desired the pointed and survey data
+                  collections should be registered as separate image
+                  services.  
+               "
+}
+
+
+otype Query  "
+            A query to be sent to the service
+         "
+  {   
+        pos: SkyPos  @?   as composition  "
+                   the center position of the rectangular region that 
+                   should be used as part of the query to the SIA service. 
+               ";
+        size: SkySize  @?   as composition  "
+                   the rectangular size of the region that should be 
+                   used as part of the query to the SIA service.
+               ";
+        verb: ivoa:integer  @?   "
+                   the verbosity level to use where 0 means the bare
+                   minimum set of columns and 3 means the full set of 
+                   available columns.
+               ";
+        extras: ivoa:string  @?   "
+                   any extra (particularly non-standard) parameters that must 
+                   be provided (apart from what is part of base URL given by 
+                   the accessURL element).
+                
+                   this value should be in the form of name=value
+                   pairs delimited with ampersands.  
+               ";
+  }
