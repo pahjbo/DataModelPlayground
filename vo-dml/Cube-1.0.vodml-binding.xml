@@ -1,0 +1,12 @@
+<m:mappedModels xmlns:m="http://www.ivoa.net/xml/vodml-binding/v0.9.1">
+    <!-- ========================================
+    This is a minimal sample file for mapping VO-DML models to XSD or Java using the gradle tooling
+     -->
+
+    <model>
+        <name>cube</name>
+        <file>Cube-1.0.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.cube</java-package>
+        <xml-targetnamespace prefix="cube" >http://ivoa.net/dm/models/vo-dml/experiment/cube</xml-targetnamespace>
+    </model>
+</m:mappedModels>
