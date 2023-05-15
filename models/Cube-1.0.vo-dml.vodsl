@@ -1,0 +1,93 @@
+
+model cube (1.0) "
+          TODO : Missing description : please, update your UML model asap.
+        "
+     
+ author "Mark Cresitello-Dittmar, Doug Tody, Omar Laurino, Gerard Lemson, Markus Demleitner, and the IVOA Data Model Working Group"
+       include "IVOA-v1.0.vodsl"
+     
+       include "Dataset-1.0.vodsl"
+     
+       include "Coords-v1.0.vodsl"
+     
+       include "Meas-v1.0.vodsl"
+     
+       include "Trans-v1.0.vodsl"
+     
+otype NDImage  -> DataProduct ""
+  {   
+        data : Voxel @*  as composition "";
+        pixelCoordSys : coords:PixelCoordSystem as composition "";
+  }
+
+otype SparseCube  -> DataProduct ""
+  {   
+        data : NDPoint @*  as composition "";
+  }
+
+abstract otype DataProduct  ""
+  {   
+        coordSys : coords:CoordSys @+  as composition "";
+        mappings : Mappings @?  as composition "";
+        dataset  references ds:dataset.Dataset "";
+  }
+
+otype Voxel  ""
+  {   
+        pixelAxis : PixelAxis @+  as composition "";
+        valueAxis : ValueAxis as composition "";
+        coordAxis : VirtualImageAxis @*  as composition "";
+  }
+
+otype NDPoint  ""
+  {   
+        observable : Observable @*  as composition "";
+  }
+
+abstract otype DataAxis  ""
+  {   
+        dependent: ivoa:boolean   "";
+  }
+
+otype PixelAxis  -> ImageAxis ""
+  {   
+        coord: coords:PixelIndex   "";
+  }
+
+abstract otype MeasurementAxis  -> DataAxis ""
+  {   
+        measure : meas:Measure as composition "";
+  }
+
+otype Observable  -> MeasurementAxis ""
+  {   
+  }
+
+otype ValueAxis  -> MeasurementAxis ""
+  {   // constraint  DataAxis.dependent = True
+  }
+
+abstract otype ImageAxis  -> DataAxis ""
+  {   // constraint  DataAxis.dependent = False
+  }
+
+otype VirtualMeasure  -> meas:Measure ""
+  {   
+        result_type: ivoa:string   "";
+        source  @+  references meas:Measure "";
+        transform  references trans:TMapping "";
+        result_frame  @?  references coords:CoordFrame "";
+  }
+
+otype VirtualImageAxis  -> ImageAxis ""
+  {   
+        result_type: ivoa:string   "";
+        source  @+  references ImageAxis "";
+        transform  references trans:TMapping "";
+        result_frame  @?  references coords:CoordFrame "";
+  }
+
+otype Mappings  ""
+  {   
+        transform : trans:TMapping @+  as composition "";
+  }
