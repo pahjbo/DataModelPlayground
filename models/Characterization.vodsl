@@ -1,57 +1,73 @@
 
-model cha () 
+model characterisation (1.11) 
 	  
-      include "IVOA-v1.0.vodsl"
+include "IVOA-v1.0.vodsl"
      
-       include "stc-v1.30.vodsl"
-     
-otype numBins2 "" 
-    {
-       
+include "Coords-v1.0.vodsl"
+ 
+ 
+ package stcExtra "some definitions that have not got into STC 2.0" {
+ 	  otype observatoryLocationType {
+ 	  	location: coords:CartesianPoint "";
+ 	  }
+ }
+ 
+ enum CalibrationStatus {
+ 	CALIBRATED, UNCALIBRATED, RELATIVE, NORMALIZED 	
+ }
+ 
+ abstract dtype numBins "base of substitution group" {
+ 	
+ }
+      
+        dtype numBins1 ->  characterisation:numBins  "" 
+        {
+         I1: ivoa:integer   "" ;
+        }
+    
+        dtype numBins2 ->  characterisation:numBins  "" 
+        {
+        
         I1: ivoa:integer   "" ;
         I2: ivoa:integer   "" ;
-    }
-
-otype numBins3 "" 
-    {
-       
+        }
+    
+        dtype numBins3 ->  characterisation:numBins  "" 
+        {
+        
         I1: ivoa:integer   "" ;
         I2: ivoa:integer   "" ;
         I3: ivoa:integer   "" ;
-    }
+        } 
+     
 
-        otype characterizationAxis ->  cha:characterisationAxis  "
+
+        abstract otype characterisationAxis "
                                 describes an axis and its properties 
                         "
         {
         
         }
     
-        otype characterization ->  cha:characterisation  "" 
+        otype characterisation   "base of substitution group" 
         {
         
         }
     
-otype CharacterisationType  "" 
+otype CharacterisationType -> characterisation "" 
   {   
         characterisationAxis: CharacterisationAxisType  @+   as composition  "" ;
   }
 
-                               describes an axis and its properties
+                    
                         
-                              minimum size of an interpretable signal along this axis 
-                        
-otype anyURIType  -> xsd:anyType "" 
-  {   // these should be subsets?
-  
-  }
 
 otype CoverageType  "
                                 How the observation is spanned along this axis
                         "
   {   
-        unit: xsd:anyType  @?   "redefinition of unit for coverage";
-        coordsystem: stc:astroCoordSystemType  @?   "redefinition of coordsystem";
+        unit: ivoa:string  @?   "redefinition of unit for coverage";
+        coordsystem @? references coords:AstroCoordSystem   "redefinition of coordsystem";
         location: LocationType   as composition  "Typical value on one axis";
         bounds: BoundsType  @?   as composition  "the limits of the observation on this axis";
         support: SupportType  @?   as composition  "describes the area where measurements are effectively present and interpretable ";
@@ -60,8 +76,8 @@ otype CoverageType  "
 
 otype ResolutionType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
         resolutionRefVal: ResolutionRefValType   as composition  "" ;
         resolutionBounds: ResolutionBoundsType  @?   as composition  "" ;
         resolutionSupport: ResolutionSupportType  @?   as composition  "" ;
@@ -70,8 +86,8 @@ otype ResolutionType  ""
 
 otype SamplingPrecisionType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
         samplingPrecisionRefVal: SamplingPrecisionRefValType   as composition  "" ;
         samplingPrecisionBounds: SamplingPrecisionBoundsType  @?   as composition  "" ;
         samplingPrecisionSupport: SamplingPrecisionSupportType  @?   as composition  "" ;
@@ -80,45 +96,45 @@ otype SamplingPrecisionType  ""
 
 otype CharacterisationAxisType  "" 
   {   
-        axisName: xsd:anyType   "
+        axisName: ivoa:string   "
 	                   A name representing the physical nature of the axis like Spatial, Spectral, Time, Velocity or any other free name for an axis
                     ";
-        ucd: xsd:anyType   "
+        ucd: ivoa:string   "
                                                  The physical meaning of the axis, 
                                                  Type:  standard semantic tag defined in the UCD list.
 			            ";
-        unit: xsd:anyType   "
+        unit: ivoa:string   "
 			                   default unit for the axis: 
                                   Type: controlled unit vocabulary following the VOTable units definitions 
 			                ";
-        coordsystem: stc:astroCoordSystemType   "
+        coordsystem: coords:AstroCoordSystem   as composition"
 					    Reference coordinate system for the axis: 		
 					";
-        ObsyLoc: stc:observatoryLocationType  @?   "
+        ObsyLoc: stcExtra:observatoryLocationType  @? as composition  "
 						Observatory location
 						Type: a  STC:observatoryLocationType or an xlink
 			";
         accuracy: AccuracyType  @?   as composition  "Global accuracy description of the axis
 			";
-        independentAxis: xsd:anyType  @?   "
+        independentAxis: ivoa:boolean  @?   "
 			                    Indicates wether the axis is independent or not from the other axes. The Observable axis
 			                    has a false independentAxis 'value' 
 			                    Type : boolean
 			";
-        calibrationStatus: xsd:anyType   "
+        calibrationStatus: CalibrationStatus  "
 			                        defines if and how the axis is calibrated: 
                                        Possible String values: CALIBRATED, UNCALIBRATED, RELATIVE, NORMALIZED 			
                                         ";
-        subset cha:numBins as    "
+        numBins: numBins    "
 						Number of bins for this axis. 
 						Type : array of 1 2 or 3 integers
-			                "; // this is almost certainly wrong - check the intended subsetting....
+			                "; 
 
-        undersamplingStatus: xsd:anyType  @?   "
+        undersamplingStatus: ivoa:string  @?   "
 					       A flag to mention wether the data are undersampled.
 					       Type: boolean
 			                ";
-        regularsamplingStatus: xsd:anyType  @?   "
+        regularsamplingStatus: ivoa:string  @?   "
 				               A flag to mention wether the data are regularly sampled.
 				               Type : boolean
 			                ";
@@ -132,19 +148,10 @@ otype SpatialAxisType  -> CharacterisationAxisType "
                            "
   {   // these should be subsets?
   //<"axisName=spatial as Natural>//<"ucd=pos as Natural>
-        unit: xsd:anyType   "" ;
-        coordsystem: stc:astroCoordSystemType   "" ;
-        ObsyLoc: stc:observatoryLocationType  @?   "" ;
-        accuracy: AccuracyType  @?   as composition  "" ;
-        independentAxis: xsd:anyType  @?   "" ;
-        calibrationStatus: xsd:anyType   "" ;
-        subset cha:numBins as    "" ; // this is almost certainly wrong - check the intended subsetting....
+     
+        subset CharacterisationAxisType.numBins as  numBins2 ; //?? intended
 
-        undersamplingStatus: xsd:anyType  @?   "" ;
-        regularsamplingStatus: xsd:anyType  @?   "" ;
-        coverage: CoverageType   as composition  "" ;
-        resolution: ResolutionType  @?   as composition  "" ;
-        samplingPrecision: SamplingPrecisionType  @?   as composition  "" ;
+      
   }
 
 otype SpectralAxisType  -> CharacterisationAxisType "
@@ -152,19 +159,9 @@ otype SpectralAxisType  -> CharacterisationAxisType "
                            "
   {   // these should be subsets?
   //<"axisName=spectral as Natural>//<"ucd=em as Natural>
-        unit: xsd:anyType   "" ;
-        coordsystem: stc:astroCoordSystemType   "" ;
-        ObsyLoc: stc:observatoryLocationType  @?   "" ;
-        accuracy: AccuracyType  @?   as composition  "" ;
-        independentAxis: xsd:anyType  @?   "" ;
-        calibrationStatus: xsd:anyType   "" ;
-        subset cha:numBins as    "" ; // this is almost certainly wrong - check the intended subsetting....
-
-        undersamplingStatus: xsd:anyType  @?   "" ;
-        regularsamplingStatus: xsd:anyType  @?   "" ;
-        coverage: CoverageType   as composition  "" ;
-        resolution: ResolutionType  @?   as composition  "" ;
-        samplingPrecision: SamplingPrecisionType  @?   as composition  "" ;
+       
+        subset CharacterisationAxisType.numBins as  numBins2 ; //?? intended
+        
   }
 
 otype TimeAxisType  -> CharacterisationAxisType "
@@ -172,40 +169,13 @@ otype TimeAxisType  -> CharacterisationAxisType "
                            "
   {   // these should be subsets?
   //<"axisName=temporal as Natural>//<"ucd=time as Natural>
-        unit: xsd:anyType   "" ;
-        coordsystem: stc:astroCoordSystemType   "" ;
-        ObsyLoc: stc:observatoryLocationType  @?   "" ;
-        accuracy: AccuracyType  @?   as composition  "" ;
-        independentAxis: xsd:anyType  @?   "" ;
-        calibrationStatus: xsd:anyType   "" ;
-        subset cha:numBins as    "" ; // this is almost certainly wrong - check the intended subsetting....
+       
+        subset CharacterisationAxisType.numBins as  numBins2 ; //?? intended
 
-        undersamplingStatus: xsd:anyType  @?   "" ;
-        regularsamplingStatus: xsd:anyType  @?   "" ;
-        coverage: CoverageType   as composition  "" ;
-        resolution: ResolutionType  @?   as composition  "" ;
-        samplingPrecision: SamplingPrecisionType  @?   as composition  "" ;
+     
   }
 
-        otype numBins1 ->  cha:numBins  "" 
-        {
-        
-        }
-    
-        otype numBins2 ->  cha:numBins  "" 
-        {
-        
-        I1: ivoa:integer   "" ;
-        I2: ivoa:integer   "" ;
-        }
-    
-        otype numBins3 ->  cha:numBins  "" 
-        {
-        
-        I1: ivoa:integer   "" ;
-        I2: ivoa:integer   "" ;
-        I3: ivoa:integer   "" ;
-        }
+
     
 otype AccuracyType  "" 
   {   
@@ -217,10 +187,8 @@ otype AccuracyType  ""
         CustError: ErrorType  @?   as composition  "" ;
   }
 
-otype ErrorType  "" 
-  {    "
-		                     Some Error on the axis
-		               "
+otype ErrorType  "Some Error on the axis" 
+  {    
         flavor: ivoa:string   "
                            The type of error described : statistical , systematic, global, etc.
                            Type: string                            
@@ -251,22 +219,22 @@ otype SysErrorType  -> ErrorType "
         ErrorVariability: ErrorVariabilityType  @?   as composition  "" ;
   }
 
-otype ErrorRefValType  "" 
-  {    "
+otype ErrorRefValType  "
 				Typical statistical error on  the axis.
 				Types:  depend on the dimensionality
 				1D Error based on stc:double1Type
 				2D Errors based on stc:size2Type, double2Type or double1Type (error 2 radius)
 				3D Errors based on stc:size3Type, double3TYpe or double1Type (error 3 radius)
-		          "
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset stc:CError as    "" ; // this is almost certainly wrong - check the intended subsetting....
+		          " 
+  {    
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset stc:CError as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        documentation: anyURIType  @?   as composition  "" ;
+        documentation: ivoa:anyURI @?  "" ;
   }
 abstract 
-        otype ErrorRefValue ->  stc:CError  "" 
+        otype ErrorRefValue   "" 
         {
         
         }
@@ -275,24 +243,28 @@ otype ErrorBoundsType  " Hi and Low values of statistical errors on this axis.
 			Type: stc:coordScalarInterval, 2DVecInterval or 3DVecInterval
 	                "
   {   
-        subset cha:ErrorLimits as    "" ; // this is almost certainly wrong - check the intended subsetting....
+  	
+//FIXME  	        subset characterisation:ErrorLimits as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        documentation: anyURIType  @?   as composition  "  A description of the error extreme values .	
+        documentation: ivoa:anyURI @?  "  A description of the error extreme values .	
 							   Type: any URI type 
                                         ";
   }
+  abstract dtype ErrorLimits {
+  	
+  }
 
-        otype ErrorLimits1 ->  cha:ErrorLimits  "" 
+        dtype ErrorLimits1 ->  characterisation:ErrorLimits  "" 
         {
         
         }
     
-        otype ErrorLimits2 ->  cha:ErrorLimits  "" 
+        dtype ErrorLimits2 ->  characterisation:ErrorLimits  "" 
         {
         
         }
     
-        otype ErrorLimits3 ->  cha:ErrorLimits  "" 
+        dtype ErrorLimits3 ->  characterisation:ErrorLimits  "" 
         {
         
         }
@@ -302,10 +274,10 @@ otype ErrorVariabilityType  "A detailed description of the local error values. C
 			Type: any URI type pointing to such a map
 	"
   {   
-        ErrorMap: anyURIType   as composition  "A map showing the variability of the error
+        ErrorMap: ivoa:anyURI  "A map showing the variability of the error
                                                     Type: any URI type
                                         ";
-        documentation: anyURIType  @?   as composition  "documentation on the Error variation
+        documentation: ivoa:anyURI @?  "documentation on the Error variation
                                               	Type: any URI type
                                         ";
   }
@@ -314,63 +286,58 @@ otype LocationType  "The typical coordinate value
 	                       Type:  stc:astroCoordsType
 	                "
   {   
-        unit: xsd:anyType  @?   "Redefinition of unit";
-        coordsystem: stc:astroCoordSystemType  @?   "Redefinition of coordsystem";
-        coord: stc:astroCoordsType  @+   "" ;
-        documentation: anyURIType  @?   as composition  "The typical coordinate value
+        unit: ivoa:string  @?   "Redefinition of unit";
+        coordsystem @? references coords:AstroCoordSystem   "Redefinition of coordsystem";
+        coord: coords:Point  @+   "" ;
+        documentation: ivoa:anyURI @?  "The typical coordinate value
 					Type: stc:astroCoordsType
 				";
   }
 
 otype BoundsType  "" 
   {   
-        unit: xsd:anyType  @?   "for bounds unit redefinition";
-        coordsystem: stc:astroCoordSystemType  @?   "for bounds coosys redefinition";
-        Extent: stc:double1Type  @?   "" ;
+        unit: ivoa:string  @?   "for bounds unit redefinition";
+        coordsystem @? references coords:AstroCoordSystem   "for bounds coosys redefinition";
+        Extent: ivoa:real  @?   "" ;
         limits: CharCoordAreaType   as composition  "
                                            The actual values defining the bounds.
-                                           2 possible types : a cha:CharBox which is a customised  STC:Coordinate with mandatory value and size 
+                                           2 possible types : a characterisation:CharBox which is a customised  STC:Coordinate with mandatory value and size 
                                                                or an STC:Interval
 			                ";
-        documentation: anyURIType  @?   as composition  "
+        documentation: ivoa:anyURI @?  "
 						A document to mention how the bounds are defined.
 					";
   }
 
 otype SupportType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        Extent: stc:double1Type  @?   "" ;
-        Area: stc:astroCoordAreaType   "
-			 			Defines the effective covered region	
-			 		";
-        AreaType: xsd:anyType   "
-						Gives the name of the region shape
-						Type:  predefined string in {Circle, Polygon, Box, ...}
-		 			";
-        documentation: anyURIType  @?   as composition  " Some text about the Support region definition
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        Extent: stc:double1Type  @?   "" ;
+//FIXME        Area: stc:astroCoordAreaType   "Defines the effective covered region";
+//FIXME        AreaType: xsd:anyType   "Gives the name of the region shape	Type:  predefined string in {Circle, Polygon, Box, ...}";
+        documentation: ivoa:anyURI @?  " Some text about the Support region definition
                                                 	Type: any URI type
                                         ";
   }
 
 otype SensitivityType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        variationMap: anyURIType   as composition  "encodes the variability of the response along the axis 
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+        variationMap: ivoa:anyURI  "encodes the variability of the response along the axis 
                          ";
-        documentation: anyURIType   as composition  " documents the purpose, type and encoding of sensitivity information
+        documentation: ivoa:anyURI  " documents the purpose, type and encoding of sensitivity information
                                              Type: URL 
                                         ";
   }
 
-otype CharCoordAreaType  -> stc:stcBaseType "" 
+otype CharCoordAreaType   "" 
   {   
         CharBox: CharCoordinateType   as composition  "" ;
-        subset cha:Interval as    "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset characterisation:Interval as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        coord_system_id: xsd:IDREF   "" ;
+        coord_system references coords:AstroCoordSystem   "" ;
   }
 
 abstract otype CharCoordinateType  " A coordinate type to define n-D bounding boxes. 
@@ -378,42 +345,33 @@ abstract otype CharCoordinateType  " A coordinate type to define n-D bounding bo
                "
   {   
         Name: ivoa:string   "" ;
-        subset stc:CoordValue as    "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset stc:CoordValue as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        subset stc:CSize as    "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset stc:CSize as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
   }
-abstract 
-        otype value ->  stc:CoordValue  "" 
-        {
-        
-        }
-    abstract 
-        otype size ->  stc:CSize  "" 
-        {
-        
-        }
-    
-                               Here is  1-, 2-, or 3-D coordinate interval substitution group head element.
+
+        abstract dtype Interval "Here is  1-, 2-, or 3-D coordinate interval substitution group head element.
                                Such an element needs to contain a minimum or maximum scalar or vector value,
                                or both. It needs to refer to a coordinate system. Boundaries may or may not
-                               be inclusive; and it can have a fill factor
-                        
-        otype CoordScalarInterval ->  cha:Interval  "
+                               be inclusive; and it can have a fill factor" {
+        	
+        }                
+        dtype CoordScalarInterval ->  characterisation:Interval  "
                              A scalar coordinate interval 
                         "
         {
         
         }
     
-        otype Coord2VecInterval ->  cha:Interval  "
+        dtype Coord2VecInterval ->  characterisation:Interval  "
                              A 2-D coordinate interval ('box')
                         "
         {
         
         }
     
-        otype Coord3VecInterval ->  cha:Interval  "
+        dtype Coord3VecInterval ->  characterisation:Interval  "
                              A 3-D coordinate triplet interval ('cube') 
                         "
         {
@@ -422,17 +380,17 @@ abstract
     
 otype ResolutionRefValType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset stc:CResolution as    "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset stc:CResolution as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        ResPow: stc:double1Type  @?   "" ;
-        documentation: anyURIType  @?   as composition  " Defines and explains how this reference value for resolution has been estimated
+        ResPow: ivoa:real  @?   "" ;
+        documentation: ivoa:anyURI @?  " Defines and explains how this reference value for resolution has been estimated
 				            Type: URL
                                 ";
   }
 abstract 
-        otype ReferenceValue ->  stc:CResolution  "
+        otype ReferenceValue  "
                           Typical resolution value along the axis
 	                  1D resolution of type stc:double1Type
                   	  2D resolution of type stc:size2Type, double4Type or double1Type (resolution radius)
@@ -444,32 +402,32 @@ abstract
     
 otype SamplingPrecisionRefValTyp  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset stc:CPixSize as    "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset stc:CPixSize as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        subset stc:CPixSize as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset stc:CPixSize as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
 
         FillFactor: ivoa:real  @?   "" ;
-        documentation: anyURIType  @?   as composition  "Explains how the fill factor is estimated . Type: URI
+        documentation: ivoa:anyURI @?  "Explains how the fill factor is estimated . Type: URI
 					";
   }
 
 otype SamplingPrecisionRefValType  -> SamplingPrecisionRefValTyp "" 
   {   // these should be subsets?
   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset cha:samplingPeriod as    "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset characterisation:samplingPeriod as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        subset cha:sampleExtent as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset characterisation:sampleExtent as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
 
         FillFactor: ivoa:real  @?   "" ;
-        documentation: anyURIType  @?   as composition  "Explains how the fill factor is estimated . Type: URI
+        documentation: ivoa:anyURI @?  "Explains how the fill factor is estimated . Type: URI
 					";
   }
 
-        otype samplingPeriod ->  stc:CPixSize  "
+        otype samplingPeriod "
                                 Typical sampling Period value of the axis
                                 Type : depends on the dimensionality
 				1D samplingPeriod based on  stc:double1Type
@@ -480,7 +438,7 @@ otype SamplingPrecisionRefValType  -> SamplingPrecisionRefValTyp ""
         
         }
     
-        otype sampleExtent ->  stc:CPixSize  "
+        otype sampleExtent   "
                                 Typical sample Extent value of the axis
                                 'Types : depend on the dimensionality'
 	                        1D sampleExtent based on stc:double1Type
@@ -493,94 +451,103 @@ otype SamplingPrecisionRefValType  -> SamplingPrecisionRefValTyp ""
     
 otype ResolutionBoundsType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset cha:resolutionLimits as    "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+        resolutionLimits : resolutionLimits    "" ; 
 
-        documentation: anyURIType  @?   as composition  " Defines and explains how this resolution has been estimated
+        documentation: ivoa:anyURI @?  " Defines and explains how this resolution has been estimated
                          ";
   }
-  Hi and Low values of  resolution on this axis.
+  
+	     abstract dtype resolutionLimits "Hi and Low values of  resolution on this axis.
                                			Type: stc:coordScalarInterval, or 2Vec or 3Vec
+	     " {
+	     	
+	     }
 	                
-        otype resolutionLimits1 ->  cha:resolutionLimits  "" 
+        dtype resolutionLimits1 ->  characterisation:resolutionLimits  "" 
         {
         
         }
     
-        otype resolutionLimits2 ->  cha:resolutionLimits  "" 
+        dtype resolutionLimits2 ->  characterisation:resolutionLimits  "" 
         {
         
         }
     
-        otype resolutionLimits3 ->  cha:resolutionLimits  "" 
+        dtype resolutionLimits3 ->  characterisation:resolutionLimits  "" 
         {
         
         }
     
 otype SamplingPrecisionBoundsType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset cha:samplingPeriodLimits as    "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset characterisation:samplingPeriodLimits as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        subset cha:samplingExtentLimits as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME        subset characterisation:samplingExtentLimits as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        documentation: anyURIType  @?   as composition  "" ;
+        documentation: ivoa:anyURI @?  "" ;
   }
- Hi and Low values of  samplingPeriod on this axis.
-	                        			   Type: stc:coordScalarInterval or 2Vec or 3Vec
-	                
-        otype samplingPeriodLimits1 ->  cha:samplingPeriodLimits  "" 
+
+	       
+	      abstract dtype samplingPeriodLimits " Hi and Low values of  samplingPeriod on this axis.
+	                        			   Type: stc:coordScalarInterval or 2Vec or 3Vec"   
+	                        			   {}      
+        dtype samplingPeriodLimits1 ->  characterisation:samplingPeriodLimits  "" 
         {
         
         }
     
-        otype samplingPeriodLimits2 ->  cha:samplingPeriodLimits  "" 
+        dtype samplingPeriodLimits2 ->  characterisation:samplingPeriodLimits  "" 
         {
         
         }
     
-        otype samplingPeriodLimits3 ->  cha:samplingPeriodLimits  "" 
+        dtype samplingPeriodLimits3 ->  characterisation:samplingPeriodLimits  "" 
         {
         
         }
     
-        otype samplingExtentLimits1 ->  cha:samplingExtentLimits  "" 
+         abstract dtype samplingExtentLimits ""{
+         	
+         }
+        dtype samplingExtentLimits1 ->  characterisation:samplingExtentLimits  "" 
         {
         
         }
     
-        otype samplingExtentLimits2 ->  cha:samplingExtentLimits  "" 
+        dtype samplingExtentLimits2 ->  characterisation:samplingExtentLimits  "" 
         {
         
         }
     
-        otype samplingExtentLimits3 ->  cha:samplingExtentLimits  "" 
+        dtype samplingExtentLimits3 ->  characterisation:samplingExtentLimits  "" 
         {
         
         }
     
 otype ResolutionSupportType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset cha:resolutionLimits as   @+   "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME         subset characterisation:resolutionLimits as   @+   "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        documentation: anyURIType  @?   as composition  " Defines and explains how this resolution has been estimated
+        documentation: ivoa:anyURI @?  " Defines and explains how this resolution has been estimated
                                                      Type: URL           
                                         ";
   }
 
 otype SamplingPrecisionSupportType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        subset cha:samplingPeriodLimits as   @+   "" ; // this is almost certainly wrong - check the intended subsetting....
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+//FIXME        subset characterisation:samplingPeriodLimits as   @+   "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        subset cha:samplingExtentLimits as   @*   "" ; // this is almost certainly wrong - check the intended subsetting....
+//FIXME         subset characterisation:samplingExtentLimits as   @*   "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        documentation: anyURIType  @?   as composition  " A place to hook some explanations about 'how' the Sampling was done and assessed.  
+        documentation: ivoa:anyURI @?  " A place to hook some explanations about 'how' the Sampling was done and assessed.  
                                         		Type: URI
 				";
   }
@@ -590,20 +557,20 @@ otype ResolutionVariabilityType  " This map describes the variability of the res
 	                     Type: URI
 	"
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        resolutionMap: anyURIType   as composition  "" ;
-        documentation: anyURIType  @?   as composition  " defines and explains how this resolution has been estimated
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+        resolutionMap: ivoa:anyURI  "" ;
+        documentation: ivoa:anyURI @?  " defines and explains how this resolution has been estimated
                                                	Type: URL
                                         ";
   }
 
 otype SamplingPrecisionVariabilityType  "" 
   {   
-        unit: xsd:anyType  @?   "" ;
-        coordsystem: stc:astroCoordSystemType  @?   "" ;
-        samplingPrecisionMap: anyURIType   as composition  "This map describes  the variability of the sampling along the axis, or the varying shape of the sampling 
+        unit: ivoa:string  @?   "" ;
+        coordsystem @? references coords:AstroCoordSystem   "" ;
+        samplingPrecisionMap: ivoa:anyURI  "This map describes  the variability of the sampling along the axis, or the varying shape of the sampling 
 			                        fonction, or both. Can be attached to the data implemented as anyURI type
 			                ";
-        documentation: anyURIType  @?   as composition  "" ;
+        documentation: ivoa:anyURI @?  "" ;
   }
