@@ -19,7 +19,7 @@
   <primitiveType>
     <vodml-id>Epoch</vodml-id>
     <name>Epoch</name>
-    <description>We define epoch as a primitive data type with the expected form "&lt;type&gt;&lt;year&gt;" where type = "J" or "B" for Julian or Besselian respectively, and year is expressed as a decimal year.  e.g.: "B1950", "J2000.0"</description>
+    <description>We define epoch as a primitive data type with the expected form "{type}{year}" where type = "J" or "B" for Julian or Besselian respectively, and year is expressed as a decimal year.  e.g.: "B1950", "J2000.0"</description>
   </primitiveType>
 
   <enumeration>
