@@ -16,4 +16,6 @@ gradle vodmlDoc
 ```
 which will create files in [doc/generated](doc/generated)
 
+If you want an IDE for editing the vodsl look [here](https://github.com/ivoa/ProposalDM/wiki/Installing-the-Eclipse-VODSL-editor) for instructions.
+
 Fork, branch, play!
