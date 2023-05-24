@@ -115,7 +115,7 @@ abstract dtype ProductType  -> VocabularyTerm "this class defines constants for 
 abstract otype CaomEntity  "base entity class to support persistence;
                 entity attributes are generally set or updated by persistence implementations"
   {   
-        id: uuid   "globally unique identifier (primary key)";
+        id: uuid iskey  "globally unique identifier (primary key)";
         lastModified: ivoa:datetime  @?   "timestamp of last modification of this entity; the timestamp is intended to be applied
                     or updated when the entity is stored 
                     (e.g. in a database)";
