@@ -576,7 +576,7 @@ ignored  "
 }
 
 
-dtype DataType  "
+abstract dtype  DataType  "
             A type (in the computer language sense) associated with a 
             parameter with an arbitrary name
           
@@ -584,7 +584,7 @@ dtype DataType  "
             with a restricted set of names.
          "
   {   
-      value : ivoa:string "";
+      
   
         arraysize: ArrayShape   "
                      The shape of the array that constitutes the value.
@@ -651,18 +651,15 @@ dtype SimpleDataType  -> DataType "
          "
   {   
     val: SimpleDataType_enum "";
-        arraysize: ArrayShape   "See vs:DataType.";
-        delim: ivoa:string   "See vs:DataType.";
-        extendedType: ivoa:string   "See vs:DataType.";
-        extendedSchema: ivoa:anyURI   "See vs:DataType.";
+       
   }
 
-abstract dtype TableDataType  "
+abstract dtype TableDataType -> DataType "
             An abstract parent for a class of data types that can be
             used to specify the data type of a table column.
          "
   {   
-      value : DataType "";
+    
   
   }
 
@@ -671,18 +668,14 @@ dtype VOTableType  -> TableDataType "
          "
   {   
     val: VOTableType_enum "";
-        arraysize: ArrayShape   "See vs:DataType.";
-        delim: ivoa:string   "See vs:DataType.";
-        extendedType: ivoa:string   "See vs:DataType.";
-        extendedSchema: ivoa:anyURI   "See vs:DataType.";
+       
   }
 
-abstract dtype TAPDataType  "
+abstract dtype TAPDataType -> TableDataType  "
             An abstract parent for the specific data types supported 
             by the Table Access Protocol.
          "
   {   
-      value : TableDataType "";
   
         size: ivoa:integer   "
                     The length of the fixed-length value
@@ -701,11 +694,7 @@ dtype TAPType  -> TAPDataType "
          "
   {   
     val: TAPType_enum "";
-        arraysize: ArrayShape   "" ;
-        delim: ivoa:string   "" ;
-        extendedType: ivoa:string   "" ;
-        extendedSchema: ivoa:anyURI   "" ;
-        size: ivoa:integer   "" ;
+       
   }
 
 // IMPL remove StandardSTC
