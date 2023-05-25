@@ -19,3 +19,8 @@ which will create files in [doc/generated](doc/generated)
 If you want an IDE for editing the vodsl look [here](https://github.com/ivoa/ProposalDM/wiki/Installing-the-Eclipse-VODSL-editor) for instructions.
 
 Fork, branch, play!
+
+This branch is dedicated to trying to express all of the DMs used in the VO
+including those in the interfaces.
+
+[Notes on the DataModels](DataModels.md)
