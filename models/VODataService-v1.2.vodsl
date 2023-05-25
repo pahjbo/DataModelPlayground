@@ -103,7 +103,7 @@ otype DataCollection  -> VOResource:Resource "
                      Each schema name must be
                      unique within a tableset.
                    ";
-        accessURL: VOResource:AccessURL  @?   "
+        accessURL: VOResource:AccessURL  @? as composition  "
                      The URL that can be used to download the data contained in 
                      this data collection.
                    ";

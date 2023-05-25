@@ -15,7 +15,7 @@
       <uri/>
       <title>TBD</title>
       <version>1.1</version>
-      <lastModified>2023-05-14T16:32:31Z</lastModified>
+      <lastModified>2023-05-25T09:42:33Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -400,78 +400,6 @@
                                 </description>	    
               <datatype>
                  <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            </dataType>
-            <dataType>
-              <vodml-id>AccessURL</vodml-id>
-              <name>AccessURL</name>
-              <description></description>	    
-            <attribute>
-              <vodml-id>AccessURL.value</vodml-id>
-              <name>value</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>AccessURL.use</vodml-id>
-              <name>use</name>
-              <description>
-                             A flag indicating whether this should be interpreted as a base
-                             URL, a full URL, or a URL to a directory that will produce a 
-                             listing of files.
-                            
-                             The default value assumed when one is not given depends on the 
-                             context.  
-                           </description>	    
-              <datatype>
-                 <vodml-ref>VOResource:AccessURL_use</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            </dataType>
-            <dataType>
-              <vodml-id>MirrorURL</vodml-id>
-              <name>MirrorURL</name>
-              <description>
-                          A URL of a mirror (i.e., a functionally identical additional 
-                          service interface) to 
-                       </description>	    
-            <attribute>
-              <vodml-id>MirrorURL.value</vodml-id>
-              <name>value</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>MirrorURL.title</vodml-id>
-              <name>title</name>
-              <description>
-                                A terse, human-readable phrase indicating the function
-                                or location of this mirror, e.g., “Primary Backup” or
-                                “European Mirror”.
-                             </description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
               </datatype>
               <multiplicity>
                 <minOccurs>1</minOccurs>
@@ -1348,57 +1276,6 @@
                           defined in the VODataService schema.
                         </description>	    
                <attribute>
-                 <vodml-id>Interface.accessURL</vodml-id>
-                 <name>accessURL</name>
-                 <description>
-                                  The URL (or base URL) that a client uses to access the
-                                  service.  How this URL is to be interpreted and used 
-                                  depends on the specific Interface subclass
-                                 
-                                  Although the schema allows multiple occurrences of
-                                  accessURL, multiple accessURLs are deprecated.  Each
-                                  interface should have exactly one access URL.  Where an
-                                  interface has several mirrors, the  accessURL should
-                                  reflect the “primary” (fastest, best-connected, 
-                                  best-maintained) site, the one that non-sophisticated
-                                  clients will go to.
-                 
-                                  Additional accessURLs should be put into mirrorURLs.
-                                  Advanced clients can retrieve the mirrorURLs and 
-                                  empirically determine interfaces closer to their 
-                                  network location.
-                                </description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:AccessURL</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>-1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
-                 <vodml-id>Interface.mirrorURL</vodml-id>
-                 <name>mirrorURL</name>
-                 <description>
-                                  A (base) URL of a mirror of this interface.  As with
-                                  accessURL, how this URL is to be interpreted and used 
-                                  depends on the specific Interface subclass
-                                 
-                                 This is intended exclusively for true mirrors, i.e.,
-                                 interfaces that are functionally identical to the
-                                 original interface and that are operated by the same 
-                                 publisher.  Other arrangements should be represented as
-                                 separate services linked by mirror-of relationships.
-                                </description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:MirrorURL</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>-1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
                  <vodml-id>Interface.testQueryString</vodml-id>
                  <name>testQueryString</name>
                  <description>
@@ -1465,6 +1342,57 @@
                  </multiplicity>
                </attribute>
                <composition>
+                 <vodml-id>Interface.accessURL</vodml-id>
+                 <name>accessURL</name>
+                 <description>
+                                  The URL (or base URL) that a client uses to access the
+                                  service.  How this URL is to be interpreted and used 
+                                  depends on the specific Interface subclass
+                                 
+                                  Although the schema allows multiple occurrences of
+                                  accessURL, multiple accessURLs are deprecated.  Each
+                                  interface should have exactly one access URL.  Where an
+                                  interface has several mirrors, the  accessURL should
+                                  reflect the “primary” (fastest, best-connected, 
+                                  best-maintained) site, the one that non-sophisticated
+                                  clients will go to.
+                 
+                                  Additional accessURLs should be put into mirrorURLs.
+                                  Advanced clients can retrieve the mirrorURLs and 
+                                  empirically determine interfaces closer to their 
+                                  network location.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:AccessURL</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>Interface.mirrorURL</vodml-id>
+                 <name>mirrorURL</name>
+                 <description>
+                                  A (base) URL of a mirror of this interface.  As with
+                                  accessURL, how this URL is to be interpreted and used 
+                                  depends on the specific Interface subclass
+                                 
+                                 This is intended exclusively for true mirrors, i.e.,
+                                 interfaces that are functionally identical to the
+                                 original interface and that are operated by the same 
+                                 publisher.  Other arrangements should be represented as
+                                 separate services linked by mirror-of relationships.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:MirrorURL</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
                  <vodml-id>Interface.securityMethod</vodml-id>
                  <name>securityMethod</name>
                  <description>
@@ -1483,6 +1411,78 @@
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </composition>
+            </objectType>
+            <objectType>
+               <vodml-id>AccessURL</vodml-id>
+               <name>AccessURL</name>
+               <description></description>	    
+               <attribute>
+                 <vodml-id>AccessURL.value</vodml-id>
+                 <name>value</name>
+                 <description></description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:anyURI</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>AccessURL.use</vodml-id>
+                 <name>use</name>
+                 <description>
+                                A flag indicating whether this should be interpreted as a base
+                                URL, a full URL, or a URL to a directory that will produce a 
+                                listing of files.
+                               
+                                The default value assumed when one is not given depends on the 
+                                context.  
+                              </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:AccessURL_use</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+            <objectType>
+               <vodml-id>MirrorURL</vodml-id>
+               <name>MirrorURL</name>
+               <description>
+                           A URL of a mirror (i.e., a functionally identical additional 
+                           service interface) to 
+                        </description>	    
+               <attribute>
+                 <vodml-id>MirrorURL.value</vodml-id>
+                 <name>value</name>
+                 <description></description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:anyURI</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>MirrorURL.title</vodml-id>
+                 <name>title</name>
+                 <description>
+                                   A terse, human-readable phrase indicating the function
+                                   or location of this mirror, e.g., “Primary Backup” or
+                                   “European Mirror”.
+                                </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
             </objectType>
             <objectType>
                <vodml-id>SecurityMethod</vodml-id>

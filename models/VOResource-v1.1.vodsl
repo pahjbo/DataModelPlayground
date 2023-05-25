@@ -586,7 +586,7 @@ abstract otype Interface  "
            defined in the VODataService schema.
          "
   {   
-        accessURL: AccessURL  @+   "
+        accessURL: AccessURL  @+ as composition  "
                  The URL (or base URL) that a client uses to access the
                  service.  How this URL is to be interpreted and used 
                  depends on the specific Interface subclass
@@ -604,7 +604,7 @@ abstract otype Interface  "
                  empirically determine interfaces closer to their 
                  network location.
                ";
-        mirrorURL: MirrorURL  @*   "
+        mirrorURL: MirrorURL  @*  as composition  "
                  A (base) URL of a mirror of this interface.  As with
                  accessURL, how this URL is to be interpreted and used 
                  depends on the specific Interface subclass
@@ -658,7 +658,7 @@ abstract otype Interface  "
             ";
   }
 
-dtype AccessURL  "" 
+otype AccessURL  "" 
   {   
       value : ivoa:anyURI "";
   
@@ -672,7 +672,7 @@ dtype AccessURL  ""
              ";
   }
 
-dtype MirrorURL  "
+otype MirrorURL  "
             A URL of a mirror (i.e., a functionally identical additional 
             service interface) to 
          "

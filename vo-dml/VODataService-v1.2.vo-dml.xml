@@ -11,7 +11,7 @@
       <uri/>
       <title>TBD</title>
       <version>1.2</version>
-      <lastModified>2023-05-14T16:37:17Z</lastModified>
+      <lastModified>2023-05-24T19:52:28Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -383,7 +383,7 @@
               </multiplicity>
             </attribute>
             </dataType>
-            <dataType>
+            <dataType abstract='true'>
               <vodml-id>DataType</vodml-id>
               <name>DataType</name>
               <description>
@@ -393,18 +393,6 @@
                           This XML type is used as a parent for defining data types
                           with a restricted set of names.
                        </description>	    
-            <attribute>
-              <vodml-id>DataType.value</vodml-id>
-              <name>value</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
             <attribute>
               <vodml-id>DataType.arraysize</vodml-id>
               <name>arraysize</name>
@@ -521,54 +509,6 @@
                 <maxOccurs>1</maxOccurs>
               </multiplicity>
             </attribute>
-            <attribute>
-              <vodml-id>SimpleDataType.arraysize</vodml-id>
-              <name>arraysize</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>SimpleDataType.delim</vodml-id>
-              <name>delim</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>SimpleDataType.extendedType</vodml-id>
-              <name>extendedType</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>SimpleDataType.extendedSchema</vodml-id>
-              <name>extendedSchema</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
             </dataType>
             <dataType abstract='true'>
               <vodml-id>TableDataType</vodml-id>
@@ -577,18 +517,9 @@
                           An abstract parent for a class of data types that can be
                           used to specify the data type of a table column.
                        </description>	    
-            <attribute>
-              <vodml-id>TableDataType.value</vodml-id>
-              <name>value</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>VODataService:DataType</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
+               <extends>
+                  <vodml-ref>VODataService:DataType</vodml-ref>
+               </extends>
             </dataType>
             <dataType>
               <vodml-id>VOTableType</vodml-id>
@@ -611,54 +542,6 @@
                 <maxOccurs>1</maxOccurs>
               </multiplicity>
             </attribute>
-            <attribute>
-              <vodml-id>VOTableType.arraysize</vodml-id>
-              <name>arraysize</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>VOTableType.delim</vodml-id>
-              <name>delim</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>VOTableType.extendedType</vodml-id>
-              <name>extendedType</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>VOTableType.extendedSchema</vodml-id>
-              <name>extendedSchema</name>
-              <description>See vs:DataType.</description>	    
-              <datatype>
-                 <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
             </dataType>
             <dataType abstract='true'>
               <vodml-id>TAPDataType</vodml-id>
@@ -667,18 +550,9 @@
                           An abstract parent for the specific data types supported 
                           by the Table Access Protocol.
                        </description>	    
-            <attribute>
-              <vodml-id>TAPDataType.value</vodml-id>
-              <name>value</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>VODataService:TableDataType</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
+               <extends>
+                  <vodml-ref>VODataService:TableDataType</vodml-ref>
+               </extends>
             <attribute>
               <vodml-id>TAPDataType.size</vodml-id>
               <name>size</name>
@@ -716,66 +590,6 @@
               <description></description>	    
               <datatype>
                  <vodml-ref>VODataService:TAPType_enum</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>TAPType.arraysize</vodml-id>
-              <name>arraysize</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>VODataService:ArrayShape</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>TAPType.delim</vodml-id>
-              <name>delim</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>TAPType.extendedType</vodml-id>
-              <name>extendedType</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:string</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>TAPType.extendedSchema</vodml-id>
-              <name>extendedSchema</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:anyURI</vodml-ref>
-              </datatype>
-              <multiplicity>
-                <minOccurs>1</minOccurs>
-                <maxOccurs>1</maxOccurs>
-              </multiplicity>
-            </attribute>
-            <attribute>
-              <vodml-id>TAPType.size</vodml-id>
-              <name>size</name>
-              <description></description>	    
-              <datatype>
-                 <vodml-ref>ivoa:integer</vodml-ref>
               </datatype>
               <multiplicity>
                 <minOccurs>1</minOccurs>
@@ -868,21 +682,6 @@
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
                </attribute>
-               <attribute>
-                 <vodml-id>DataCollection.accessURL</vodml-id>
-                 <name>accessURL</name>
-                 <description>
-                                      The URL that can be used to download the data contained in 
-                                      this data collection.
-                                    </description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:AccessURL</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
                <composition>
                  <vodml-id>DataCollection.coverage</vodml-id>
                  <name>coverage</name>
@@ -910,6 +709,21 @@
                                     </description>	    
                  <datatype>
                     <vodml-ref>VODataService:TableSet</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </composition>
+               <composition>
+                 <vodml-id>DataCollection.accessURL</vodml-id>
+                 <name>accessURL</name>
+                 <description>
+                                      The URL that can be used to download the data contained in 
+                                      this data collection.
+                                    </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:AccessURL</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
