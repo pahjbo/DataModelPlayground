@@ -9,7 +9,7 @@
       <title>TBD</title>
       <author>Patrick Dowler, Canadian Astronomy Data Centre</author>
       <version>2.4</version>
-      <lastModified>2023-05-15T07:26:56Z</lastModified>
+      <lastModified>2023-05-23T20:30:41Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -367,6 +367,9 @@
                    <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
+                 <constraint xsi:type="vo-dml:NaturalKey">
+                 	<position>1</position>
+                 </constraint>
                </attribute>
                <attribute>
                  <vodml-id>CaomEntity.lastModified</vodml-id>
