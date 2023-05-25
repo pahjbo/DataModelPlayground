@@ -94,7 +94,7 @@ otype SamplingPrecisionType  ""
         samplingPrecisionVariability: SamplingPrecisionVariabilityType  @?   as composition  "" ;
   }
 
-otype CharacterisationAxisType  "" 
+abstract otype CharacterisationAxisType  "" 
   {   
         axisName: ivoa:string   "
 	                   A name representing the physical nature of the axis like Spatial, Spectral, Time, Velocity or any other free name for an axis
@@ -202,11 +202,7 @@ otype StatErrorType  -> ErrorType "Statistical Error on the axis
 	"
   {   // these should be subsets?
   //<"flavor=statistical as Natural>
-        ErrorRefVal: ErrorRefValType   as composition  "Typical statistical Error on the axis";
-        ErrorBounds: ErrorBoundsType  @?   as composition  "Range of the error for mapping along this axis ";
-        ErrorVariability: ErrorVariabilityType  @?   as composition  "
-                              A detailed description of the local error values
-                            ";
+      
   }
 
 otype SysErrorType  -> ErrorType "
@@ -214,9 +210,7 @@ otype SysErrorType  -> ErrorType "
 	                "
   {   // these should be subsets?
   //<"flavor=systematic as Natural>
-        ErrorRefVal: ErrorRefValType   as composition  "" ;
-        ErrorBounds: ErrorBoundsType  @?   as composition  "" ;
-        ErrorVariability: ErrorVariabilityType  @?   as composition  "" ;
+
   }
 
 otype ErrorRefValType  "
@@ -416,15 +410,11 @@ otype SamplingPrecisionRefValTyp  ""
 otype SamplingPrecisionRefValType  -> SamplingPrecisionRefValTyp "" 
   {   // these should be subsets?
   
-        unit: ivoa:string  @?   "" ;
-        coordsystem @? references coords:AstroCoordSystem   "" ;
 //FIXME        subset characterisation:samplingPeriod as    "" ; // this is almost certainly wrong - check the intended subsetting....
 
 //FIXME        subset characterisation:sampleExtent as   @?   "" ; // this is almost certainly wrong - check the intended subsetting....
 
-        FillFactor: ivoa:real  @?   "" ;
-        documentation: ivoa:anyURI @?  "Explains how the fill factor is estimated . Type: URI
-					";
+
   }
 
         otype samplingPeriod "

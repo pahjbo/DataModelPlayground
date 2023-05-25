@@ -8,7 +8,7 @@
       <uri/>
       <title>TBD</title>
       <version>1.11</version>
-      <lastModified>2023-05-15T10:33:12Z</lastModified>
+      <lastModified>2023-05-25T16:44:16Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -567,7 +567,7 @@
                  </multiplicity>
                </reference>
             </objectType>
-            <objectType>
+            <objectType abstract='true'>
                <vodml-id>CharacterisationAxisType</vodml-id>
                <name>CharacterisationAxisType</name>
                <description></description>	    
@@ -943,44 +943,6 @@
                <extends>
                   <vodml-ref>characterisation:ErrorType</vodml-ref>
                </extends>
-               <composition>
-                 <vodml-id>StatErrorType.ErrorRefVal</vodml-id>
-                 <name>ErrorRefVal</name>
-                 <description>Typical statistical Error on the axis</description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorRefValType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
-               <composition>
-                 <vodml-id>StatErrorType.ErrorBounds</vodml-id>
-                 <name>ErrorBounds</name>
-                 <description>Range of the error for mapping along this axis </description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorBoundsType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
-               <composition>
-                 <vodml-id>StatErrorType.ErrorVariability</vodml-id>
-                 <name>ErrorVariability</name>
-                 <description>
-                                               A detailed description of the local error values
-                                             </description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorVariabilityType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
             </objectType>
             <objectType>
                <vodml-id>SysErrorType</vodml-id>
@@ -991,42 +953,6 @@
                <extends>
                   <vodml-ref>characterisation:ErrorType</vodml-ref>
                </extends>
-               <composition>
-                 <vodml-id>SysErrorType.ErrorRefVal</vodml-id>
-                 <name>ErrorRefVal</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorRefValType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
-               <composition>
-                 <vodml-id>SysErrorType.ErrorBounds</vodml-id>
-                 <name>ErrorBounds</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorBoundsType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
-               <composition>
-                 <vodml-id>SysErrorType.ErrorVariability</vodml-id>
-                 <name>ErrorVariability</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>characterisation:ErrorVariabilityType</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </composition>
             </objectType>
             <objectType>
                <vodml-id>ErrorRefValType</vodml-id>
@@ -1538,55 +1464,6 @@
                <extends>
                   <vodml-ref>characterisation:SamplingPrecisionRefValTyp</vodml-ref>
                </extends>
-               <attribute>
-                 <vodml-id>SamplingPrecisionRefValType.unit</vodml-id>
-                 <name>unit</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
-                 <vodml-id>SamplingPrecisionRefValType.FillFactor</vodml-id>
-                 <name>FillFactor</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:real</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
-                 <vodml-id>SamplingPrecisionRefValType.documentation</vodml-id>
-                 <name>documentation</name>
-                 <description>Explains how the fill factor is estimated . Type: URI
-                 					</description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:anyURI</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <reference>
-                 <vodml-id>SamplingPrecisionRefValType.coordsystem</vodml-id>
-                 <name>coordsystem</name>
-                 <description></description>	    
-                 <datatype>
-                   <vodml-ref>coords:AstroCoordSystem</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </reference>
             </objectType>
             <objectType>
                <vodml-id>samplingPeriod</vodml-id>
