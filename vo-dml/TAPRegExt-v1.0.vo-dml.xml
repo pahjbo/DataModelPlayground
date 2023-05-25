@@ -10,7 +10,7 @@
       <uri/>
       <title>TBD</title>
       <version>1.0</version>
-      <lastModified>2023-05-15T06:06:51Z</lastModified>
+      <lastModified>2023-05-24T18:59:32Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -162,54 +162,6 @@
                <extends>
                   <vodml-ref>VOResource:Capability</vodml-ref>
                </extends>
-               <attribute>
-                 <vodml-id>TAPCapRestriction.validationLevel</vodml-id>
-                 <name>validationLevel</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:Validation</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>-1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
-                 <vodml-id>TAPCapRestriction.description</vodml-id>
-                 <name>description</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>ivoa:string</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <attribute>
-                 <vodml-id>TAPCapRestriction.standardID</vodml-id>
-                 <name>standardID</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:IdentifierURI</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>1</minOccurs>
-                   <maxOccurs>1</maxOccurs>
-                 </multiplicity>
-               </attribute>
-               <composition>
-                 <vodml-id>TAPCapRestriction.interface</vodml-id>
-                 <name>interface</name>
-                 <description></description>	    
-                 <datatype>
-                    <vodml-ref>VOResource:Interface</vodml-ref>
-                 </datatype>
-                 <multiplicity>
-                   <minOccurs>0</minOccurs>
-                   <maxOccurs>-1</maxOccurs>
-                 </multiplicity>
-               </composition>
             </objectType>
             <objectType>
                <vodml-id>TableAccess</vodml-id>

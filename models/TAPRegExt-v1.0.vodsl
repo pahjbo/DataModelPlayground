@@ -21,11 +21,6 @@ abstract otype TAPCapRestriction  -> VOResource:Capability "
       See VOResource:Capability for documentation on inherited children.
       "
   {   // these should be subsets?
-  
-        validationLevel: VOResource:Validation  @*   "" ;
-        description: ivoa:string  @?   "" ;
-        interface:  VOResource:Interface  @* as composition "" ;
-        standardID: VOResource:IdentifierURI   "" ;
   }
 
 otype TableAccess  -> TAPCapRestriction "
