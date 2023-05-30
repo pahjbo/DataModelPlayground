@@ -1,0 +1,22 @@
+model DALIParameters(1.0) "DALI parameter definitions"
+
+    include "IVOA-v1.0.vodsl"
+    
+    //note vodsl cannot deal with 
+    
+    
+    
+    abstract otype DaliBaseParams {
+    	
+    	//IMPL - not easy to express this parameters that end up a comma separated list in the interface.
+    	UPLOAD: DALIParameters:UPLOAD @? "upload name, URL pair"; //https://www.ivoa.net/documents/DALI/20170517/REC-DALI-1.1.html#tth_sEc3.4.5
+    	
+    	RUNID: ivoa:string @? "client side identifier";//https://www.ivoa.net/documents/DALI/20170517/REC-DALI-1.1.html#tth_sEc3.4.6
+   
+      //IMPL - no responseformat - to be done http headers - note also only application/x-votable+xml	 to return votable, - text/xml to return XML as object model....
+   
+    }
+    
+    dtype UPLOAD {
+    	val: ivoa:string @[2] "upload name, URL pair";
+    }

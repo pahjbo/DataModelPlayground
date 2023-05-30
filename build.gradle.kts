@@ -14,8 +14,13 @@ version = "0.1-SNAPSHOT"
 vodml {
     vodmlDir.set(file("vo-dml"))
     vodslDir.set(file("models"))
-//    vodmlFiles.setFrom(files (vodmlDir.file("Characterization.vo-dml.xml"), vodmlDir.file("IVOA-v1.0.vo-dml.xml"), vodmlDir.file("Coords-v1.0.vo-dml.xml"))) // if you want to operate on single model
-    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("*.vodml-binding.xml"))))
+    vodmlFiles.setFrom(files (vodmlDir.asFileTree.matching(PatternSet().include("*.vo-dml.xml").exclude("Provenance*")))) // provenance breaks the "no aggregation" rules too often...
+    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("*.vodml-binding.xml").exclude("Provenance*"))))
+
+//    vodmlFiles.setFrom(files (vodmlDir.file("Provenance.vo-dml.xml"), vodmlDir.file("IVOA-v1.0.vo-dml.xml"))) // if you want to operate on single model
+//    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("Prov*.vodml-binding.xml")),vodmlDir.file("ivoa_base.vodml-binding.xml")))
+
+
     outputDocDir.set(layout.projectDirectory.dir("doc/generated"))
 }
 /* uncomment below to run the generation of vodml from vodsl automatically */

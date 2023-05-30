@@ -1,0 +1,30 @@
+
+model VOSIAvail (1.0) 
+	   "
+       A schema for formatting availability metadata as returned by an
+       availability resource defined in the IVOA Support Interfaces 
+       specification (VOSI). 
+       See http://www.ivoa.net/Documents/latest/VOSI.html.  
+     "
+      include "IVOA-v1.0.vodsl"
+     
+otype Availability  "" 
+  {   
+        available: ivoa:boolean   "
+             Indicates whether the service is currently available.
+           ";
+        upSince: ivoa:datetime  @?   "
+            The instant at which the service last became available.
+          ";
+        downAt: ivoa:datetime  @?   "
+            The instant at which the service is next scheduled to become
+            unavailable.
+          ";
+        backAt: ivoa:datetime  @?   "
+            The instant at which the service is scheduled to become available 
+            again after a period of unavailability.
+          ";
+        note: ivoa:string  @*   "
+            A textual note concerning availability.
+          ";
+  }

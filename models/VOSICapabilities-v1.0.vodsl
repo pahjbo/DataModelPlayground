@@ -1,0 +1,23 @@
+
+model VOSIcap (1.0) 
+	   "
+       A schema for formatting service capabilities as returned by a 
+       capabilities resource, defined by the IVOA Support Interfaces 
+       specification (VOSI). 
+       See http://www.ivoa.net/Documents/latest/VOSI.html.  
+     "
+      include "VOResource-v1.1.vodsl"
+     
+otype capabilities " // might not be a necessary wrapper....
+         A listing of capabilities supported by a service
+       "
+    {
+       
+        capability: VOResource:Capability  @* as composition    "
+                  A capability supported by the service.  
+                 
+                  A protocol-specific capability is included by specifying a
+                  vr:Capability sub-type via an xsi:type attribute on this 
+                  element.
+                ";
+    }

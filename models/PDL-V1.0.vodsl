@@ -1,0 +1,276 @@
+
+model pdl (1.0) 
+	   " IVOA Description of the set of parameters for a service"
+      include "IVOA-v1.0.vodsl"
+     
+otype Service " The base service description. A
+            service in this context is simply some sort of process
+            that has input parameters and produces output parameters.
+         "
+    {
+       
+        ServiceId: ivoa:string   "The ivoa identifier for the service";
+        ServiceName: ivoa:string   "" ;
+        Description: ivoa:string   "" ;
+        Parameters: Parameters   as composition  "The list of all possible parameters both input and output parameters";
+        Inputs: ParameterGroup   as composition  "The input parameters for a service.";
+        Outputs: ParameterGroup   as composition  "The parameters output from a service.";
+    }
+
+otype Parameters  "The list of possible parameters both input and output."
+  {   
+        parameter: SingleParameter  @+   as composition  "" ;
+  }
+
+otype ParameterReference  "A reference to a parameter"
+  {   
+        ParameterName: ivoa:string   "The name of the parameter being referred to.";
+  }
+
+otype Description  "" 
+  {   
+        humanReadableDescription: ivoa:string   "" ;
+  }
+
+enum ParameterDependency  "The types that a parameter may have. 
+            Flag for saying if a parameter is required or optional   
+         "
+{
+required  "The parameter must be provided by user.",
+optional  "The parameter is optional."
+}
+
+
+enum ParameterType  "The types that a parameter may have. 
+            Note that the types are made more specific by using the UCD attribute of the parameter definition. 
+            In particular it is expected that a Parameter Model library would be able to recognise the more specific types associated with the following UCDs
+            pos - to provide a suitable widget for positionstime - to provide suitable widgets for times and durations"
+{
+boolean  "A representation of a boolean - e.g. true/false",
+string  "Data that can be interpreted as text.",
+integer  "" ,
+real  "" ,
+date  "" 
+}
+
+
+enum FunctionType  "" 
+{
+size  "" ,
+abs  "" ,
+sin  "" ,
+cos  "" ,
+tan  "" ,
+asin  "" ,
+acos  "" ,
+atan  "" ,
+exp  "" ,
+log  "" ,
+sum  "" ,
+product  "" 
+}
+
+
+enum OperationType  "" 
+{
+PLUS  "" ,
+MINUS  "" ,
+MULTIPLY  "" ,
+DIVIDE  "" ,
+SCALAR  "" 
+}
+
+
+otype SingleParameter  "" 
+  {   
+        Name: ivoa:string   "" ;
+        ParameterType: ParameterType   "" ;
+        UCD: ivoa:string  @?   "" ;
+        UType: ivoa:string  @?   "" ;
+        SkosConcept: ivoa:string  @?   "" ;
+        Unit: ivoa:string  @?   "" ;
+        Precision: Expression  @?   as composition  "" ;
+        Dimension: Expression   as composition  "" ;
+        dependency: ParameterDependency   "" ;
+  }
+
+otype ParameterGroup  "A logical grouping of parameters"
+  {   
+        Name: ivoa:string   "The name of the parameter group which can be used for display";
+        ParameterRef: ParameterReference  @*   as composition  "The list of parameters that are in the group";
+        ConstraintOnGroup: ConstraintOnGroup  @?   as composition  "The constraints on parameters in the group";
+        ParameterGroup: ParameterGroup  @*   as composition  "possibly nested parameter groups";
+        Active: WhenConditionalStatement  @?   as composition  "It the goup active? i.e. should it be displayed - The default is yes if there is no active element, otherwise it is the result of the evaluation of the When conditional statement.";
+  }
+
+otype ConstraintOnGroup  "The possible constraints on the parameters in a group"
+  {   
+        ConditionalStatement: ConditionalStatement  @*   as composition  "" ;
+  }
+
+abstract otype ConditionalStatement  "" 
+  {   
+        comment: ivoa:string   "" ;
+  }
+
+otype IfThenConditionalStatement  -> ConditionalStatement "" 
+  {   
+        if_: If   as composition  "" ;
+        then_: Then   as composition  "" ;
+  }
+
+otype AlwaysConditionalStatement  -> ConditionalStatement "" 
+  {   
+        always: Always   as composition  "" ;
+  }
+
+otype WhenConditionalStatement  -> ConditionalStatement "
+            A statement that has only a True or a False value
+         "
+  {   
+        when_: When   as composition  "" ;
+  }
+
+abstract otype LogicalConnector  "" 
+  {   
+        Criterion: AbstractCriterion   as composition  "" ;
+  }
+
+otype And  -> LogicalConnector "" 
+  {   
+  }
+
+otype Or  -> LogicalConnector "" 
+  {   
+  }
+
+abstract otype ConditionalClause  "" 
+  {   
+        Criterion: AbstractCriterion   as composition  "" ;
+  }
+
+otype Always  -> ConditionalClause "" 
+  {   
+  }
+
+otype If  -> ConditionalClause "" 
+  {   
+  }
+
+otype Then  -> ConditionalClause "" 
+  {   
+  }
+
+otype When  -> ConditionalClause "" 
+  {   
+  }
+
+abstract otype AbstractCondition  "" 
+  {   
+  }
+
+otype IsNull  -> AbstractCondition "" 
+  {   
+  }
+
+otype IsInteger  -> AbstractCondition "" 
+  {   
+  }
+
+otype IsReal  -> AbstractCondition "" 
+  {   
+  }
+
+otype BelongToSet  -> AbstractCondition "The value must belong to a set"
+  {   
+        Value: Expression  @+   as composition  "" ;
+  }
+
+otype ValueLargerThan  -> AbstractCondition "" 
+  {   
+        Value: Expression   as composition  "" ;
+        reached: ivoa:boolean   "" ;
+  }
+
+otype ValueSmallerThan  -> AbstractCondition "" 
+  {   
+        Value: Expression   as composition  "" ;
+        reached: ivoa:boolean   "" ;
+  }
+
+otype ValueInRange  -> AbstractCondition "" 
+  {   
+        Sup: ValueSmallerThan   as composition  "" ;
+        Inf: ValueLargerThan   as composition  "" ;
+  }
+
+otype ValueDifferentFrom  -> AbstractCondition "" 
+  {   
+        Value: Expression   as composition  "" ;
+  }
+
+otype DefaultValue  -> AbstractCondition "" 
+  {   
+        Value: Expression   as composition  "" ;
+  }
+
+abstract otype AbstractCriterion  "" 
+  {   
+        Expression: Expression   as composition  "" ;
+        ConditionType: AbstractCondition   as composition  "" ;
+        LogicalConnector: LogicalConnector  @?   as composition  "" ;
+  }
+
+otype Criterion  -> AbstractCriterion "" 
+  {   
+  }
+
+otype ParenthesisCriterion  -> AbstractCriterion "" 
+  {   
+        ExternalLogicalConnector: LogicalConnector  @?   as composition  "" ;
+  }
+
+otype Function  -> Expression "" 
+  {   
+        expression: Expression   as composition  "" ;
+        functionName: FunctionType   "" ;
+  }
+
+otype Operation  "" 
+  {   
+        expression: Expression   as composition  "" ;
+        operationType: OperationType   "" ;
+  }
+
+abstract otype Expression  "" 
+  {   
+  }
+
+otype ParenthesisContent  -> Expression "" 
+  {   
+        expression: Expression   as composition  "" ;
+        power: Expression  @?   as composition  "" ;
+        Operation: Operation  @?   as composition  "" ;
+  }
+
+otype AtomicParameterExpression  -> Expression "" 
+  {   
+        parameterRef: ParameterReference   as composition  "" ;
+        power: Expression  @?   as composition  "" ;
+        Operation: Operation  @?   as composition  "" ;
+  }
+
+otype AtomicConstantExpression  -> Expression "" 
+  {   
+        Constant: ivoa:string  @+   "" ;
+        power: Expression  @?   as composition  "" ;
+        Operation: Operation  @?   as composition  "" ;
+        ConstantType: ParameterType   "" ;
+  }
+
+otype FunctionExpression  -> Expression "" 
+  {   
+        Function: Function   as composition  "" ;
+        Power: Expression  @?   as composition  "" ;
+        Operation: Operation  @?   as composition  "" ;
+  }

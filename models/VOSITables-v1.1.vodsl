@@ -1,0 +1,23 @@
+
+model VOSITables (1.1) 
+	   "
+       A schema for formatting table metadata as returned by a 
+       tables resource, defined by the IVOA Support Interfaces 
+       specification (VOSI). 
+       See http://www.ivoa.net/Documents/latest/VOSI.html.  
+     "
+      include "VODataService-v1.2.vodsl"
+     
+     otype tableset -> VODataService:TableSet "  A description of the table metadata supported by the 
+         service associated with a VOSI-enabled resource."
+         {
+         	//TODO not sure if this is necessary... was in XML days but only because no elements in XSD
+         }
+      
+     otype atable -> VODataService:Table   
+         "A description of a single table supported by the
+         service associated with a VOSI-enabled resource."
+         {
+         	// TODO not sure if this is necessary...
+         }
+       

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.ivoa.net/xml/VODML/v1 https://www.ivoa.net/xml/VODML/vo-dml-v1.xsd" 
+              vodmlVersion="1.1">	<!-- file generated from VODSL - needs validatate against v1.1 of schema  --> 
+      <name>VOSIcap</name>
+      <description>
+             A schema for formatting service capabilities as returned by a 
+             capabilities resource, defined by the IVOA Support Interfaces 
+             specification (VOSI). 
+             See http://www.ivoa.net/Documents/latest/VOSI.html.  
+           </description> 
+      <uri/>
+      <title>TBD</title>
+      <version>1.0</version>
+      <lastModified>2023-05-16T15:13:42Z</lastModified>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>VOResource-v1.1.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+            <objectType>
+               <vodml-id>capabilities</vodml-id>
+               <name>capabilities</name>
+               <description> // might not be a necessary wrapper....
+                        A listing of capabilities supported by a service
+                      </description>	    
+               <composition>
+                 <vodml-id>capabilities.capability</vodml-id>
+                 <name>capability</name>
+                 <description>
+                                   A capability supported by the service.  
+                                  
+                                   A protocol-specific capability is included by specifying a
+                                   vr:Capability sub-type via an xsi:type attribute on this 
+                                   element.
+                                 </description>	    
+                 <datatype>
+                    <vodml-ref>VOResource:Capability</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </composition>
+            </objectType>
+</vo-dml:model>

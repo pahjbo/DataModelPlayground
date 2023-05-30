@@ -1,0 +1,24 @@
+<m:mappedModels xmlns:m="http://www.ivoa.net/xml/vodml-binding/v0.9.1">
+    <!-- ========================================
+    This binding covers all of the registry models
+     -->
+
+    <model>
+        <name>VOSIAvail</name>
+        <file>VOSIAvailability-v1.0.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.vosi.availability</java-package>
+        <xml-targetnamespace prefix="avail">http://ivoa.net/dm/models/vo-dml/experiment/vosi/avail</xml-targetnamespace>
+    </model>
+    <model>
+        <name>VOSIcap</name>
+        <file>VOSICapabilities-v1.0.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.vosi.capabilities</java-package>
+        <xml-targetnamespace prefix="cap">http://ivoa.net/dm/models/vo-dml/experiment/vosi/cap</xml-targetnamespace>
+    </model>
+    <model>
+        <name>VOSITables</name>
+        <file>VOSITables-v1.1.vo-dml.xml</file>
+        <java-package>org.ivoa.dm.vosi.tables</java-package>
+        <xml-targetnamespace prefix="table">http://ivoa.net/dm/models/vo-dml/experiment/vosi/table</xml-targetnamespace>
+    </model>
+</m:mappedModels>

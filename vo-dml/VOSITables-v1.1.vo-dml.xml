@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.ivoa.net/xml/VODML/v1 https://www.ivoa.net/xml/VODML/vo-dml-v1.xsd" 
+              vodmlVersion="1.1">	<!-- file generated from VODSL - needs validatate against v1.1 of schema  --> 
+      <name>VOSITables</name>
+      <description>
+             A schema for formatting table metadata as returned by a 
+             tables resource, defined by the IVOA Support Interfaces 
+             specification (VOSI). 
+             See http://www.ivoa.net/Documents/latest/VOSI.html.  
+           </description> 
+      <uri/>
+      <title>TBD</title>
+      <version>1.1</version>
+      <lastModified>2023-05-30T15:19:32Z</lastModified>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>VODataService-v1.2.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+            <objectType>
+               <vodml-id>tableset</vodml-id>
+               <name>tableset</name>
+               <description>  A description of the table metadata supported by the 
+                        service associated with a VOSI-enabled resource.</description>	    
+               <extends>
+                  <vodml-ref>VODataService:TableSet</vodml-ref>
+               </extends>
+            </objectType>
+            <objectType>
+               <vodml-id>atable</vodml-id>
+               <name>atable</name>
+               <description>A description of a single table supported by the
+                        service associated with a VOSI-enabled resource.</description>	    
+               <extends>
+                  <vodml-ref>VODataService:Table</vodml-ref>
+               </extends>
+            </objectType>
+</vo-dml:model>

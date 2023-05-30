@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vo-dml:model xmlns:vo-dml="http://www.ivoa.net/xml/VODML/v1" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://www.ivoa.net/xml/VODML/v1 https://www.ivoa.net/xml/VODML/vo-dml-v1.xsd" 
+              vodmlVersion="1.1">	<!-- file generated from VODSL - needs validatate against v1.1 of schema  --> 
+      <name>VOSIAvail</name>
+      <description>
+             A schema for formatting availability metadata as returned by an
+             availability resource defined in the IVOA Support Interfaces 
+             specification (VOSI). 
+             See http://www.ivoa.net/Documents/latest/VOSI.html.  
+           </description> 
+      <uri/>
+      <title>TBD</title>
+      <version>1.0</version>
+      <lastModified>2023-05-16T15:19:45Z</lastModified>
+      <import>
+        <name>null</name><!--should not be needed in modern vo-dml -->
+        <url>IVOA-v1.0.vo-dml.xml</url>
+        <documentationURL>not known</documentationURL>
+      </import>
+            <objectType>
+               <vodml-id>Availability</vodml-id>
+               <name>Availability</name>
+               <description></description>	    
+               <attribute>
+                 <vodml-id>Availability.available</vodml-id>
+                 <name>available</name>
+                 <description>
+                              Indicates whether the service is currently available.
+                            </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:boolean</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Availability.upSince</vodml-id>
+                 <name>upSince</name>
+                 <description>
+                             The instant at which the service last became available.
+                           </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:datetime</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Availability.downAt</vodml-id>
+                 <name>downAt</name>
+                 <description>
+                             The instant at which the service is next scheduled to become
+                             unavailable.
+                           </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:datetime</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Availability.backAt</vodml-id>
+                 <name>backAt</name>
+                 <description>
+                             The instant at which the service is scheduled to become available 
+                             again after a period of unavailability.
+                           </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:datetime</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+               <attribute>
+                 <vodml-id>Availability.note</vodml-id>
+                 <name>note</name>
+                 <description>
+                             A textual note concerning availability.
+                           </description>	    
+                 <datatype>
+                    <vodml-ref>ivoa:string</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>0</minOccurs>
+                   <maxOccurs>-1</maxOccurs>
+                 </multiplicity>
+               </attribute>
+            </objectType>
+</vo-dml:model>
