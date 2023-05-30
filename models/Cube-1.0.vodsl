@@ -74,17 +74,24 @@ abstract otype ImageAxis  -> DataAxis ""
 otype VirtualMeasure  -> meas:Measure ""
   {   
         result_type: ivoa:string   "";
-        source  @+  references meas:Measure "";
+        source : VirtualMeasureSource  @+ as composition   "";
         transform  references trans:Mapping "";
         result_frame  @?  references coords:CoordFrame "";
+  }
+  
+  otype VirtualMeasureSource { // introduced to obey the no-aggregation rule for vo-dml
+  	source references meas:Measure "";
   }
 
 otype VirtualImageAxis  -> ImageAxis ""
   {   
         result_type: ivoa:string   "";
-        source  @+  references ImageAxis "";
+        source: VirtualImageAxisSource  @+  as composition "";
         transform  references trans:Mapping "";
         result_frame  @?  references coords:CoordFrame "";
+  }
+  otype VirtualImageAxisSource {
+  	source  references ImageAxis "";
   }
 
 otype Mappings  ""

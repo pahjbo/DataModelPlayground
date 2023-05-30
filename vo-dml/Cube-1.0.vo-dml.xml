@@ -11,7 +11,7 @@
       <title>TBD</title>
       <author>Mark Cresitello-Dittmar, Doug Tody, Omar Laurino, Gerard Lemson, Markus Demleitner, and the IVOA Data Model Working Group</author>
       <version>1.0</version>
-      <lastModified>2023-05-15T15:41:51Z</lastModified>
+      <lastModified>2023-05-30T14:02:33Z</lastModified>
       <import>
         <name>null</name><!--should not be needed in modern vo-dml -->
         <url>IVOA-v1.0.vo-dml.xml</url>
@@ -288,18 +288,18 @@
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
-               <reference>
+               <composition>
                  <vodml-id>VirtualMeasure.source</vodml-id>
                  <name>source</name>
                  <description></description>	    
                  <datatype>
-                   <vodml-ref>meas:Measure</vodml-ref>
+                    <vodml-ref>cube:VirtualMeasureSource</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
-               </reference>
+               </composition>
                <reference>
                  <vodml-id>VirtualMeasure.transform</vodml-id>
                  <name>transform</name>
@@ -326,6 +326,23 @@
                </reference>
             </objectType>
             <objectType>
+               <vodml-id>VirtualMeasureSource</vodml-id>
+               <name>VirtualMeasureSource</name>
+               <description></description>	    
+               <reference>
+                 <vodml-id>VirtualMeasureSource.source</vodml-id>
+                 <name>source</name>
+                 <description></description>	    
+                 <datatype>
+                   <vodml-ref>meas:Measure</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </reference>
+            </objectType>
+            <objectType>
                <vodml-id>VirtualImageAxis</vodml-id>
                <name>VirtualImageAxis</name>
                <description></description>	    
@@ -344,18 +361,18 @@
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </attribute>
-               <reference>
+               <composition>
                  <vodml-id>VirtualImageAxis.source</vodml-id>
                  <name>source</name>
                  <description></description>	    
                  <datatype>
-                   <vodml-ref>cube:ImageAxis</vodml-ref>
+                    <vodml-ref>cube:VirtualImageAxisSource</vodml-ref>
                  </datatype>
                  <multiplicity>
                    <minOccurs>1</minOccurs>
                    <maxOccurs>-1</maxOccurs>
                  </multiplicity>
-               </reference>
+               </composition>
                <reference>
                  <vodml-id>VirtualImageAxis.transform</vodml-id>
                  <name>transform</name>
@@ -377,6 +394,23 @@
                  </datatype>
                  <multiplicity>
                    <minOccurs>0</minOccurs>
+                   <maxOccurs>1</maxOccurs>
+                 </multiplicity>
+               </reference>
+            </objectType>
+            <objectType>
+               <vodml-id>VirtualImageAxisSource</vodml-id>
+               <name>VirtualImageAxisSource</name>
+               <description></description>	    
+               <reference>
+                 <vodml-id>VirtualImageAxisSource.source</vodml-id>
+                 <name>source</name>
+                 <description></description>	    
+                 <datatype>
+                   <vodml-ref>cube:ImageAxis</vodml-ref>
+                 </datatype>
+                 <multiplicity>
+                   <minOccurs>1</minOccurs>
                    <maxOccurs>1</maxOccurs>
                  </multiplicity>
                </reference>
