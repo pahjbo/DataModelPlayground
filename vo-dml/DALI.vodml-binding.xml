@@ -15,10 +15,11 @@
         <java-package>org.ivoa.dm.uws</java-package>
         <xml-targetnamespace prefix="uws">http://ivoa.net/dm/models/vo-dml/experiment/uws</xml-targetnamespace>
     </model>
+    <!--
     <model>
         <name>pdl</name>
         <file>PDL-V1.0.vo-dml.xml</file>
         <java-package>org.ivoa.dm.pdl</java-package>
         <xml-targetnamespace prefix="pdl">http://ivoa.net/dm/models/vo-dml/experiment/pdl</xml-targetnamespace>
-    </model>
+    </model> -->
 </m:mappedModels>
