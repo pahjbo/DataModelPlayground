@@ -22,6 +22,6 @@ Characterisation
 
 The only machine-readable form of the data model is the [xml schema](https://www.ivoa.net/xml/Characterisation/Characterisation-v1.11.xsd). This schema is not structured in the same fashion as registry schema, and so the vodmlXsdToVodsl does not do such
 a good job of representing the model. The initial VODSL has required quite extensive editing 
-even to make it valid - however, this still will need some extra maual editing before it fully represents the original Characterisation model.
+even to make it valid - however, this still will need some extra manual editing before it fully represents the original Characterisation model.
 
 
