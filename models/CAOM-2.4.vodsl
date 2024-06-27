@@ -340,7 +340,7 @@ otype Proposal  "description of the science proposal or programme that initiated
         pi: ivoa:string  @?   "proper name of the principal investigator";
         project: ivoa:string  @?   "common name of the project this proposal belongs to; typically used for larger or
                     long-running projects that include mutliple proposals";
-        title: ivoa:string  @?   "title of the proposal";
+        ^title: ivoa:string  @?   "title of the proposal";
         keywords: ivoa:string  @*   "additional keywords that describe the science goals of the proposal; 
                     keywords cannot contain the pipe (|) character - it is reserved for use in persistence
                     systems (e.g. to store all keywords in a single column in a table)";

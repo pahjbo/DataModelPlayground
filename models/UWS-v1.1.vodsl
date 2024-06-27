@@ -1,5 +1,5 @@
 
-model uws (1.1) 
+model uws (1.1) "Universal Worker Service"
 	  
       include "IVOA-v1.0.vodsl"
      

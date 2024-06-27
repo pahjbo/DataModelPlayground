@@ -218,7 +218,7 @@ otype DataID  "The Data Identification object (DataID) stores the dataset identi
 	Much of the content of this object is assembled from various definitions in the IVAO Resource Metadata document.  Here, we provide a brief description of each field for easy reference, along with a notation of its mapping to the Resource Metadata document (RM:field), where the reader may find more detailed information.
 "
   {   
-        title: ivoa:string   "A free form string giving a title for the dataset.  (RM:Identity.Title)";
+        ^title: ivoa:string   "A free form string giving a title for the dataset.  (RM:Identity.Title)";
         datasetID: ivoa:anyURI  @?   "If the dataset is registered with an external 'global index service' such as ADS, the publisher may include that identifier here.  This provides a common, persistent identifier for the dataset, and possible access point to follow for information on publications and other related datasets.  Note: the same dataset published at more than one location would have different Curation.publisherDID values, but the same DataID.datasetID.  eg: 'ivo://ADS/Sa.CXO?obsid=1234', 'ivo://ADS/sh.hut#ngc4151_141'
 ";
         creatorDID: ivoa:anyURI  @?   "The dataset identifier assigned by the creator.  Here, the authority-id of the identifier must be that of the creator.  It is used to identify the original exposure of the dataset in an archive, and will remain static regardless of where the dataset is published.  The creator ID will not necessarily change even if the VO object in question is a cutout or is otherwise further processed.

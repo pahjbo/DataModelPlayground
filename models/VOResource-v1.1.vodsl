@@ -79,7 +79,7 @@ otype Resource  "
                   capability element (see the vr:Service complex
                   type).  
                ";
-        title: ivoa:string   "
+        ^title: ivoa:string   "
                   the full name given to the resource
                ";
         shortName: ShortName  @?   "
@@ -679,7 +679,7 @@ otype MirrorURL  "
   {   
       value : ivoa:anyURI "";
   
-        title: ivoa:string   "
+        ^title: ivoa:string   "
                   A terse, human-readable phrase indicating the function
                   or location of this mirror, e.g., “Primary Backup” or
                   “European Mirror”.

@@ -1,5 +1,5 @@
 
-model characterisation (1.11) 
+model characterisation (1.11) ""
 	  
 include "IVOA-v1.0.vodsl"
      
@@ -182,9 +182,9 @@ otype AccuracyType  ""
         quality: ivoa:string  @?   "A combination of flags attesting the data quality.
 					Type: String
 					";
-        statError: StatErrorType  @?   as composition  "" ;
+        statError: StatErrorType  @?   as composition  ""  ;
         sysError: SysErrorType  @?   as composition  "" ;
-        CustError: ErrorType  @?   as composition  "" ;
+        CustError: ErrorType  @?   as composition  ""  ;
   }
 
 otype ErrorType  "Some Error on the axis" 

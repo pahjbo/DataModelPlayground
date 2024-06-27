@@ -85,7 +85,7 @@ otype SingleParameter  ""
   {   
         Name: ivoa:string   "" ;
         ParameterType: ParameterType   "" ;
-        UCD: ivoa:string  @?   "" ;
+        ^UCD: ivoa:string  @?   "" ;
         UType: ivoa:string  @?   "" ;
         SkosConcept: ivoa:string  @?   "" ;
         Unit: ivoa:string  @?   "" ;
@@ -100,7 +100,7 @@ otype ParameterGroup  "A logical grouping of parameters"
         ParameterRef: ParameterReference  @*   as composition  "The list of parameters that are in the group";
         ConstraintOnGroup: ConstraintOnGroup  @?   as composition  "The constraints on parameters in the group";
         ParameterGroup: ParameterGroup  @*   as composition  "possibly nested parameter groups";
-        Active: WhenConditionalStatement  @?   as composition  "It the goup active? i.e. should it be displayed - The default is yes if there is no active element, otherwise it is the result of the evaluation of the When conditional statement.";
+        Active: WhenConditionalStatement  @?   as composition  "It the group active? i.e. should it be displayed - The default is yes if there is no active element, otherwise it is the result of the evaluation of the When conditional statement.";
   }
 
 otype ConstraintOnGroup  "The possible constraints on the parameters in a group"

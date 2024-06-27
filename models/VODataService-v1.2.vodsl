@@ -266,7 +266,7 @@ otype TableSchema  "
                this group, the name should be explicitly set to
                “default”.  
              ";
-        title: ivoa:string  @?   "
+        ^title: ivoa:string  @?   "
                   A descriptive, human-interpretable name for the group of 
                   tables.
                 
@@ -427,7 +427,7 @@ otype Table  ""
                   catalogue and schema qualifiers are delimited from the
                   table name with dots (.).  
                ";
-        title: ivoa:string  @?   "
+        ^title: ivoa:string  @?   "
                   A descriptive, human-interpretable name for the table.
                 
                   This is used for display purposes.  There is no requirement
