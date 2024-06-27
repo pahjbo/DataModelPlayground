@@ -1,0 +1,38 @@
+
+
+            {
+            "VODataService model": [
+            {
+            "Overview": "generated/VODataService-v1.2.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"BaseParam" : "generated/VODataService/BaseParam.md"},{"CatalogResource" : "generated/VODataService/CatalogResource.md"},{"CatalogService" : "generated/VODataService/CatalogService.md"},{"Coverage" : "generated/VODataService/Coverage.md"},{"DataCollection" : "generated/VODataService/DataCollection.md"},{"DataResource" : "generated/VODataService/DataResource.md"},{"DataService" : "generated/VODataService/DataService.md"},{"FKColumn" : "generated/VODataService/FKColumn.md"},{"ForeignKey" : "generated/VODataService/ForeignKey.md"},{"InputParam" : "generated/VODataService/InputParam.md"},{"ParamHTTP" : "generated/VODataService/ParamHTTP.md"},{"Table" : "generated/VODataService/Table.md"},{"TableParam" : "generated/VODataService/TableParam.md"},{"TableSchema" : "generated/VODataService/TableSchema.md"},{"TableSet" : "generated/VODataService/TableSet.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"DataType" : "generated/VODataService/DataType.md"},{"Format" : "generated/VODataService/Format.md"},{"ServiceReference" : "generated/VODataService/ServiceReference.md"},{"SimpleDataType" : "generated/VODataService/SimpleDataType.md"},{"SpatialCoverage" : "generated/VODataService/SpatialCoverage.md"},{"TAPDataType" : "generated/VODataService/TAPDataType.md"},{"TAPType" : "generated/VODataService/TAPType.md"},{"TableDataType" : "generated/VODataService/TableDataType.md"},{"VOTableType" : "generated/VODataService/VOTableType.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"ArrayShape" : "generated/VODataService/ArrayShape.md"},{"FloatInterval" : "generated/VODataService/FloatInterval.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"HTTPQueryType" : "generated/VODataService/HTTPQueryType.md"},{"ParamUse" : "generated/VODataService/ParamUse.md"},{"SimpleDataType_enum" : "generated/VODataService/SimpleDataType_enum.md"},{"TAPType_enum" : "generated/VODataService/TAPType_enum.md"},{"VOTableType_enum" : "generated/VODataService/VOTableType_enum.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

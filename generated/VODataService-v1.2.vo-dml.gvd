@@ -1,0 +1,237 @@
+
+digraph GVmap {  
+	label = "\n\nVODataService data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "VOResource:Resource" [
+    URL="#Resource"
+    label = "{VOResource:Resource}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "VOResource:AccessURL" [
+    URL="#AccessURL"
+    label = "{VOResource:AccessURL}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "VOResource:Service" [
+    URL="#Service"
+    label = "{VOResource:Service}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "VOResource:Interface" [
+    URL="#Interface"
+    label = "{VOResource:Interface}"
+    fillcolor="grey"
+    ] ;
+      
+    "VODataService:ArrayShape"[
+    URL="../VODataService/ArrayShape"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nArrayShape}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:FloatInterval"[
+    URL="../VODataService/FloatInterval"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nFloatInterval}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:SimpleDataType_enum" [
+    URL="../VODataService/SimpleDataType_enum"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nSimpleDataType_enum|+integer\l+real\l+complex\l+boolean\l+char\l+string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:VOTableType_enum" [
+    URL="../VODataService/VOTableType_enum"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nVOTableType_enum|+boolean\l+bit\l+unsignedByte\l+short\l+int\l+long\l+char\l+unicodeChar\l+float\l+double\l+floatComplex\l+doubleComplex\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TAPType_enum" [
+    URL="../VODataService/TAPType_enum"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nTAPType_enum|+BOOLEAN\l+SMALLINT\l+INTEGER\l+BIGINT\l+REAL\l+DOUBLE\l+TIMESTAMP\l+CHAR\l+VARCHAR\l+BINARY\l+VARBINARY\l+POINT\l+REGION\l+CLOB\l+BLOB\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:HTTPQueryType" [
+    URL="../VODataService/HTTPQueryType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nHTTPQueryType|+GET\l+POST\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:ParamUse" [
+    URL="../VODataService/ParamUse"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nParamUse|+required\l+optional\l+ignored\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:SpatialCoverage" [
+    URL="../VODataService/SpatialCoverage"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSpatialCoverage|+value : ivoa:string\l+frame : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:ServiceReference" [
+    URL="../VODataService/ServiceReference"
+    label = "{&lt;&lt;datatype&gt;&gt;\nServiceReference|+value : ivoa:anyURI\l+ivoid : VOResource:IdentifierURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:Format" [
+    URL="../VODataService/Format"
+    label = "{&lt;&lt;datatype&gt;&gt;\nFormat|+value : ivoa:string\l+isMIMEType : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:DataType" [
+    URL="../VODataService/DataType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDataType|+arraysize : VODataService:ArrayShape\l+delim : ivoa:string\l+extendedType : ivoa:string\l+extendedSchema : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:SimpleDataType" [
+    URL="../VODataService/SimpleDataType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSimpleDataType|+val : VODataService:SimpleDataType_enum\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TableDataType" [
+    URL="../VODataService/TableDataType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nTableDataType}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:VOTableType" [
+    URL="../VODataService/VOTableType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nVOTableType|+val : VODataService:VOTableType_enum\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TAPDataType" [
+    URL="../VODataService/TAPDataType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nTAPDataType|+size : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TAPType" [
+    URL="../VODataService/TAPType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nTAPType|+val : VODataService:TAPType_enum\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:DataCollection" [
+    URL="../VODataService/DataCollection"
+    label = "{DataCollection|+facility : VOResource:ResourceName\l+instrument : VOResource:ResourceName\l+rights : VOResource:Rights\l+format : VODataService:Format\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:Coverage" [
+    URL="../VODataService/Coverage"
+    label = "{Coverage|+spatial : VODataService:SpatialCoverage\l+temporal : VODataService:FloatInterval\l+spectral : VODataService:FloatInterval\l+footprint : VODataService:ServiceReference\l+waveband : ivoa:string\l+regionOfRegard : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TableSet" [
+    URL="../VODataService/TableSet"
+    label = "{TableSet}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TableSchema" [
+    URL="../VODataService/TableSchema"
+    label = "{TableSchema|+name : ivoa:string\l+title : ivoa:string\l+description : ivoa:string\l+utype : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:DataResource" [
+    URL="../VODataService/DataResource"
+    label = "{DataResource|+facility : VOResource:ResourceName\l+instrument : VOResource:ResourceName\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:DataService" [
+    URL="../VODataService/DataService"
+    label = "{DataService}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:ParamHTTP" [
+    URL="../VODataService/ParamHTTP"
+    label = "{ParamHTTP|+queryType : VODataService:HTTPQueryType\l+resultType : ivoa:string\l+testQuery : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:CatalogResource" [
+    URL="../VODataService/CatalogResource"
+    label = "{CatalogResource}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:CatalogService" [
+    URL="../VODataService/CatalogService"
+    label = "{CatalogService}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:Table" [
+    URL="../VODataService/Table"
+    label = "{Table|+name : ivoa:string\l+title : ivoa:string\l+description : ivoa:string\l+utype : ivoa:string\l+nrows : ivoa:nonnegativeInteger\l+type : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:BaseParam" [
+    URL="../VODataService/BaseParam"
+    label = "{BaseParam|+name : ivoa:string\l+description : ivoa:string\l+unit : ivoa:string\l+ucd : ivoa:string\l+utype : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:TableParam" [
+    URL="../VODataService/TableParam"
+    label = "{TableParam|+dataType : VODataService:TableDataType\l+flag : ivoa:string\l+std : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:InputParam" [
+    URL="../VODataService/InputParam"
+    label = "{InputParam|+dataType : VODataService:DataType\l+use : VODataService:ParamUse\l+std : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:ForeignKey" [
+    URL="../VODataService/ForeignKey"
+    label = "{ForeignKey|+targetTable : ivoa:string\l+description : ivoa:string\l+utype : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VODataService:FKColumn" [
+    URL="../VODataService/FKColumn"
+    label = "{FKColumn|+fromColumn : ivoa:string\l+targetColumn : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "VODataService:SimpleDataType" -> "VODataService:DataType" ;
+  "VODataService:TableDataType" -> "VODataService:DataType" ;
+  "VODataService:VOTableType" -> "VODataService:TableDataType" ;
+  "VODataService:TAPDataType" -> "VODataService:TableDataType" ;
+  "VODataService:TAPType" -> "VODataService:TAPDataType" ;
+  "VODataService:DataCollection" -> "VOResource:Resource" ;
+  "VODataService:DataResource" -> "VOResource:Service" ;
+  "VODataService:DataService" -> "VODataService:DataResource" ;
+  "VODataService:ParamHTTP" -> "VOResource:Interface" ;
+  "VODataService:CatalogResource" -> "VODataService:DataResource" ;
+  "VODataService:CatalogService" -> "VODataService:CatalogResource" ;
+  "VODataService:TableParam" -> "VODataService:BaseParam" ;
+  "VODataService:InputParam" -> "VODataService:BaseParam" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "VODataService:DataCollection" -> "VODataService:Coverage" [headlabel="0..1",label="coverage",labelfontsize=10] ;
+  "VODataService:DataCollection" -> "VODataService:TableSet" [headlabel="0..1",label="tableset",labelfontsize=10] ;
+  "VODataService:DataCollection" -> "VOResource:AccessURL" [headlabel="0..1",label="accessURL",labelfontsize=10] ;
+  "VODataService:TableSet" -> "VODataService:TableSchema" [headlabel="1..*",label="schema",labelfontsize=10] ;
+  "VODataService:TableSchema" -> "VODataService:Table" [headlabel="0..*",label="table",labelfontsize=10] ;
+  "VODataService:DataResource" -> "VODataService:Coverage" [headlabel="0..1",label="coverage",labelfontsize=10] ;
+  "VODataService:ParamHTTP" -> "VODataService:InputParam" [headlabel="0..*",label="param",labelfontsize=10] ;
+  "VODataService:CatalogResource" -> "VODataService:TableSet" [headlabel="0..1",label="tableset",labelfontsize=10] ;
+  "VODataService:Table" -> "VODataService:TableParam" [headlabel="0..*",label="column",labelfontsize=10] ;
+  "VODataService:Table" -> "VODataService:ForeignKey" [headlabel="0..*",label="foreignKey",labelfontsize=10] ;
+  "VODataService:ForeignKey" -> "VODataService:FKColumn" [headlabel="1..*",label="fkColumn",labelfontsize=10] ;
+    
+}
+  

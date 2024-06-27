@@ -1,0 +1,32 @@
+
+
+            {
+            "uws model": [
+            {
+            "Overview": "generated/UWS-v1.1.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"ErrorSummary" : "generated/uws/ErrorSummary.md"},{"JobSummary" : "generated/uws/JobSummary.md"},{"Parameter" : "generated/uws/Parameter.md"},{"ResultReference" : "generated/uws/ResultReference.md"},{"ShortJobDescription" : "generated/uws/ShortJobDescription.md"},{"job" : "generated/uws/job.md"},{"jobInfo" : "generated/uws/jobInfo.md"},{"jobs" : "generated/uws/jobs.md"},{"parameters" : "generated/uws/parameters.md"},{"results" : "generated/uws/results.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"JobIdentifier" : "generated/uws/JobIdentifier.md"},{"UWSVersion" : "generated/uws/UWSVersion.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"ErrorType" : "generated/uws/ErrorType.md"},{"ExecutionPhase" : "generated/uws/ExecutionPhase.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

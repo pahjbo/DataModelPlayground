@@ -1,0 +1,32 @@
+
+
+            {
+            "TAPRegExt model": [
+            {
+            "Overview": "generated/TAPRegExt-v1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"DataLimits" : "generated/TAPRegExt/DataLimits.md"},{"Language" : "generated/TAPRegExt/Language.md"},{"LanguageFeature" : "generated/TAPRegExt/LanguageFeature.md"},{"LanguageFeatureList" : "generated/TAPRegExt/LanguageFeatureList.md"},{"OutputFormat" : "generated/TAPRegExt/OutputFormat.md"},{"TAPCapRestriction" : "generated/TAPRegExt/TAPCapRestriction.md"},{"TableAccess" : "generated/TAPRegExt/TableAccess.md"},{"TimeLimits" : "generated/TAPRegExt/TimeLimits.md"},{"UploadMethod" : "generated/TAPRegExt/UploadMethod.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"DataLimit" : "generated/TAPRegExt/DataLimit.md"},{"DataModelType" : "generated/TAPRegExt/DataModelType.md"},{"Version" : "generated/TAPRegExt/Version.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"DataLimit_unit" : "generated/TAPRegExt/DataLimit_unit.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

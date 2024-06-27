@@ -1,0 +1,262 @@
+
+digraph GVmap {  
+	label = "\n\ntrans data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "coords:CoordSys" [
+    URL="#CoordSys"
+    label = "{coords:CoordSys}"
+    fillcolor="grey"
+    ] ;
+      
+    "trans:InterpolationMethod" [
+    URL="../trans/InterpolationMethod"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nInterpolationMethod|+None\l+Nearest\l+Linear\l+Spline\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SkyProjectionType" [
+    URL="../trans/SkyProjectionType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nSkyProjectionType|+AZP\l+SZP\l+TAN\l+STG\l+SIN\l+ARC\l+ZPN\l+ZEA\l+AIR\l+CYP\l+CEA\l+CAR\l+MER\l+SFL\l+PAR\l+MOL\l+AIT\l+COP\l+COE\l+COD\l+COO\l+BON\l+PCO\l+TSC\l+CSC\l+QSC\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SpectralProjectionType" [
+    URL="../trans/SpectralProjectionType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nSpectralProjectionType|+F2W\l+F2V\l+F2A\l+W2F\l+W2V\l+W2A\l+V2F\l+V2W\l+V2A\l+A2F\l+A2W\l+A2V\l+LOG\l+GRI\l+GRA\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SpectralCoordType" [
+    URL="../trans/SpectralCoordType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nSpectralCoordType|+FREQ\l+ENER\l+WAVN\l+VRAD\l+WAVE\l+VOPT\l+ZOPT\l+AWAV\l+VELO\l+BETA\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Mapping" [
+    URL="../trans/Mapping"
+    label = "{Mapping|+invert : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:CompoundMap" [
+    URL="../trans/CompoundMap"
+    label = "{CompoundMap}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:ComposeMap" [
+    URL="../trans/ComposeMap"
+    label = "{ComposeMap}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:ConcatenateMap" [
+    URL="../trans/ConcatenateMap"
+    label = "{ConcatenateMap}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Permute" [
+    URL="../trans/Permute"
+    label = "{Permute|+numSourceAxes : ivoa:nonnegativeInteger\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:PermuteAxis" [
+    URL="../trans/PermuteAxis"
+    label = "{PermuteAxis|+sourceAxis : ivoa:nonnegativeInteger\l+seedValue : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Unit" [
+    URL="../trans/Unit"
+    label = "{Unit}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Shift" [
+    URL="../trans/Shift"
+    label = "{Shift|+offset : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Scale" [
+    URL="../trans/Scale"
+    label = "{Scale|+factor : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Rotate2D" [
+    URL="../trans/Rotate2D"
+    label = "{Rotate2D|+angle : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:EulerRotation" [
+    URL="../trans/EulerRotation"
+    label = "{EulerRotation}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:EulerAngle" [
+    URL="../trans/EulerAngle"
+    label = "{EulerAngle|+rotationAxis : ivoa:string\l+angle : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Matrix" [
+    URL="../trans/Matrix"
+    label = "{Matrix|+M : ivoa:nonnegativeInteger\l+N : ivoa:nonnegativeInteger\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:MatrixElement" [
+    URL="../trans/MatrixElement"
+    label = "{MatrixElement|+m : ivoa:nonnegativeInteger\l+n : ivoa:nonnegativeInteger\l+value : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Projection" [
+    URL="../trans/Projection"
+    label = "{Projection}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:ProjectionParam" [
+    URL="../trans/ProjectionParam"
+    label = "{ProjectionParam|+name : ivoa:string\l+value : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SkyProjection" [
+    URL="../trans/SkyProjection"
+    label = "{SkyProjection|+algorithm : trans:SkyProjectionType\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SkyProjRotate" [
+    URL="../trans/SkyProjRotate"
+    label = "{SkyProjRotate|+referenceValue : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:SpectralProjection" [
+    URL="../trans/SpectralProjection"
+    label = "{SpectralProjection|+referenceValue : ivoa:real\l+algorithm : trans:SpectralProjectionType\l+coordType : trans:SpectralCoordType\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Polynomial" [
+    URL="../trans/Polynomial"
+    label = "{Polynomial|+order : ivoa:nonnegativeInteger\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Polynomial1D" [
+    URL="../trans/Polynomial1D"
+    label = "{Polynomial1D}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:PolyCoeff1D" [
+    URL="../trans/PolyCoeff1D"
+    label = "{PolyCoeff1D|+coeff : ivoa:real\l+power : ivoa:nonnegativeInteger\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Polynomial2D" [
+    URL="../trans/Polynomial2D"
+    label = "{Polynomial2D}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:PolyCoeff2D" [
+    URL="../trans/PolyCoeff2D"
+    label = "{PolyCoeff2D|+coeff : ivoa:real\l+power : ivoa:nonnegativeInteger\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:Lookup" [
+    URL="../trans/Lookup"
+    label = "{Lookup|+interpolation : trans:InterpolationMethod\l+bounds_error : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:LookupEntry" [
+    URL="../trans/LookupEntry"
+    label = "{LookupEntry|+fill : ivoa:boolean\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:NumericEntry" [
+    URL="../trans/NumericEntry"
+    label = "{NumericEntry|+nativeValue : ivoa:real\l+targetValue : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:NumericEntry2D" [
+    URL="../trans/NumericEntry2D"
+    label = "{NumericEntry2D|+nativeValue : ivoa:real\l+targetValue : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:StringEntry" [
+    URL="../trans/StringEntry"
+    label = "{StringEntry|+nativeValue : ivoa:integer\l+targetValue : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:TransformSet" [
+    URL="../trans/TransformSet"
+    label = "{TransformSet}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:TransNode" [
+    URL="../trans/TransNode"
+    label = "{TransNode}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:MapRef" [
+    URL="../trans/MapRef"
+    label = "{MapRef}"
+    fillcolor="/set312/1"
+    ] ;
+  "trans:BiDirectionalMap" [
+    URL="../trans/BiDirectionalMap"
+    label = "{BiDirectionalMap}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "trans:CompoundMap" -> "trans:Mapping" ;
+  "trans:ComposeMap" -> "trans:CompoundMap" ;
+  "trans:ConcatenateMap" -> "trans:CompoundMap" ;
+  "trans:Permute" -> "trans:Mapping" ;
+  "trans:Unit" -> "trans:Mapping" ;
+  "trans:Shift" -> "trans:Mapping" ;
+  "trans:Scale" -> "trans:Mapping" ;
+  "trans:Rotate2D" -> "trans:Mapping" ;
+  "trans:EulerRotation" -> "trans:Mapping" ;
+  "trans:Matrix" -> "trans:Mapping" ;
+  "trans:Projection" -> "trans:Mapping" ;
+  "trans:SkyProjection" -> "trans:Projection" ;
+  "trans:SkyProjRotate" -> "trans:SkyProjection" ;
+  "trans:SpectralProjection" -> "trans:Projection" ;
+  "trans:Polynomial" -> "trans:Mapping" ;
+  "trans:Polynomial1D" -> "trans:Polynomial" ;
+  "trans:Polynomial2D" -> "trans:Polynomial" ;
+  "trans:Lookup" -> "trans:Mapping" ;
+  "trans:NumericEntry" -> "trans:LookupEntry" ;
+  "trans:NumericEntry2D" -> "trans:LookupEntry" ;
+  "trans:StringEntry" -> "trans:LookupEntry" ;
+  "trans:BiDirectionalMap" -> "trans:Mapping" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "trans:CompoundMap" -> "trans:MapRef" [headlabel="1..*",label="cptMap",labelfontsize=10] ;
+  "trans:Permute" -> "trans:PermuteAxis" [headlabel="0..*",label="axismap",labelfontsize=10] ;
+  "trans:EulerRotation" -> "trans:EulerAngle" [headlabel="1..*",label="eulerAngle",labelfontsize=10] ;
+  "trans:Matrix" -> "trans:MatrixElement" [headlabel="0..*",label="element",labelfontsize=10] ;
+  "trans:Projection" -> "trans:ProjectionParam" [headlabel="0..*",label="param",labelfontsize=10] ;
+  "trans:Polynomial1D" -> "trans:PolyCoeff1D" [headlabel="1..*",label="term",labelfontsize=10] ;
+  "trans:Polynomial2D" -> "trans:PolyCoeff2D" [headlabel="1..*",label="term",labelfontsize=10] ;
+  "trans:Lookup" -> "trans:LookupEntry" [headlabel="1..*",label="entry",labelfontsize=10] ;
+  "trans:TransformSet" -> "trans:TransNode" [headlabel="1..*",label="node",labelfontsize=10] ;
+  
+ 
+    edge [color="green", arrowhead="open", arrowtail="none"]
+    "trans:TransNode" -> "trans:TransNode" [headlabel="0..1",label="parent",labelfontsize=10] ;
+  "trans:TransNode" -> "coords:CoordSys" [headlabel="0..1",label="target",labelfontsize=10] ;
+  "trans:TransNode" -> "trans:Mapping" [headlabel="0..1",label="mapping",labelfontsize=10] ;
+  "trans:MapRef" -> "trans:Mapping" [headlabel="1",label="ref",labelfontsize=10] ;
+  "trans:BiDirectionalMap" -> "trans:Mapping" [headlabel="1",label="inverseMap",labelfontsize=10] ;
+  "trans:BiDirectionalMap" -> "trans:Mapping" [headlabel="1",label="forwardMap",labelfontsize=10] ;
+    
+}
+  

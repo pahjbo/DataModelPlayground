@@ -1,0 +1,20 @@
+
+
+            {
+            "VOSIcap model": [
+            {
+            "Overview": "generated/VOSICapabilities-v1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"capabilities" : "generated/VOSIcap/capabilities.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

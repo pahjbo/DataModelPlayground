@@ -1,0 +1,26 @@
+
+
+            {
+            "DALIParameters model": [
+            {
+            "Overview": "generated/DALIParameters.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"DaliBaseParams" : "generated/DALIParameters/DaliBaseParams.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"UPLOAD" : "generated/DALIParameters/UPLOAD.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

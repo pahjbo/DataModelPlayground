@@ -1,0 +1,20 @@
+
+
+            {
+            "cube model": [
+            {
+            "Overview": "generated/Cube-1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"DataAxis" : "generated/cube/DataAxis.md"},{"DataProduct" : "generated/cube/DataProduct.md"},{"ImageAxis" : "generated/cube/ImageAxis.md"},{"Mappings" : "generated/cube/Mappings.md"},{"MeasurementAxis" : "generated/cube/MeasurementAxis.md"},{"NDImage" : "generated/cube/NDImage.md"},{"NDPoint" : "generated/cube/NDPoint.md"},{"Observable" : "generated/cube/Observable.md"},{"PixelAxis" : "generated/cube/PixelAxis.md"},{"SparseCube" : "generated/cube/SparseCube.md"},{"ValueAxis" : "generated/cube/ValueAxis.md"},{"VirtualImageAxis" : "generated/cube/VirtualImageAxis.md"},{"VirtualImageAxisSource" : "generated/cube/VirtualImageAxisSource.md"},{"VirtualMeasure" : "generated/cube/VirtualMeasure.md"},{"VirtualMeasureSource" : "generated/cube/VirtualMeasureSource.md"},{"Voxel" : "generated/cube/Voxel.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

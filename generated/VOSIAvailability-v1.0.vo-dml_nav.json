@@ -1,0 +1,20 @@
+
+
+            {
+            "VOSIAvail model": [
+            {
+            "Overview": "generated/VOSIAvailability-v1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"Availability" : "generated/VOSIAvail/Availability.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

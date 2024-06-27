@@ -1,0 +1,243 @@
+
+digraph GVmap {  
+	label = "\n\nds data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+    "experiment" [
+
+    URL="../ds/experiment"
+    label = "experiment"
+    fillcolor="/set312/2"
+    ] ;
+    
+    "dataset" [
+
+    URL="../ds/dataset"
+    label = "dataset"
+    fillcolor="/set312/3"
+    ] ;
+    
+    "party" [
+
+    URL="../ds/party"
+    label = "party"
+    fillcolor="/set312/4"
+    ] ;
+    
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "meas:Position" [
+    URL="#Position"
+    label = "{meas:Position}"
+    fillcolor="grey"
+    ] ;
+      
+    "ds:experiment.Observation" [
+    URL="../ds/experiment.Observation"
+    label = "{experiment/Observation|+observationID : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.ObsConfig" [
+    URL="../ds/experiment.ObsConfig"
+    label = "{experiment/ObsConfig|+bandpass : ivoa:string\l+datasource : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.BaseTarget" [
+    URL="../ds/experiment.BaseTarget"
+    label = "{experiment/BaseTarget|+name : ivoa:string\l+description : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.Target" [
+    URL="../ds/experiment.Target"
+    label = "{experiment/Target|+objectClass : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.AstroTarget" [
+    URL="../ds/experiment.AstroTarget"
+    label = "{experiment/AstroTarget|+objectClass : ivoa:string\l+spectralClass : ivoa:string\l+redshift : ivoa:real\l+varAmpl : ivoa:real\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.Facility" [
+    URL="../ds/experiment.Facility"
+    label = "{experiment/Facility}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.Instrument" [
+    URL="../ds/experiment.Instrument"
+    label = "{experiment/Instrument|+name : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.Proposal" [
+    URL="../ds/experiment.Proposal"
+    label = "{experiment/Proposal|+identifier : ivoa:string\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.Derived" [
+    URL="../ds/experiment.Derived"
+    label = "{experiment/Derived}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.ObsDataset" [
+    URL="../ds/experiment.ObsDataset"
+    label = "{experiment/ObsDataset|+calibLevel : ivoa:integer\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.DerivedElement" [
+    URL="../ds/experiment.DerivedElement"
+    label = "{experiment/DerivedElement}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:experiment.DerivedScalar" [
+    URL="../ds/experiment.DerivedScalar"
+    label = "{experiment/DerivedScalar|+name : ivoa:string\l+value : ivoa:Quantity\l}"
+    fillcolor="/set312/2"
+    ] ;
+  "ds:dataset.DataProductType" [
+    URL="../ds/dataset.DataProductType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ndataset/DataProductType|+CUBE\l+IMAGE\l+PHOTOMETRY\l+SPECTRUM\l+TIMESERIES\l+SED\l+VISIBILITY\l+EVENT\l+CATALOG\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.CreationType" [
+    URL="../ds/dataset.CreationType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ndataset/CreationType|+ARCHIVAL\l+CUTOUT\l+FILTERED\l+MOSAIC\l+SPECTRAL_EXTRACTION\l+CATALOG_EXTRACTION\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.RightsType" [
+    URL="../ds/dataset.RightsType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ndataset/RightsType|+PUBLIC\l+PROPRIETARY\l+SECURE\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.SpectralBandType" [
+    URL="../ds/dataset.SpectralBandType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\ndataset/SpectralBandType|+RADIO\l+MILLIMETER\l+INFRARED\l+OPTICAL\l+ULTRAVIOLET\l+XRAY\l+GAMMARAY\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.DataModel" [
+    URL="../ds/dataset.DataModel"
+    label = "{dataset/DataModel|+name : ivoa:string\l+prefix : ivoa:string\l+URL : ivoa:anyURI\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Dataset" [
+    URL="../ds/dataset.Dataset"
+    label = "{dataset/Dataset|+dataProductType : ds:dataset.DataProductType\l+dataProductSubtype : ivoa:string\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.DataID" [
+    URL="../ds/dataset.DataID"
+    label = "{dataset/DataID|+title : ivoa:string\l+datasetID : ivoa:anyURI\l+creatorDID : ivoa:anyURI\l+version : ivoa:string\l+date : ivoa:datetime\l+creationType : ds:dataset.CreationType\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Curation" [
+    URL="../ds/dataset.Curation"
+    label = "{dataset/Curation|+publisherDID : ivoa:anyURI\l+version : ivoa:string\l+releaseDate : ivoa:datetime\l+rights : ds:dataset.RightsType\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Publisher" [
+    URL="../ds/dataset.Publisher"
+    label = "{dataset/Publisher|+publisherID : ivoa:anyURI\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Contact" [
+    URL="../ds/dataset.Contact"
+    label = "{dataset/Contact}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Creator" [
+    URL="../ds/dataset.Creator"
+    label = "{dataset/Creator}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Contributor" [
+    URL="../ds/dataset.Contributor"
+    label = "{dataset/Contributor|+acknowledgment : ivoa:string\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Publication" [
+    URL="../ds/dataset.Publication"
+    label = "{dataset/Publication|+refCode : ivoa:string\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:dataset.Collection" [
+    URL="../ds/dataset.Collection"
+    label = "{dataset/Collection|+name : ivoa:string\l}"
+    fillcolor="/set312/3"
+    ] ;
+  "ds:party.Party" [
+    URL="../ds/party.Party"
+    label = "{party/Party|+name : ivoa:string\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "ds:party.Role" [
+    URL="../ds/party.Role"
+    label = "{party/Role}"
+    fillcolor="/set312/4"
+    ] ;
+  "ds:party.Individual" [
+    URL="../ds/party.Individual"
+    label = "{party/Individual|+address : ivoa:string\l+phone : ivoa:string\l+email : ivoa:string\l}"
+    fillcolor="/set312/4"
+    ] ;
+  "ds:party.Organization" [
+    URL="../ds/party.Organization"
+    label = "{party/Organization|+address : ivoa:string\l+phone : ivoa:string\l+email : ivoa:string\l+logo : ivoa:anyURI\l}"
+    fillcolor="/set312/4"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "ds:experiment.Target" -> "ds:experiment.BaseTarget" ;
+  "ds:experiment.AstroTarget" -> "ds:experiment.BaseTarget" ;
+  "ds:experiment.Facility" -> "ds:party.Role" ;
+  "ds:experiment.ObsDataset" -> "ds:dataset.Dataset" ;
+  "ds:experiment.DerivedScalar" -> "ds:experiment.DerivedElement" ;
+  "ds:dataset.Publisher" -> "ds:party.Role" ;
+  "ds:dataset.Contact" -> "ds:party.Role" ;
+  "ds:dataset.Creator" -> "ds:party.Role" ;
+  "ds:dataset.Contributor" -> "ds:party.Role" ;
+  "ds:party.Individual" -> "ds:party.Party" ;
+  "ds:party.Organization" -> "ds:party.Party" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "ds:experiment.Observation" -> "ds:experiment.ObsConfig" [headlabel="1",label="obsConfig",labelfontsize=10] ;
+  "ds:experiment.Observation" -> "ds:experiment.ObsDataset" [headlabel="0..*",label="result",labelfontsize=10] ;
+  "ds:experiment.Observation" -> "ds:experiment.BaseTarget" [headlabel="1",label="target",labelfontsize=10] ;
+  "ds:experiment.Observation" -> "ds:experiment.Proposal" [headlabel="0..1",label="proposal",labelfontsize=10] ;
+  "ds:experiment.ObsConfig" -> "ds:experiment.Facility" [headlabel="0..1",label="facility",labelfontsize=10] ;
+  "ds:experiment.ObsConfig" -> "ds:experiment.Instrument" [headlabel="0..1",label="instrument",labelfontsize=10] ;
+  "ds:experiment.Derived" -> "ds:experiment.DerivedElement" [headlabel="0..*",label="derivedElement",labelfontsize=10] ;
+  "ds:experiment.ObsDataset" -> "ds:experiment.Derived" [headlabel="0..1",label="derived",labelfontsize=10] ;
+  "ds:dataset.Dataset" -> "ds:dataset.Curation" [headlabel="1",label="curation",labelfontsize=10] ;
+  "ds:dataset.Dataset" -> "ds:dataset.DataID" [headlabel="1",label="dataID",labelfontsize=10] ;
+  "ds:dataset.DataID" -> "ds:dataset.Creator" [headlabel="0..1",label="creator",labelfontsize=10] ;
+  "ds:dataset.DataID" -> "ds:dataset.Contributor" [headlabel="0..*",label="contributor",labelfontsize=10] ;
+  "ds:dataset.DataID" -> "ds:dataset.Collection" [headlabel="0..*",label="collection",labelfontsize=10] ;
+  "ds:dataset.Curation" -> "ds:dataset.Publisher" [headlabel="1",label="publisher",labelfontsize=10] ;
+  "ds:dataset.Curation" -> "ds:dataset.Contact" [headlabel="0..1",label="contact",labelfontsize=10] ;
+  "ds:dataset.Curation" -> "ds:dataset.Publication" [headlabel="0..*",label="reference",labelfontsize=10] ;
+  
+ 
+    edge [color="green", arrowhead="open", arrowtail="none"]
+    "ds:experiment.BaseTarget" -> "meas:Position" [headlabel="0..1",label="position",labelfontsize=10] ;
+  "ds:experiment.ObsDataset" -> "ds:experiment.BaseTarget" [headlabel="1",label="target",labelfontsize=10] ;
+  "ds:experiment.ObsDataset" -> "ds:experiment.Proposal" [headlabel="0..1",label="proposal",labelfontsize=10] ;
+  "ds:experiment.ObsDataset" -> "ds:experiment.ObsConfig" [headlabel="0..1",label="obsConfig",labelfontsize=10] ;
+  "ds:party.Role" -> "ds:party.Party" [headlabel="1",label="party",labelfontsize=10] ;
+    
+}
+  

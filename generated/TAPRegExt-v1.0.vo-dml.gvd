@@ -1,0 +1,113 @@
+
+digraph GVmap {  
+	label = "\n\nTAPRegExt data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "VOResource:Capability" [
+    URL="#Capability"
+    label = "{VOResource:Capability}"
+    fillcolor="grey"
+    ] ;
+      
+    "TAPRegExt:DataLimit_unit" [
+    URL="../TAPRegExt/DataLimit_unit"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nDataLimit_unit|+byte\l+row\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:DataModelType" [
+    URL="../TAPRegExt/DataModelType"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDataModelType|+value : ivoa:string\l+ivoid : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:Version" [
+    URL="../TAPRegExt/Version"
+    label = "{&lt;&lt;datatype&gt;&gt;\nVersion|+value : ivoa:string\l+ivoid : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:DataLimit" [
+    URL="../TAPRegExt/DataLimit"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDataLimit|+value : ivoa:integer\l+unit : TAPRegExt:DataLimit_unit\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:TAPCapRestriction" [
+    URL="../TAPRegExt/TAPCapRestriction"
+    label = "{TAPCapRestriction}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:TableAccess" [
+    URL="../TAPRegExt/TableAccess"
+    label = "{TableAccess|+dataModel : TAPRegExt:DataModelType\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:Language" [
+    URL="../TAPRegExt/Language"
+    label = "{Language|+name : ivoa:string\l+version : TAPRegExt:Version\l+description : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:LanguageFeatureList" [
+    URL="../TAPRegExt/LanguageFeatureList"
+    label = "{LanguageFeatureList|+type : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:LanguageFeature" [
+    URL="../TAPRegExt/LanguageFeature"
+    label = "{LanguageFeature|+form : ivoa:string\l+description : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:OutputFormat" [
+    URL="../TAPRegExt/OutputFormat"
+    label = "{OutputFormat|+mime : ivoa:string\l+alias : ivoa:string\l+ivoid : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:UploadMethod" [
+    URL="../TAPRegExt/UploadMethod"
+    label = "{UploadMethod|+ivoid : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:TimeLimits" [
+    URL="../TAPRegExt/TimeLimits"
+    label = "{TimeLimits|+default : ivoa:integer\l+hard : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "TAPRegExt:DataLimits" [
+    URL="../TAPRegExt/DataLimits"
+    label = "{DataLimits|+default : TAPRegExt:DataLimit\l+hard : TAPRegExt:DataLimit\l}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "TAPRegExt:TAPCapRestriction" -> "VOResource:Capability" ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:TAPCapRestriction" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "TAPRegExt:TableAccess" -> "TAPRegExt:Language" [headlabel="1..*",label="language",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:OutputFormat" [headlabel="1..*",label="outputFormat",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:UploadMethod" [headlabel="0..*",label="uploadMethod",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:TimeLimits" [headlabel="0..1",label="retentionPeriod",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:TimeLimits" [headlabel="0..1",label="executionDuration",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:DataLimits" [headlabel="0..1",label="outputLimit",labelfontsize=10] ;
+  "TAPRegExt:TableAccess" -> "TAPRegExt:DataLimits" [headlabel="0..1",label="uploadLimit",labelfontsize=10] ;
+  "TAPRegExt:Language" -> "TAPRegExt:LanguageFeatureList" [headlabel="0..*",label="languageFeatures",labelfontsize=10] ;
+  "TAPRegExt:LanguageFeatureList" -> "TAPRegExt:LanguageFeature" [headlabel="0..*",label="feature",labelfontsize=10] ;
+    
+}
+  

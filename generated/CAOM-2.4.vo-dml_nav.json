@@ -1,0 +1,38 @@
+
+
+            {
+            "caom2 model": [
+            {
+            "Overview": "generated/CAOM-2.4.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"Algorithm" : "generated/caom2/Algorithm.md"},{"Artifact" : "generated/caom2/Artifact.md"},{"CaomEntity" : "generated/caom2/CaomEntity.md"},{"Chunk" : "generated/caom2/Chunk.md"},{"CustomAxis" : "generated/caom2/CustomAxis.md"},{"DataQuality" : "generated/caom2/DataQuality.md"},{"DerivedObservation" : "generated/caom2/DerivedObservation.md"},{"Energy" : "generated/caom2/Energy.md"},{"Environment" : "generated/caom2/Environment.md"},{"Instrument" : "generated/caom2/Instrument.md"},{"Metrics" : "generated/caom2/Metrics.md"},{"Observable" : "generated/caom2/Observable.md"},{"Observation" : "generated/caom2/Observation.md"},{"Part" : "generated/caom2/Part.md"},{"Plane" : "generated/caom2/Plane.md"},{"Polarization" : "generated/caom2/Polarization.md"},{"Position" : "generated/caom2/Position.md"},{"Proposal" : "generated/caom2/Proposal.md"},{"Provenance" : "generated/caom2/Provenance.md"},{"Requirements" : "generated/caom2/Requirements.md"},{"SimpleObservation" : "generated/caom2/SimpleObservation.md"},{"Target" : "generated/caom2/Target.md"},{"TargetPosition" : "generated/caom2/TargetPosition.md"},{"Telescope" : "generated/caom2/Telescope.md"},{"Time" : "generated/caom2/Time.md"},{"wcs.CustomWCS" : "generated/caom2/wcs.CustomWCS.md"},{"wcs.ObservableAxis" : "generated/caom2/wcs.ObservableAxis.md"},{"wcs.PolarizationWCS" : "generated/caom2/wcs.PolarizationWCS.md"},{"wcs.SpatialWCS" : "generated/caom2/wcs.SpatialWCS.md"},{"wcs.SpectralWCS" : "generated/caom2/wcs.SpectralWCS.md"},{"wcs.TemporalWCS" : "generated/caom2/wcs.TemporalWCS.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"DataProductType" : "generated/caom2/DataProductType.md"},{"ProductType" : "generated/caom2/ProductType.md"},{"Quality" : "generated/caom2/Quality.md"},{"Status" : "generated/caom2/Status.md"},{"TargetType" : "generated/caom2/TargetType.md"},{"VocabularyTerm" : "generated/caom2/VocabularyTerm.md"},{"types.Circle" : "generated/caom2/types.Circle.md"},{"types.Interval" : "generated/caom2/types.Interval.md"},{"types.MultiPolygon" : "generated/caom2/types.MultiPolygon.md"},{"types.Point" : "generated/caom2/types.Point.md"},{"types.Polygon" : "generated/caom2/types.Polygon.md"},{"types.SampledInterval" : "generated/caom2/types.SampledInterval.md"},{"types.Shape" : "generated/caom2/types.Shape.md"},{"types.Vertex" : "generated/caom2/types.Vertex.md"},{"wcs.Axis" : "generated/caom2/wcs.Axis.md"},{"wcs.Coord2D" : "generated/caom2/wcs.Coord2D.md"},{"wcs.CoordAxis1D" : "generated/caom2/wcs.CoordAxis1D.md"},{"wcs.CoordAxis2D" : "generated/caom2/wcs.CoordAxis2D.md"},{"wcs.CoordBounds1D" : "generated/caom2/wcs.CoordBounds1D.md"},{"wcs.CoordBounds2D" : "generated/caom2/wcs.CoordBounds2D.md"},{"wcs.CoordError" : "generated/caom2/wcs.CoordError.md"},{"wcs.CoordFunction1D" : "generated/caom2/wcs.CoordFunction1D.md"},{"wcs.CoordFunction2D" : "generated/caom2/wcs.CoordFunction2D.md"},{"wcs.CoordRange1D" : "generated/caom2/wcs.CoordRange1D.md"},{"wcs.CoordRange2D" : "generated/caom2/wcs.CoordRange2D.md"},{"wcs.Dimension2D" : "generated/caom2/wcs.Dimension2D.md"},{"wcs.EnergyTransition" : "generated/caom2/wcs.EnergyTransition.md"},{"wcs.RefCoord" : "generated/caom2/wcs.RefCoord.md"},{"wcs.Slice" : "generated/caom2/wcs.Slice.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"ObservationURI" : "generated/caom2/ObservationURI.md"},{"PlaneURI" : "generated/caom2/PlaneURI.md"},{"uuid" : "generated/caom2/uuid.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"CalibrationLevel" : "generated/caom2/CalibrationLevel.md"},{"EnergyBand" : "generated/caom2/EnergyBand.md"},{"ObservationIntentType" : "generated/caom2/ObservationIntentType.md"},{"PolarizationState" : "generated/caom2/PolarizationState.md"},{"ReleaseType" : "generated/caom2/ReleaseType.md"},{"SegmentType" : "generated/caom2/SegmentType.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

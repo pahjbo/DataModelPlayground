@@ -1,0 +1,38 @@
+
+
+            {
+            "VOResource model": [
+            {
+            "Overview": "generated/VOResource-v1.1.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"AccessURL" : "generated/VOResource/AccessURL.md"},{"Capability" : "generated/VOResource/Capability.md"},{"Contact" : "generated/VOResource/Contact.md"},{"Content" : "generated/VOResource/Content.md"},{"Creator" : "generated/VOResource/Creator.md"},{"Curation" : "generated/VOResource/Curation.md"},{"Interface" : "generated/VOResource/Interface.md"},{"MirrorURL" : "generated/VOResource/MirrorURL.md"},{"Organisation" : "generated/VOResource/Organisation.md"},{"Relationship" : "generated/VOResource/Relationship.md"},{"Resource" : "generated/VOResource/Resource.md"},{"SecurityMethod" : "generated/VOResource/SecurityMethod.md"},{"Service" : "generated/VOResource/Service.md"},{"WebBrowser" : "generated/VOResource/WebBrowser.md"},{"WebService" : "generated/VOResource/WebService.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"Date" : "generated/VOResource/Date.md"},{"ResourceName" : "generated/VOResource/ResourceName.md"},{"Rights" : "generated/VOResource/Rights.md"},{"Source" : "generated/VOResource/Source.md"},{"Validation" : "generated/VOResource/Validation.md"}
+                ]
+                }
+            
+                ,{
+                "PrimitiveTypes": [
+                {"AuthorityID" : "generated/VOResource/AuthorityID.md"},{"IdentifierURI" : "generated/VOResource/IdentifierURI.md"},{"ResourceKey" : "generated/VOResource/ResourceKey.md"},{"ShortName" : "generated/VOResource/ShortName.md"},{"UTCDateTime" : "generated/VOResource/UTCDateTime.md"},{"UTCTimestamp" : "generated/VOResource/UTCTimestamp.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"AccessURL_use" : "generated/VOResource/AccessURL_use.md"},{"Resource_status" : "generated/VOResource/Resource_status.md"},{"ValidationLevel" : "generated/VOResource/ValidationLevel.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

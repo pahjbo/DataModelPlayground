@@ -1,0 +1,26 @@
+
+
+            {
+            "ds model": [
+            {
+            "Overview": "generated/Dataset-1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"dataset.Collection" : "generated/ds/dataset.Collection.md"},{"dataset.Contact" : "generated/ds/dataset.Contact.md"},{"dataset.Contributor" : "generated/ds/dataset.Contributor.md"},{"dataset.Creator" : "generated/ds/dataset.Creator.md"},{"dataset.Curation" : "generated/ds/dataset.Curation.md"},{"dataset.DataID" : "generated/ds/dataset.DataID.md"},{"dataset.DataModel" : "generated/ds/dataset.DataModel.md"},{"dataset.Dataset" : "generated/ds/dataset.Dataset.md"},{"dataset.Publication" : "generated/ds/dataset.Publication.md"},{"dataset.Publisher" : "generated/ds/dataset.Publisher.md"},{"experiment.AstroTarget" : "generated/ds/experiment.AstroTarget.md"},{"experiment.BaseTarget" : "generated/ds/experiment.BaseTarget.md"},{"experiment.Derived" : "generated/ds/experiment.Derived.md"},{"experiment.DerivedElement" : "generated/ds/experiment.DerivedElement.md"},{"experiment.DerivedScalar" : "generated/ds/experiment.DerivedScalar.md"},{"experiment.Facility" : "generated/ds/experiment.Facility.md"},{"experiment.Instrument" : "generated/ds/experiment.Instrument.md"},{"experiment.ObsConfig" : "generated/ds/experiment.ObsConfig.md"},{"experiment.ObsDataset" : "generated/ds/experiment.ObsDataset.md"},{"experiment.Observation" : "generated/ds/experiment.Observation.md"},{"experiment.Proposal" : "generated/ds/experiment.Proposal.md"},{"experiment.Target" : "generated/ds/experiment.Target.md"},{"party.Individual" : "generated/ds/party.Individual.md"},{"party.Organization" : "generated/ds/party.Organization.md"},{"party.Party" : "generated/ds/party.Party.md"},{"party.Role" : "generated/ds/party.Role.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"dataset.CreationType" : "generated/ds/dataset.CreationType.md"},{"dataset.DataProductType" : "generated/ds/dataset.DataProductType.md"},{"dataset.RightsType" : "generated/ds/dataset.RightsType.md"},{"dataset.SpectralBandType" : "generated/ds/dataset.SpectralBandType.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

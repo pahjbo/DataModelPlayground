@@ -1,0 +1,26 @@
+
+
+            {
+            "SIA model": [
+            {
+            "Overview": "generated/SIA-v1.2.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"Query" : "generated/SIA/Query.md"},{"SimpleImageAccess" : "generated/SIA/SimpleImageAccess.md"},{"SkyPos" : "generated/SIA/SkyPos.md"},{"SkySize" : "generated/SIA/SkySize.md"}
+                ]
+                }
+            
+                ,{
+                "Enumerations": [
+                {"ImageServiceType" : "generated/SIA/ImageServiceType.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

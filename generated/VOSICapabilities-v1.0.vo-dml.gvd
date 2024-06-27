@@ -1,0 +1,40 @@
+
+digraph GVmap {  
+	label = "\n\nVOSIcap data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "VOResource:Capability" [
+    URL="#Capability"
+    label = "{VOResource:Capability}"
+    fillcolor="grey"
+    ] ;
+      
+    "VOSIcap:capabilities" [
+    URL="../VOSIcap/capabilities"
+    label = "{capabilities}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "VOSIcap:capabilities" -> "VOResource:Capability" [headlabel="0..*",label="capability",labelfontsize=10] ;
+    
+}
+  

@@ -1,0 +1,20 @@
+
+
+            {
+            "VOSITables model": [
+            {
+            "Overview": "generated/VOSITables-v1.1.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"atable" : "generated/VOSITables/atable.md"},{"tableset" : "generated/VOSITables/tableset.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

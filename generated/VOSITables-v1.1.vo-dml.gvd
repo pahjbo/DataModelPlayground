@@ -1,0 +1,53 @@
+
+digraph GVmap {  
+	label = "\n\nVOSITables data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "VODataService:TableSet" [
+    URL="#TableSet"
+    label = "{VODataService:TableSet}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "VODataService:Table" [
+    URL="#Table"
+    label = "{VODataService:Table}"
+    fillcolor="grey"
+    ] ;
+      
+    "VOSITables:tableset" [
+    URL="../VOSITables/tableset"
+    label = "{tableset}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOSITables:atable" [
+    URL="../VOSITables/atable"
+    label = "{atable}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "VOSITables:tableset" -> "VODataService:TableSet" ;
+  "VOSITables:atable" -> "VODataService:Table" ;
+    
+}
+  

@@ -1,0 +1,26 @@
+
+
+            {
+            "meas model": [
+            {
+            "Overview": "generated/Meas-v1.0.vo-dml.md"
+            }
+
+            
+                ,{
+                "ObjectTypes": [
+
+                {"Error" : "generated/meas/Error.md"},{"GenericMeasure" : "generated/meas/GenericMeasure.md"},{"Measure" : "generated/meas/Measure.md"},{"Polarization" : "generated/meas/Polarization.md"},{"Position" : "generated/meas/Position.md"},{"ProperMotion" : "generated/meas/ProperMotion.md"},{"Time" : "generated/meas/Time.md"},{"Velocity" : "generated/meas/Velocity.md"}
+                ]
+                }
+            
+                ,{
+                "DataTypes": [
+                {"Asymmetrical1D" : "generated/meas/Asymmetrical1D.md"},{"Asymmetrical2D" : "generated/meas/Asymmetrical2D.md"},{"Asymmetrical3D" : "generated/meas/Asymmetrical3D.md"},{"Bounds1D" : "generated/meas/Bounds1D.md"},{"Bounds2D" : "generated/meas/Bounds2D.md"},{"Bounds3D" : "generated/meas/Bounds3D.md"},{"Ellipse" : "generated/meas/Ellipse.md"},{"Ellipsoid" : "generated/meas/Ellipsoid.md"},{"Symmetrical" : "generated/meas/Symmetrical.md"},{"Uncertainty" : "generated/meas/Uncertainty.md"}
+                ]
+                }
+            
+            ]
+            }
+
+        

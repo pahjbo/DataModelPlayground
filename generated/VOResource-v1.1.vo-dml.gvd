@@ -1,0 +1,189 @@
+
+digraph GVmap {  
+	label = "\n\nVOResource data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    "VOResource:UTCTimestamp"[
+    URL="../VOResource/UTCTimestamp"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nUTCTimestamp}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:UTCDateTime"[
+    URL="../VOResource/UTCDateTime"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nUTCDateTime}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:AuthorityID"[
+    URL="../VOResource/AuthorityID"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nAuthorityID}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:ResourceKey"[
+    URL="../VOResource/ResourceKey"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nResourceKey}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:IdentifierURI"[
+    URL="../VOResource/IdentifierURI"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nIdentifierURI}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:ShortName"[
+    URL="../VOResource/ShortName"
+    label = "{&lt;&lt;primitive type&gt;&gt;\nShortName}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Resource_status" [
+    URL="../VOResource/Resource_status"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nResource_status|+active\l+inactive\l+deleted\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:AccessURL_use" [
+    URL="../VOResource/AccessURL_use"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nAccessURL_use|+full\l+base\l+dir\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:ValidationLevel" [
+    URL="../VOResource/ValidationLevel"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nValidationLevel|+described\l+valid\l+compliant\l+inspected\l+interoperable\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Validation" [
+    URL="../VOResource/Validation"
+    label = "{&lt;&lt;datatype&gt;&gt;\nValidation|+value : VOResource:ValidationLevel\l+validatedBy : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:ResourceName" [
+    URL="../VOResource/ResourceName"
+    label = "{&lt;&lt;datatype&gt;&gt;\nResourceName|+value : ivoa:string\l+ivoid : VOResource:IdentifierURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Date" [
+    URL="../VOResource/Date"
+    label = "{&lt;&lt;datatype&gt;&gt;\nDate|+value : VOResource:UTCDateTime\l+role : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Source" [
+    URL="../VOResource/Source"
+    label = "{&lt;&lt;datatype&gt;&gt;\nSource|+value : ivoa:string\l+format : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Rights" [
+    URL="../VOResource/Rights"
+    label = "{&lt;&lt;datatype&gt;&gt;\nRights|+value : ivoa:string\l+rightsURI : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Resource" [
+    URL="../VOResource/Resource"
+    label = "{Resource|+validationLevel : VOResource:Validation\l+title : ivoa:string\l+shortName : VOResource:ShortName\l+identifier : VOResource:IdentifierURI\l+altIdentifier : ivoa:anyURI\l+created : VOResource:UTCTimestamp\l+updated : VOResource:UTCTimestamp\l+status : VOResource:Resource_status\l+version : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Curation" [
+    URL="../VOResource/Curation"
+    label = "{Curation|+publisher : VOResource:ResourceName\l+contributor : VOResource:ResourceName\l+date : VOResource:Date\l+version : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Contact" [
+    URL="../VOResource/Contact"
+    label = "{Contact|+name : VOResource:ResourceName\l+address : ivoa:string\l+email : ivoa:string\l+telephone : ivoa:string\l+altIdentifier : ivoa:anyURI\l+ivoid : VOResource:IdentifierURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Creator" [
+    URL="../VOResource/Creator"
+    label = "{Creator|+name : VOResource:ResourceName\l+logo : ivoa:anyURI\l+altIdentifier : ivoa:anyURI\l+ivoid : VOResource:IdentifierURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Content" [
+    URL="../VOResource/Content"
+    label = "{Content|+subject : ivoa:string\l+description : ivoa:string\l+source : VOResource:Source\l+referenceURL : ivoa:anyURI\l+type : ivoa:string\l+contentLevel : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Relationship" [
+    URL="../VOResource/Relationship"
+    label = "{Relationship|+relationshipType : ivoa:string\l+relatedResource : VOResource:ResourceName\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Organisation" [
+    URL="../VOResource/Organisation"
+    label = "{Organisation|+facility : VOResource:ResourceName\l+instrument : VOResource:ResourceName\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Service" [
+    URL="../VOResource/Service"
+    label = "{Service|+rights : VOResource:Rights\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Capability" [
+    URL="../VOResource/Capability"
+    label = "{Capability|+validationLevel : VOResource:Validation\l+description : ivoa:string\l+standardID : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:Interface" [
+    URL="../VOResource/Interface"
+    label = "{Interface|+testQueryString : ivoa:string\l+version : ivoa:string\l+role : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:AccessURL" [
+    URL="../VOResource/AccessURL"
+    label = "{AccessURL|+value : ivoa:anyURI\l+use : VOResource:AccessURL_use\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:MirrorURL" [
+    URL="../VOResource/MirrorURL"
+    label = "{MirrorURL|+value : ivoa:anyURI\l+title : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:SecurityMethod" [
+    URL="../VOResource/SecurityMethod"
+    label = "{SecurityMethod|+standardID : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:WebBrowser" [
+    URL="../VOResource/WebBrowser"
+    label = "{WebBrowser}"
+    fillcolor="/set312/1"
+    ] ;
+  "VOResource:WebService" [
+    URL="../VOResource/WebService"
+    label = "{WebService|+wsdlURL : ivoa:anyURI\l}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "VOResource:Organisation" -> "VOResource:Resource" ;
+  "VOResource:Service" -> "VOResource:Resource" ;
+  "VOResource:WebBrowser" -> "VOResource:Interface" ;
+  "VOResource:WebService" -> "VOResource:Interface" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "VOResource:Resource" -> "VOResource:Curation" [headlabel="1",label="curation",labelfontsize=10] ;
+  "VOResource:Resource" -> "VOResource:Content" [headlabel="1",label="content",labelfontsize=10] ;
+  "VOResource:Curation" -> "VOResource:Creator" [headlabel="0..*",label="creator",labelfontsize=10] ;
+  "VOResource:Curation" -> "VOResource:Contact" [headlabel="1..*",label="contact",labelfontsize=10] ;
+  "VOResource:Content" -> "VOResource:Relationship" [headlabel="0..*",label="relationship",labelfontsize=10] ;
+  "VOResource:Service" -> "VOResource:Capability" [headlabel="0..*",label="capability",labelfontsize=10] ;
+  "VOResource:Capability" -> "VOResource:Interface" [headlabel="0..*",label="interface",labelfontsize=10] ;
+  "VOResource:Interface" -> "VOResource:AccessURL" [headlabel="1..*",label="accessURL",labelfontsize=10] ;
+  "VOResource:Interface" -> "VOResource:MirrorURL" [headlabel="0..*",label="mirrorURL",labelfontsize=10] ;
+  "VOResource:Interface" -> "VOResource:SecurityMethod" [headlabel="0..*",label="securityMethod",labelfontsize=10] ;
+    
+}
+  

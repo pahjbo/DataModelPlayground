@@ -1,0 +1,68 @@
+
+digraph GVmap {  
+	label = "\n\nSIA data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    
+  "VOResource:Capability" [
+    URL="#Capability"
+    label = "{VOResource:Capability}"
+    fillcolor="grey"
+    ] ;
+      
+    "SIA:ImageServiceType" [
+    URL="../SIA/ImageServiceType"
+    label = "{&lt;&lt;enumeration&gt;&gt;\nImageServiceType|+Cutout\l+Mosaic\l+Atlas\l+Pointed\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "SIA:SimpleImageAccess" [
+    URL="../SIA/SimpleImageAccess"
+    label = "{SimpleImageAccess|+imageServiceType : SIA:ImageServiceType\l+maxImageSize : ivoa:integer\l+maxFileSize : ivoa:integer\l+maxRecords : ivoa:integer\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "SIA:SkySize" [
+    URL="../SIA/SkySize"
+    label = "{SkySize|+long : ivoa:real\l+lat : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "SIA:SkyPos" [
+    URL="../SIA/SkyPos"
+    label = "{SkyPos|+long : ivoa:real\l+lat : ivoa:real\l}"
+    fillcolor="/set312/1"
+    ] ;
+  "SIA:Query" [
+    URL="../SIA/Query"
+    label = "{Query|+verb : ivoa:integer\l+extras : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+  
+ 
+    edge [color="red", arrowtail="none", arrowhead="empty"]
+    "SIA:SimpleImageAccess" -> "VOResource:Capability" ;
+  
+ 
+    edge [color="blue", arrowhead="open", arrowtail="diamond",dir="both",fontsize="10"]
+    "SIA:SimpleImageAccess" -> "SIA:SkySize" [headlabel="0..1",label="maxQueryRegionSize",labelfontsize=10] ;
+  "SIA:SimpleImageAccess" -> "SIA:SkySize" [headlabel="0..1",label="maxImageExtent",labelfontsize=10] ;
+  "SIA:SimpleImageAccess" -> "SIA:Query" [headlabel="0..1",label="testQuery",labelfontsize=10] ;
+  "SIA:Query" -> "SIA:SkyPos" [headlabel="0..1",label="pos",labelfontsize=10] ;
+  "SIA:Query" -> "SIA:SkySize" [headlabel="0..1",label="size",labelfontsize=10] ;
+    
+}
+  

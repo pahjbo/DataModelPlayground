@@ -1,0 +1,29 @@
+
+digraph GVmap {  
+	label = "\n\nVOSIAvail data model"
+	rankdir=TB
+	
+	node [ 
+	  shape=tab
+	  style=filled
+	]
+	subgraph cluster_packages {
+	  label="Model"
+	  rankdir=TB
+      style=filled
+      fillcolor="/set312/1"
+	  
+	}
+	
+	node [
+	shape=record
+	fontsize=8
+	style=filled] 
+    "VOSIAvail:Availability" [
+    URL="../VOSIAvail/Availability"
+    label = "{Availability|+available : ivoa:boolean\l+upSince : ivoa:datetime\l+downAt : ivoa:datetime\l+backAt : ivoa:datetime\l+note : ivoa:string\l}"
+    fillcolor="/set312/1"
+    ] ;
+    
+}
+  
