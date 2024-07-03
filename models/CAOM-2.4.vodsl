@@ -1,5 +1,20 @@
 
 model caom2 (2.4) "a general purpose data model for use as the core data model of an astronomical data centre"
+
+
+//
+// STD - would like to have Telescope/Instrument DB outside.
+// STD - TargetSource - standalone model
+// STD - plane is a strange word for the concept
+// STD - Vocabulary term - is modelled with semantic concept in vodml
+// STD - does a lot of aggregation - vodml does not like ;-)
+// STD - need arrays of telescopes
+// STD - perhaps store the natural WCS as separate to the transformed one for search purposes.
+// STD - solar system positions.....
+// STD - clarity about internal and external references
+// STD - many targets in observation....
+// STD - import COORDs?..
+
      
 author "Patrick Dowler, Canadian Astronomy Data Centre"
        include "IVOA-v1.0.vodsl"
@@ -41,7 +56,7 @@ Gammaray  "energy greater than ~120keV"
 }
 
 enum PolarizationState  "a classification of polarization (Stokes states plus other related quantities);
-                work-around: using the name of the literal to convey the serialised value"
+                work-around: using the name of the literal to convey the serialised value" //STD cannot represent pure circular polarized - e.g. voltages
 {
 I  "unpolarized",
 Q  "Stokes linear Q",
@@ -169,7 +184,7 @@ abstract otype Observation  -> CaomEntity "an observation is a single top-level 
         intent: ObservationIntentType   "the intent of the original observer in acquiring this data";
         metaReadGroups: ivoa:anyURI  @*   "set of groups with read permission on observation metadata (new in 2.4)";
         algorithm : Algorithm as composition "the algorithm or process that created this observation";
-        telescope : Telescope @?  as composition "the telescope or facility where this observation was created";
+        telescope : Telescope @?  as composition "the telescope or facility where this observation was created"; //STD - what about telescope arrays
         instrument : Instrument @?  as composition "the instrument or detector used to acquire the data";
         environment : Environment @?  as composition "the environmental conditions at the time of observation";
         proposal : Proposal @?  as composition "the science proposal underwhich this observation was created";
@@ -295,7 +310,7 @@ otype Algorithm  "the algorithm that was responsible for creating the observatio
                     TBD: publish a list of acceptable values as a machine-readable vocabulary?";
   }
 
-otype Telescope  "the telescope used to acquire the data for an observation"
+otype Telescope  "the telescope used to acquire the data for an observation" // STD - could point to IVOA telescopes service 
   {   
         name: ivoa:string   "common name of the telescope; 
                     TBD: reference to a standard list of names?";
@@ -440,7 +455,7 @@ otype Energy  "description of the energy coverage and sampling of the data"
         restwav: ivoa:real  @?   "rest wavelength of the target energy transition";
   }
 
-otype Time  "description of the time coverage and sampling of the data"
+otype Time  "description of the time coverage and sampling of the data" //STD - what time axis not pixel based - just list...
   {   
         bounds: types.SampledInterval  @?   "time bounds that include the data";
         dimension: ivoa:integer  @?   "number of measurements (pixels) on the time axis";
