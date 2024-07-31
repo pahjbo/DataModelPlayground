@@ -165,7 +165,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordSys.html" title="class in org.ivoa.dm.stc.coords">CoordSys</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="GenericSys.html" title="class in org.ivoa.dm.stc.coords">GenericSys</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createGenericSys(java.util.function.Consumer)" class="member-name-link">createGenericSys</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="GenericSys.GenericSysBuilder.html" title="class in org.ivoa.dm.stc.coords">GenericSys.GenericSysBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -177,7 +179,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFrame()" class="member-name-link">getFrame</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns frame Attribute</div>
+<div class="block">Returns frame Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -188,7 +190,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFrame(org.ivoa.dm.stc.coords.GenericFrame)" class="member-name-link">setFrame</a><wbr>(<a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a>&nbsp;pFrame)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines frame Attribute</div>
+<div class="block">Set frame Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.coords.GenericSys)" class="member-name-link">updateUsing</a><wbr>(<a href="GenericSys.html" title="class in org.ivoa.dm.stc.coords">GenericSys</a>&nbsp;other)</code></div>
@@ -197,7 +199,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GenericSys.html" title="class in org.ivoa.dm.stc.coords">GenericSys</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFrame(org.ivoa.dm.stc.coords.GenericFrame)" class="member-name-link">withFrame</a><wbr>(<a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a>&nbsp;pFrame)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for frame Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -281,9 +285,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CoordSys.html" title="class in org.ivoa.dm.stc.coords">CoordSys</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="PhysicalCoordSys.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="PhysicalCoordSys.html" title="class in org.ivoa.dm.stc.coords">PhysicalCoordSys</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -302,7 +309,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getFrame()">
 <h3>getFrame</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a></span>&nbsp;<span class="element-name">getFrame</span>()</div>
-<div class="block">Returns frame Attribute</div>
+<div class="block">Returns frame Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>frame Attribute</dd>
@@ -313,7 +320,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setFrame(org.ivoa.dm.stc.coords.GenericFrame)">
 <h3>setFrame</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFrame</span><wbr><span class="parameters">(<a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a>&nbsp;pFrame)</span></div>
-<div class="block">Defines frame Attribute</div>
+<div class="block">Set frame Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pFrame</code> - value to set</dd>
@@ -324,6 +331,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withFrame(org.ivoa.dm.stc.coords.GenericFrame)">
 <h3>withFrame</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GenericSys.html" title="class in org.ivoa.dm.stc.coords">GenericSys</a></span>&nbsp;<span class="element-name">withFrame</span><wbr><span class="parameters">(<a href="GenericFrame.html" title="class in org.ivoa.dm.stc.coords">GenericFrame</a>&nbsp;pFrame)</span></div>
+<div class="block">fluent setter for frame Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pFrame</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>GenericSys</dd>
+</dl>
 </section>
 </li>
 <li>

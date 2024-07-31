@@ -172,7 +172,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordSpace.html" title="class in org.ivoa.dm.stc.coords">CoordSpace</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createPixelSpace(java.util.function.Consumer)" class="member-name-link">createPixelSpace</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="PixelSpace.PixelSpaceBuilder.html" title="class in org.ivoa.dm.stc.coords">PixelSpace.PixelSpaceBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -184,12 +186,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BinnedAxis.html" title="class in org.ivoa.dm.stc.coords">BinnedAxis</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAxis()" class="member-name-link">getAxis</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns axis Attribute</div>
+<div class="block">Returns axis Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHandedness()" class="member-name-link">getHandedness</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns handedness Attribute</div>
+<div class="block">Returns handedness Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -200,7 +202,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHandedness(org.ivoa.dm.stc.coords.Handedness)" class="member-name-link">setHandedness</a><wbr>(<a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a>&nbsp;pHandedness)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines handedness Attribute</div>
+<div class="block">Set handedness Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.coords.PixelSpace)" class="member-name-link">updateUsing</a><wbr>(<a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a>&nbsp;other)</code></div>
@@ -209,10 +211,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAxis(java.util.List)" class="member-name-link">withAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BinnedAxis.html" title="class in org.ivoa.dm.stc.coords">BinnedAxis</a>&gt;&nbsp;pAxis)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for axis Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withHandedness(org.ivoa.dm.stc.coords.Handedness)" class="member-name-link">withHandedness</a><wbr>(<a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a>&nbsp;pHandedness)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for handedness Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -311,9 +317,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CoordSpace.html" title="class in org.ivoa.dm.stc.coords">CoordSpace</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CoordSpace.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="CoordSpace.html" title="class in org.ivoa.dm.stc.coords">CoordSpace</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -332,7 +341,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getAxis()">
 <h3>getAxis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BinnedAxis.html" title="class in org.ivoa.dm.stc.coords">BinnedAxis</a>&gt;</span>&nbsp;<span class="element-name">getAxis</span>()</div>
-<div class="block">Returns axis Attribute</div>
+<div class="block">Returns axis Attribute.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="CoordSpace.html#getAxis()">getAxis</a></code>&nbsp;in class&nbsp;<code><a href="CoordSpace.html" title="class in org.ivoa.dm.stc.coords">CoordSpace</a></code></dd>
@@ -345,13 +354,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withAxis(java.util.List)">
 <h3>withAxis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></span>&nbsp;<span class="element-name">withAxis</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="BinnedAxis.html" title="class in org.ivoa.dm.stc.coords">BinnedAxis</a>&gt;&nbsp;pAxis)</span></div>
+<div class="block">fluent setter for axis Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pAxis</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>PixelSpace</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getHandedness()">
 <h3>getHandedness</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a></span>&nbsp;<span class="element-name">getHandedness</span>()</div>
-<div class="block">Returns handedness Attribute</div>
+<div class="block">Returns handedness Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>handedness Attribute</dd>
@@ -362,7 +378,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setHandedness(org.ivoa.dm.stc.coords.Handedness)">
 <h3>setHandedness</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHandedness</span><wbr><span class="parameters">(<a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a>&nbsp;pHandedness)</span></div>
-<div class="block">Defines handedness Attribute</div>
+<div class="block">Set handedness Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pHandedness</code> - value to set</dd>
@@ -373,6 +389,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withHandedness(org.ivoa.dm.stc.coords.Handedness)">
 <h3>withHandedness</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></span>&nbsp;<span class="element-name">withHandedness</span><wbr><span class="parameters">(<a href="Handedness.html" title="enum class in org.ivoa.dm.stc.coords">Handedness</a>&nbsp;pHandedness)</span></div>
+<div class="block">fluent setter for handedness Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pHandedness</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>PixelSpace</dd>
+</dl>
 </section>
 </li>
 <li>

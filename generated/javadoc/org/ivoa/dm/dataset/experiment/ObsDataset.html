@@ -207,7 +207,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../dataset/Dataset.html" title="class in org.ivoa.dm.dataset.dataset">Dataset</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ObsDataset.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createObsDataset(java.util.function.Consumer)" class="member-name-link">createObsDataset</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="ObsDataset.ObsDatasetBuilder.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset.ObsDatasetBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -219,12 +221,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCalibLevel()" class="member-name-link">getCalibLevel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns calibLevel Attribute</div>
+<div class="block">Returns calibLevel Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDerived()" class="member-name-link">getDerived</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns derived Attribute</div>
+<div class="block">Returns derived Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ObsConfig.html" title="class in org.ivoa.dm.dataset.experiment">ObsConfig</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getObsConfig()" class="member-name-link">getObsConfig</a>()</code></div>
@@ -250,12 +252,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCalibLevel(java.lang.Integer)" class="member-name-link">setCalibLevel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pCalibLevel)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines calibLevel Attribute</div>
+<div class="block">Set calibLevel Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDerived(org.ivoa.dm.dataset.experiment.Derived)" class="member-name-link">setDerived</a><wbr>(<a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a>&nbsp;pDerived)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines derived Attribute</div>
+<div class="block">Set derived Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setObsConfig(org.ivoa.dm.dataset.experiment.ObsConfig)" class="member-name-link">setObsConfig</a><wbr>(<a href="ObsConfig.html" title="class in org.ivoa.dm.dataset.experiment">ObsConfig</a>&nbsp;pObsConfig)</code></div>
@@ -284,10 +286,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ObsDataset.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCalibLevel(java.lang.Integer)" class="member-name-link">withCalibLevel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pCalibLevel)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for calibLevel Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ObsDataset.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDerived(org.ivoa.dm.dataset.experiment.Derived)" class="member-name-link">withDerived</a><wbr>(<a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a>&nbsp;pDerived)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for derived Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -489,9 +495,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../dataset/Dataset.html" title="class in org.ivoa.dm.dataset.dataset">Dataset</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../dataset/Dataset.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="../dataset/Dataset.html" title="class in org.ivoa.dm.dataset.dataset">Dataset</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -521,7 +530,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getCalibLevel()">
 <h3>getCalibLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getCalibLevel</span>()</div>
-<div class="block">Returns calibLevel Attribute</div>
+<div class="block">Returns calibLevel Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>calibLevel Attribute</dd>
@@ -532,7 +541,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setCalibLevel(java.lang.Integer)">
 <h3>setCalibLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCalibLevel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pCalibLevel)</span></div>
-<div class="block">Defines calibLevel Attribute</div>
+<div class="block">Set calibLevel Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCalibLevel</code> - value to set</dd>
@@ -543,13 +552,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withCalibLevel(java.lang.Integer)">
 <h3>withCalibLevel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ObsDataset.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset</a></span>&nbsp;<span class="element-name">withCalibLevel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pCalibLevel)</span></div>
+<div class="block">fluent setter for calibLevel Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCalibLevel</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ObsDataset</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDerived()">
 <h3>getDerived</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a></span>&nbsp;<span class="element-name">getDerived</span>()</div>
-<div class="block">Returns derived Attribute</div>
+<div class="block">Returns derived Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>derived Attribute</dd>
@@ -560,7 +576,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setDerived(org.ivoa.dm.dataset.experiment.Derived)">
 <h3>setDerived</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDerived</span><wbr><span class="parameters">(<a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a>&nbsp;pDerived)</span></div>
-<div class="block">Defines derived Attribute</div>
+<div class="block">Set derived Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pDerived</code> - value to set</dd>
@@ -571,6 +587,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withDerived(org.ivoa.dm.dataset.experiment.Derived)">
 <h3>withDerived</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ObsDataset.html" title="class in org.ivoa.dm.dataset.experiment">ObsDataset</a></span>&nbsp;<span class="element-name">withDerived</span><wbr><span class="parameters">(<a href="Derived.html" title="class in org.ivoa.dm.dataset.experiment">Derived</a>&nbsp;pDerived)</span></div>
+<div class="block">fluent setter for derived Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pDerived</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ObsDataset</dd>
+</dl>
 </section>
 </li>
 <li>

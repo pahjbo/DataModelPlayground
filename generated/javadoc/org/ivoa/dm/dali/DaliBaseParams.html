@@ -151,7 +151,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -161,12 +163,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRUNID()" class="member-name-link">getRUNID</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns RUNID Attribute</div>
+<div class="block">Returns RUNID Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUPLOAD()" class="member-name-link">getUPLOAD</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns UPLOAD Attribute</div>
+<div class="block">Returns UPLOAD Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -177,12 +179,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRUNID(java.lang.String)" class="member-name-link">setRUNID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRUNID)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines RUNID Attribute</div>
+<div class="block">Set RUNID Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUPLOAD(org.ivoa.dm.dali.UPLOAD)" class="member-name-link">setUPLOAD</a><wbr>(<a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a>&nbsp;pUPLOAD)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines UPLOAD Attribute</div>
+<div class="block">Set UPLOAD Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.dali.DaliBaseParams)" class="member-name-link">updateUsing</a><wbr>(<a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a>&nbsp;other)</code></div>
@@ -191,10 +193,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRUNID(java.lang.String)" class="member-name-link">withRUNID</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRUNID)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for RUNID Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withUPLOAD(org.ivoa.dm.dali.UPLOAD)" class="member-name-link">withUPLOAD</a><wbr>(<a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a>&nbsp;pUPLOAD)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for UPLOAD Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -293,6 +299,11 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -310,7 +321,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getUPLOAD()">
 <h3>getUPLOAD</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a></span>&nbsp;<span class="element-name">getUPLOAD</span>()</div>
-<div class="block">Returns UPLOAD Attribute</div>
+<div class="block">Returns UPLOAD Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>UPLOAD Attribute</dd>
@@ -321,7 +332,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setUPLOAD(org.ivoa.dm.dali.UPLOAD)">
 <h3>setUPLOAD</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUPLOAD</span><wbr><span class="parameters">(<a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a>&nbsp;pUPLOAD)</span></div>
-<div class="block">Defines UPLOAD Attribute</div>
+<div class="block">Set UPLOAD Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pUPLOAD</code> - value to set</dd>
@@ -332,13 +343,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withUPLOAD(org.ivoa.dm.dali.UPLOAD)">
 <h3>withUPLOAD</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></span>&nbsp;<span class="element-name">withUPLOAD</span><wbr><span class="parameters">(<a href="UPLOAD.html" title="class in org.ivoa.dm.dali">UPLOAD</a>&nbsp;pUPLOAD)</span></div>
+<div class="block">fluent setter for UPLOAD Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pUPLOAD</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DaliBaseParams</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRUNID()">
 <h3>getRUNID</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRUNID</span>()</div>
-<div class="block">Returns RUNID Attribute</div>
+<div class="block">Returns RUNID Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>RUNID Attribute</dd>
@@ -349,7 +367,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setRUNID(java.lang.String)">
 <h3>setRUNID</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRUNID</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRUNID)</span></div>
-<div class="block">Defines RUNID Attribute</div>
+<div class="block">Set RUNID Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pRUNID</code> - value to set</dd>
@@ -360,6 +378,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withRUNID(java.lang.String)">
 <h3>withRUNID</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DaliBaseParams.html" title="class in org.ivoa.dm.dali">DaliBaseParams</a></span>&nbsp;<span class="element-name">withRUNID</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRUNID)</span></div>
+<div class="block">fluent setter for RUNID Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pRUNID</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DaliBaseParams</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -172,7 +172,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Contributor.html" title="class in org.ivoa.dm.dataset.dataset">Contributor</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createContributor(java.util.function.Consumer)" class="member-name-link">createContributor</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Contributor.ContributorBuilder.html" title="class in org.ivoa.dm.dataset.dataset">Contributor.ContributorBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -184,7 +186,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAcknowledgment()" class="member-name-link">getAcknowledgment</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns acknowledgment Attribute</div>
+<div class="block">Returns acknowledgment Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -195,7 +197,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAcknowledgment(java.lang.String)" class="member-name-link">setAcknowledgment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pAcknowledgment)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines acknowledgment Attribute</div>
+<div class="block">Set acknowledgment Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.dataset.dataset.Contributor)" class="member-name-link">updateUsing</a><wbr>(<a href="Contributor.html" title="class in org.ivoa.dm.dataset.dataset">Contributor</a>&nbsp;other)</code></div>
@@ -204,7 +206,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Contributor.html" title="class in org.ivoa.dm.dataset.dataset">Contributor</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAcknowledgment(java.lang.String)" class="member-name-link">withAcknowledgment</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pAcknowledgment)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for acknowledgment Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -303,9 +307,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../party/Role.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -324,7 +331,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getAcknowledgment()">
 <h3>getAcknowledgment</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getAcknowledgment</span>()</div>
-<div class="block">Returns acknowledgment Attribute</div>
+<div class="block">Returns acknowledgment Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>acknowledgment Attribute</dd>
@@ -335,7 +342,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setAcknowledgment(java.lang.String)">
 <h3>setAcknowledgment</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setAcknowledgment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pAcknowledgment)</span></div>
-<div class="block">Defines acknowledgment Attribute</div>
+<div class="block">Set acknowledgment Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pAcknowledgment</code> - value to set</dd>
@@ -346,6 +353,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withAcknowledgment(java.lang.String)">
 <h3>withAcknowledgment</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Contributor.html" title="class in org.ivoa.dm.dataset.dataset">Contributor</a></span>&nbsp;<span class="element-name">withAcknowledgment</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pAcknowledgment)</span></div>
+<div class="block">fluent setter for acknowledgment Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pAcknowledgment</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Contributor</dd>
+</dl>
 </section>
 </li>
 <li>

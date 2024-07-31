@@ -204,7 +204,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createService(java.util.function.Consumer)" class="member-name-link">createService</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Service.ServiceBuilder.html" title="class in org.ivoa.dm.registry.voresource">Service.ServiceBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -221,7 +223,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRights()" class="member-name-link">getRights</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns rights Attribute</div>
+<div class="block">Returns rights Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -247,7 +249,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRights(java.util.List)" class="member-name-link">setRights</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;pRights)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines rights Attribute</div>
+<div class="block">Set rights Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.voresource.Service)" class="member-name-link">updateUsing</a><wbr>(<a href="Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a>&nbsp;other)</code></div>
@@ -256,7 +258,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRights(java.util.List)" class="member-name-link">withRights</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;pRights)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for rights Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -491,9 +495,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Resource.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -512,7 +519,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getRights()">
 <h3>getRights</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;</span>&nbsp;<span class="element-name">getRights</span>()</div>
-<div class="block">Returns rights Attribute</div>
+<div class="block">Returns rights Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>rights Attribute</dd>
@@ -523,7 +530,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setRights(java.util.List)">
 <h3>setRights</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRights</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;pRights)</span></div>
-<div class="block">Defines rights Attribute</div>
+<div class="block">Set rights Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pRights</code> - value to set</dd>
@@ -534,6 +541,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withRights(java.util.List)">
 <h3>withRights</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a></span>&nbsp;<span class="element-name">withRights</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;pRights)</span></div>
+<div class="block">fluent setter for rights Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pRights</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Service</dd>
+</dl>
 </section>
 </li>
 <li>

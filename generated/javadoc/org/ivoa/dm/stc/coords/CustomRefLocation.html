@@ -182,7 +182,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RefLocation.html" title="class in org.ivoa.dm.stc.coords">RefLocation</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCustomRefLocation(java.util.function.Consumer)" class="member-name-link">createCustomRefLocation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CustomRefLocation.CustomRefLocationBuilder.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation.CustomRefLocationBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -194,17 +196,17 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEpoch()" class="member-name-link">getEpoch</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns epoch Attribute</div>
+<div class="block">Returns epoch Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosition()" class="member-name-link">getPosition</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns position Attribute</div>
+<div class="block">Returns position Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVelocity()" class="member-name-link">getVelocity</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns velocity Attribute</div>
+<div class="block">Returns velocity Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -215,17 +217,17 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEpoch(org.ivoa.dm.stc.coords.Epoch)" class="member-name-link">setEpoch</a><wbr>(<a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a>&nbsp;pEpoch)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines epoch Attribute</div>
+<div class="block">Set epoch Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosition(org.ivoa.dm.stc.coords.Point)" class="member-name-link">setPosition</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pPosition)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines position Attribute</div>
+<div class="block">Set position Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVelocity(org.ivoa.dm.stc.coords.Point)" class="member-name-link">setVelocity</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pVelocity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines velocity Attribute</div>
+<div class="block">Set velocity Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.coords.CustomRefLocation)" class="member-name-link">updateUsing</a><wbr>(<a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a>&nbsp;other)</code></div>
@@ -234,13 +236,19 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withEpoch(org.ivoa.dm.stc.coords.Epoch)" class="member-name-link">withEpoch</a><wbr>(<a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a>&nbsp;pEpoch)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for epoch Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPosition(org.ivoa.dm.stc.coords.Point)" class="member-name-link">withPosition</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pPosition)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for position Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withVelocity(org.ivoa.dm.stc.coords.Point)" class="member-name-link">withVelocity</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pVelocity)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for velocity Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -364,9 +372,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RefLocation.html" title="class in org.ivoa.dm.stc.coords">RefLocation</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="RefLocation.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="RefLocation.html" title="class in org.ivoa.dm.stc.coords">RefLocation</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -385,7 +396,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getEpoch()">
 <h3>getEpoch</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a></span>&nbsp;<span class="element-name">getEpoch</span>()</div>
-<div class="block">Returns epoch Attribute</div>
+<div class="block">Returns epoch Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>epoch Attribute</dd>
@@ -396,7 +407,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setEpoch(org.ivoa.dm.stc.coords.Epoch)">
 <h3>setEpoch</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setEpoch</span><wbr><span class="parameters">(<a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a>&nbsp;pEpoch)</span></div>
-<div class="block">Defines epoch Attribute</div>
+<div class="block">Set epoch Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pEpoch</code> - value to set</dd>
@@ -407,13 +418,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withEpoch(org.ivoa.dm.stc.coords.Epoch)">
 <h3>withEpoch</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></span>&nbsp;<span class="element-name">withEpoch</span><wbr><span class="parameters">(<a href="Epoch.html" title="class in org.ivoa.dm.stc.coords">Epoch</a>&nbsp;pEpoch)</span></div>
+<div class="block">fluent setter for epoch Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pEpoch</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>CustomRefLocation</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPosition()">
 <h3>getPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></span>&nbsp;<span class="element-name">getPosition</span>()</div>
-<div class="block">Returns position Attribute</div>
+<div class="block">Returns position Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>position Attribute</dd>
@@ -424,7 +442,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setPosition(org.ivoa.dm.stc.coords.Point)">
 <h3>setPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosition</span><wbr><span class="parameters">(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pPosition)</span></div>
-<div class="block">Defines position Attribute</div>
+<div class="block">Set position Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pPosition</code> - value to set</dd>
@@ -435,13 +453,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withPosition(org.ivoa.dm.stc.coords.Point)">
 <h3>withPosition</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></span>&nbsp;<span class="element-name">withPosition</span><wbr><span class="parameters">(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pPosition)</span></div>
+<div class="block">fluent setter for position Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pPosition</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>CustomRefLocation</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getVelocity()">
 <h3>getVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></span>&nbsp;<span class="element-name">getVelocity</span>()</div>
-<div class="block">Returns velocity Attribute</div>
+<div class="block">Returns velocity Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>velocity Attribute</dd>
@@ -452,7 +477,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setVelocity(org.ivoa.dm.stc.coords.Point)">
 <h3>setVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVelocity</span><wbr><span class="parameters">(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pVelocity)</span></div>
-<div class="block">Defines velocity Attribute</div>
+<div class="block">Set velocity Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pVelocity</code> - value to set</dd>
@@ -463,6 +488,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withVelocity(org.ivoa.dm.stc.coords.Point)">
 <h3>withVelocity</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomRefLocation.html" title="class in org.ivoa.dm.stc.coords">CustomRefLocation</a></span>&nbsp;<span class="element-name">withVelocity</span><wbr><span class="parameters">(<a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a>&nbsp;pVelocity)</span></div>
+<div class="block">fluent setter for velocity Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVelocity</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>CustomRefLocation</dd>
+</dl>
 </section>
 </li>
 <li>

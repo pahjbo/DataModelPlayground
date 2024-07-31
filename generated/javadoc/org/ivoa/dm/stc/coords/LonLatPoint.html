@@ -189,7 +189,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createLonLatPoint(java.util.function.Consumer)" class="member-name-link">createLonLatPoint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="LonLatPoint.LonLatPointBuilder.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint.LonLatPointBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -201,17 +203,17 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDist()" class="member-name-link">getDist</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns dist Attribute</div>
+<div class="block">Returns dist Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLat()" class="member-name-link">getLat</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns lat Attribute</div>
+<div class="block">Returns lat Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLon()" class="member-name-link">getLon</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns lon Attribute</div>
+<div class="block">Returns lon Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -222,17 +224,17 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDist(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setDist</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDist)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines dist Attribute</div>
+<div class="block">Set dist Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLat(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setLat</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLat)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines lat Attribute</div>
+<div class="block">Set lat Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLon(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setLon</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLon)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines lon Attribute</div>
+<div class="block">Set lon Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateClonedReferences()" class="member-name-link">updateClonedReferences</a>()</code></div>
@@ -246,13 +248,19 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDist(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withDist</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDist)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for dist Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLat(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withLat</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLat)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for lat Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLon(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withLon</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLon)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for lon Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -381,9 +389,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Point.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -413,7 +424,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getLon()">
 <h3>getLon</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getLon</span>()</div>
-<div class="block">Returns lon Attribute</div>
+<div class="block">Returns lon Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>lon Attribute</dd>
@@ -424,7 +435,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setLon(org.ivoa.dm.ivoa.Quantity)">
 <h3>setLon</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLon</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLon)</span></div>
-<div class="block">Defines lon Attribute</div>
+<div class="block">Set lon Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pLon</code> - value to set</dd>
@@ -435,13 +446,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withLon(org.ivoa.dm.ivoa.Quantity)">
 <h3>withLon</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></span>&nbsp;<span class="element-name">withLon</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLon)</span></div>
+<div class="block">fluent setter for lon Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pLon</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>LonLatPoint</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getLat()">
 <h3>getLat</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getLat</span>()</div>
-<div class="block">Returns lat Attribute</div>
+<div class="block">Returns lat Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>lat Attribute</dd>
@@ -452,7 +470,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setLat(org.ivoa.dm.ivoa.Quantity)">
 <h3>setLat</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLat</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLat)</span></div>
-<div class="block">Defines lat Attribute</div>
+<div class="block">Set lat Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pLat</code> - value to set</dd>
@@ -463,13 +481,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withLat(org.ivoa.dm.ivoa.Quantity)">
 <h3>withLat</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></span>&nbsp;<span class="element-name">withLat</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pLat)</span></div>
+<div class="block">fluent setter for lat Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pLat</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>LonLatPoint</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDist()">
 <h3>getDist</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getDist</span>()</div>
-<div class="block">Returns dist Attribute</div>
+<div class="block">Returns dist Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>dist Attribute</dd>
@@ -480,7 +505,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setDist(org.ivoa.dm.ivoa.Quantity)">
 <h3>setDist</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDist</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDist)</span></div>
-<div class="block">Defines dist Attribute</div>
+<div class="block">Set dist Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pDist</code> - value to set</dd>
@@ -491,6 +516,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withDist(org.ivoa.dm.ivoa.Quantity)">
 <h3>withDist</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LonLatPoint.html" title="class in org.ivoa.dm.stc.coords">LonLatPoint</a></span>&nbsp;<span class="element-name">withDist</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDist)</span></div>
+<div class="block">fluent setter for dist Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pDist</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>LonLatPoint</dd>
+</dl>
 </section>
 </li>
 <li>

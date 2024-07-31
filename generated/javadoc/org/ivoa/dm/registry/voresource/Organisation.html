@@ -205,7 +205,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createOrganisation(java.util.function.Consumer)" class="member-name-link">createOrganisation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Organisation.OrganisationBuilder.html" title="class in org.ivoa.dm.registry.voresource">Organisation.OrganisationBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -217,12 +219,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFacility()" class="member-name-link">getFacility</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns facility Attribute</div>
+<div class="block">Returns facility Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInstrument()" class="member-name-link">getInstrument</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns instrument Attribute</div>
+<div class="block">Returns instrument Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -233,12 +235,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setFacility(java.util.List)" class="member-name-link">setFacility</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pFacility)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines facility Attribute</div>
+<div class="block">Set facility Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setInstrument(java.util.List)" class="member-name-link">setInstrument</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pInstrument)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines instrument Attribute</div>
+<div class="block">Set instrument Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.voresource.Organisation)" class="member-name-link">updateUsing</a><wbr>(<a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a>&nbsp;other)</code></div>
@@ -247,10 +249,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFacility(java.util.List)" class="member-name-link">withFacility</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pFacility)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for facility Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInstrument(java.util.List)" class="member-name-link">withInstrument</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pInstrument)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for instrument Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -439,9 +445,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Resource.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -460,7 +469,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getFacility()">
 <h3>getFacility</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;</span>&nbsp;<span class="element-name">getFacility</span>()</div>
-<div class="block">Returns facility Attribute</div>
+<div class="block">Returns facility Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>facility Attribute</dd>
@@ -471,7 +480,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setFacility(java.util.List)">
 <h3>setFacility</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFacility</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pFacility)</span></div>
-<div class="block">Defines facility Attribute</div>
+<div class="block">Set facility Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pFacility</code> - value to set</dd>
@@ -482,13 +491,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withFacility(java.util.List)">
 <h3>withFacility</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a></span>&nbsp;<span class="element-name">withFacility</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pFacility)</span></div>
+<div class="block">fluent setter for facility Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pFacility</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Organisation</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getInstrument()">
 <h3>getInstrument</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;</span>&nbsp;<span class="element-name">getInstrument</span>()</div>
-<div class="block">Returns instrument Attribute</div>
+<div class="block">Returns instrument Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>instrument Attribute</dd>
@@ -499,7 +515,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setInstrument(java.util.List)">
 <h3>setInstrument</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setInstrument</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pInstrument)</span></div>
-<div class="block">Defines instrument Attribute</div>
+<div class="block">Set instrument Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pInstrument</code> - value to set</dd>
@@ -510,6 +526,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withInstrument(java.util.List)">
 <h3>withInstrument</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Organisation.html" title="class in org.ivoa.dm.registry.voresource">Organisation</a></span>&nbsp;<span class="element-name">withInstrument</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;pInstrument)</span></div>
+<div class="block">fluent setter for instrument Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pInstrument</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Organisation</dd>
+</dl>
 </section>
 </li>
 <li>

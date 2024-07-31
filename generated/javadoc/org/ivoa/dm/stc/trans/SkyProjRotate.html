@@ -188,7 +188,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Mapping.html" title="class in org.ivoa.dm.stc.trans">Mapping</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SkyProjRotate.html" title="class in org.ivoa.dm.stc.trans">SkyProjRotate</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createSkyProjRotate(java.util.function.Consumer)" class="member-name-link">createSkyProjRotate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="SkyProjRotate.SkyProjRotateBuilder.html" title="class in org.ivoa.dm.stc.trans">SkyProjRotate.SkyProjRotateBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -200,7 +202,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReferenceValue()" class="member-name-link">getReferenceValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns referenceValue Attribute</div>
+<div class="block">Returns referenceValue Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -211,7 +213,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReferenceValue(java.lang.Double%5B%5D)" class="member-name-link">setReferenceValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]&nbsp;pReferenceValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines referenceValue Attribute</div>
+<div class="block">Set referenceValue Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.trans.SkyProjRotate)" class="member-name-link">updateUsing</a><wbr>(<a href="SkyProjRotate.html" title="class in org.ivoa.dm.stc.trans">SkyProjRotate</a>&nbsp;other)</code></div>
@@ -220,7 +222,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SkyProjRotate.html" title="class in org.ivoa.dm.stc.trans">SkyProjRotate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withReferenceValue(java.lang.Double%5B%5D)" class="member-name-link">withReferenceValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]&nbsp;pReferenceValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for referenceValue Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -337,9 +341,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mapping.html" title="class in org.ivoa.dm.stc.trans">Mapping</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="SkyProjection.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="SkyProjection.html" title="class in org.ivoa.dm.stc.trans">SkyProjection</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -358,7 +365,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getReferenceValue()">
 <h3>getReferenceValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]</span>&nbsp;<span class="element-name">getReferenceValue</span>()</div>
-<div class="block">Returns referenceValue Attribute</div>
+<div class="block">Returns referenceValue Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>referenceValue Attribute</dd>
@@ -369,7 +376,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setReferenceValue(java.lang.Double[])">
 <h3>setReferenceValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setReferenceValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]&nbsp;pReferenceValue)</span></div>
-<div class="block">Defines referenceValue Attribute</div>
+<div class="block">Set referenceValue Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pReferenceValue</code> - value to set</dd>
@@ -380,6 +387,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withReferenceValue(java.lang.Double[])">
 <h3>withReferenceValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkyProjRotate.html" title="class in org.ivoa.dm.stc.trans">SkyProjRotate</a></span>&nbsp;<span class="element-name">withReferenceValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>[]&nbsp;pReferenceValue)</span></div>
+<div class="block">fluent setter for referenceValue Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pReferenceValue</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>SkyProjRotate</dd>
+</dl>
 </section>
 </li>
 <li>

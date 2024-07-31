@@ -88,6 +88,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@Embeddable
+@MappedSuperclass
 @VoDml(id="VODataService:TAPDataType",
        role=dataType)
 </span><span class="modifiers">public abstract class </span><span class="element-name type-name-label">TAPDataType</span>
@@ -161,14 +162,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns size Attribute</div>
+<div class="block">Returns size Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -179,7 +182,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSize(java.lang.Integer)" class="member-name-link">setSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pSize)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines size Attribute</div>
+<div class="block">Set size Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.vodataservice.TAPDataType)" class="member-name-link">updateUsing</a><wbr>(<a href="TAPDataType.html" title="class in org.ivoa.dm.registry.vodataservice">TAPDataType</a>&nbsp;other)</code></div>
@@ -188,7 +191,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TAPDataType.html" title="class in org.ivoa.dm.registry.vodataservice">TAPDataType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSize(java.lang.Integer)" class="member-name-link">withSize</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pSize)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for size Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -312,9 +317,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TableDataType.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="TableDataType.html" title="class in org.ivoa.dm.registry.vodataservice">TableDataType</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -333,7 +341,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getSize()">
 <h3>getSize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
-<div class="block">Returns size Attribute</div>
+<div class="block">Returns size Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>size Attribute</dd>
@@ -344,7 +352,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setSize(java.lang.Integer)">
 <h3>setSize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSize</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pSize)</span></div>
-<div class="block">Defines size Attribute</div>
+<div class="block">Set size Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pSize</code> - value to set</dd>
@@ -355,6 +363,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withSize(java.lang.Integer)">
 <h3>withSize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TAPDataType.html" title="class in org.ivoa.dm.registry.vodataservice">TAPDataType</a></span>&nbsp;<span class="element-name">withSize</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pSize)</span></div>
+<div class="block">fluent setter for size Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pSize</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>TAPDataType</dd>
+</dl>
 </section>
 </li>
 <li>

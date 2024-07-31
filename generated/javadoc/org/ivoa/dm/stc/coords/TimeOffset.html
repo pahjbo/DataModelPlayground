@@ -181,7 +181,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="TimeOffset.html" title="class in org.ivoa.dm.stc.coords">TimeOffset</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createTimeOffset(java.util.function.Consumer)" class="member-name-link">createTimeOffset</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="TimeOffset.TimeOffsetBuilder.html" title="class in org.ivoa.dm.stc.coords">TimeOffset.TimeOffsetBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -193,12 +195,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTime()" class="member-name-link">getTime</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns time Attribute</div>
+<div class="block">Returns time Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTime0()" class="member-name-link">getTime0</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns time0 Attribute</div>
+<div class="block">Returns time0 Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -209,12 +211,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTime(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">setTime</a><wbr>(<a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pTime)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines time Attribute</div>
+<div class="block">Set time Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTime0(org.ivoa.dm.stc.coords.TimeInstant)" class="member-name-link">setTime0</a><wbr>(<a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a>&nbsp;pTime0)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines time0 Attribute</div>
+<div class="block">Set time0 Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateClonedReferences()" class="member-name-link">updateClonedReferences</a>()</code></div>
@@ -228,10 +230,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TimeOffset.html" title="class in org.ivoa.dm.stc.coords">TimeOffset</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTime(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">withTime</a><wbr>(<a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pTime)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for time Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TimeOffset.html" title="class in org.ivoa.dm.stc.coords">TimeOffset</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTime0(org.ivoa.dm.stc.coords.TimeInstant)" class="member-name-link">withTime0</a><wbr>(<a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a>&nbsp;pTime0)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for time0 Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -345,9 +351,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="TimeStamp.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="TimeStamp.html" title="class in org.ivoa.dm.stc.coords">TimeStamp</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -377,7 +386,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getTime()">
 <h3>getTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></span>&nbsp;<span class="element-name">getTime</span>()</div>
-<div class="block">Returns time Attribute</div>
+<div class="block">Returns time Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>time Attribute</dd>
@@ -388,7 +397,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setTime(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>setTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTime</span><wbr><span class="parameters">(<a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pTime)</span></div>
-<div class="block">Defines time Attribute</div>
+<div class="block">Set time Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pTime</code> - value to set</dd>
@@ -399,13 +408,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withTime(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>withTime</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TimeOffset.html" title="class in org.ivoa.dm.stc.coords">TimeOffset</a></span>&nbsp;<span class="element-name">withTime</span><wbr><span class="parameters">(<a href="../../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pTime)</span></div>
+<div class="block">fluent setter for time Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTime</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>TimeOffset</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getTime0()">
 <h3>getTime0</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a></span>&nbsp;<span class="element-name">getTime0</span>()</div>
-<div class="block">Returns time0 Attribute</div>
+<div class="block">Returns time0 Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>time0 Attribute</dd>
@@ -416,7 +432,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setTime0(org.ivoa.dm.stc.coords.TimeInstant)">
 <h3>setTime0</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTime0</span><wbr><span class="parameters">(<a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a>&nbsp;pTime0)</span></div>
-<div class="block">Defines time0 Attribute</div>
+<div class="block">Set time0 Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pTime0</code> - value to set</dd>
@@ -427,6 +443,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withTime0(org.ivoa.dm.stc.coords.TimeInstant)">
 <h3>withTime0</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TimeOffset.html" title="class in org.ivoa.dm.stc.coords">TimeOffset</a></span>&nbsp;<span class="element-name">withTime0</span><wbr><span class="parameters">(<a href="TimeInstant.html" title="class in org.ivoa.dm.stc.coords">TimeInstant</a>&nbsp;pTime0)</span></div>
+<div class="block">fluent setter for time0 Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTime0</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>TimeOffset</dd>
+</dl>
 </section>
 </li>
 <li>

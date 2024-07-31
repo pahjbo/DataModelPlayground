@@ -172,7 +172,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createPoint(java.util.function.Consumer)" class="member-name-link">createPoint</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Point.PointBuilder.html" title="class in org.ivoa.dm.caom2.types">Point.PointBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -184,12 +186,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval1()" class="member-name-link">getCval1</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns cval1 Attribute</div>
+<div class="block">Returns cval1 Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCval2()" class="member-name-link">getCval2</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns cval2 Attribute</div>
+<div class="block">Returns cval2 Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -200,12 +202,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCval1(java.lang.Double)" class="member-name-link">setCval1</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval1)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines cval1 Attribute</div>
+<div class="block">Set cval1 Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCval2(java.lang.Double)" class="member-name-link">setCval2</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval2)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines cval2 Attribute</div>
+<div class="block">Set cval2 Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.types.Point)" class="member-name-link">updateUsing</a><wbr>(<a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a>&nbsp;other)</code></div>
@@ -214,10 +216,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCval1(java.lang.Double)" class="member-name-link">withCval1</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval1)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for cval1 Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCval2(java.lang.Double)" class="member-name-link">withCval2</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval2)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for cval2 Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -308,6 +314,11 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -325,7 +336,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getCval1()">
 <h3>getCval1</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getCval1</span>()</div>
-<div class="block">Returns cval1 Attribute</div>
+<div class="block">Returns cval1 Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cval1 Attribute</dd>
@@ -336,7 +347,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setCval1(java.lang.Double)">
 <h3>setCval1</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCval1</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval1)</span></div>
-<div class="block">Defines cval1 Attribute</div>
+<div class="block">Set cval1 Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCval1</code> - value to set</dd>
@@ -347,13 +358,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withCval1(java.lang.Double)">
 <h3>withCval1</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></span>&nbsp;<span class="element-name">withCval1</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval1)</span></div>
+<div class="block">fluent setter for cval1 Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCval1</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Point</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCval2()">
 <h3>getCval2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getCval2</span>()</div>
-<div class="block">Returns cval2 Attribute</div>
+<div class="block">Returns cval2 Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cval2 Attribute</dd>
@@ -364,7 +382,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setCval2(java.lang.Double)">
 <h3>setCval2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCval2</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval2)</span></div>
-<div class="block">Defines cval2 Attribute</div>
+<div class="block">Set cval2 Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCval2</code> - value to set</dd>
@@ -375,6 +393,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withCval2(java.lang.Double)">
 <h3>withCval2</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.caom2.types">Point</a></span>&nbsp;<span class="element-name">withCval2</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pCval2)</span></div>
+<div class="block">fluent setter for cval2 Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCval2</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Point</dd>
+</dl>
 </section>
 </li>
 <li>

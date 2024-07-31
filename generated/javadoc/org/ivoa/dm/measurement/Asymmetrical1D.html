@@ -175,7 +175,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createAsymmetrical1D(java.util.function.Consumer)" class="member-name-link">createAsymmetrical1D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Asymmetrical1D.Asymmetrical1DBuilder.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D.Asymmetrical1DBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -187,12 +189,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMinus()" class="member-name-link">getMinus</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns minus Attribute</div>
+<div class="block">Returns minus Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPlus()" class="member-name-link">getPlus</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns plus Attribute</div>
+<div class="block">Returns plus Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -203,12 +205,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMinus(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">setMinus</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pMinus)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines minus Attribute</div>
+<div class="block">Set minus Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPlus(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">setPlus</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pPlus)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines plus Attribute</div>
+<div class="block">Set plus Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.measurement.Asymmetrical1D)" class="member-name-link">updateUsing</a><wbr>(<a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a>&nbsp;other)</code></div>
@@ -217,10 +219,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMinus(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">withMinus</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pMinus)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for minus Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPlus(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">withPlus</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pPlus)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for plus Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -329,9 +335,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Uncertainty.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -350,7 +359,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getPlus()">
 <h3>getPlus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></span>&nbsp;<span class="element-name">getPlus</span>()</div>
-<div class="block">Returns plus Attribute</div>
+<div class="block">Returns plus Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>plus Attribute</dd>
@@ -361,7 +370,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setPlus(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>setPlus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPlus</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pPlus)</span></div>
-<div class="block">Defines plus Attribute</div>
+<div class="block">Set plus Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pPlus</code> - value to set</dd>
@@ -372,13 +381,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withPlus(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>withPlus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a></span>&nbsp;<span class="element-name">withPlus</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pPlus)</span></div>
+<div class="block">fluent setter for plus Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pPlus</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Asymmetrical1D</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getMinus()">
 <h3>getMinus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></span>&nbsp;<span class="element-name">getMinus</span>()</div>
-<div class="block">Returns minus Attribute</div>
+<div class="block">Returns minus Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>minus Attribute</dd>
@@ -389,7 +405,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setMinus(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>setMinus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMinus</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pMinus)</span></div>
-<div class="block">Defines minus Attribute</div>
+<div class="block">Set minus Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pMinus</code> - value to set</dd>
@@ -400,6 +416,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withMinus(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>withMinus</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Asymmetrical1D.html" title="class in org.ivoa.dm.measurement">Asymmetrical1D</a></span>&nbsp;<span class="element-name">withMinus</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pMinus)</span></div>
+<div class="block">fluent setter for minus Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMinus</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Asymmetrical1D</dd>
+</dl>
 </section>
 </li>
 <li>

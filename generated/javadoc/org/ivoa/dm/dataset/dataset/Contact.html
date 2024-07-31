@@ -162,7 +162,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Contact.html" title="class in org.ivoa.dm.dataset.dataset">Contact</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createContact(java.util.function.Consumer)" class="member-name-link">createContact</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Contact.ContactBuilder.html" title="class in org.ivoa.dm.dataset.dataset">Contact.ContactBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -174,7 +176,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParty()" class="member-name-link">getParty</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns party Attribute</div>
+<div class="block">Returns party Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -185,7 +187,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setParty(org.ivoa.dm.dataset.party.Individual)" class="member-name-link">setParty</a><wbr>(<a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a>&nbsp;pParty)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines party Attribute</div>
+<div class="block">Set party Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.dataset.dataset.Contact)" class="member-name-link">updateUsing</a><wbr>(<a href="Contact.html" title="class in org.ivoa.dm.dataset.dataset">Contact</a>&nbsp;other)</code></div>
@@ -194,7 +196,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Contact.html" title="class in org.ivoa.dm.dataset.dataset">Contact</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withParty(org.ivoa.dm.dataset.party.Individual)" class="member-name-link">withParty</a><wbr>(<a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a>&nbsp;pParty)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for party Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -270,9 +274,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../party/Role.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -291,7 +298,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getParty()">
 <h3>getParty</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a></span>&nbsp;<span class="element-name">getParty</span>()</div>
-<div class="block">Returns party Attribute</div>
+<div class="block">Returns party Attribute.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../party/Role.html#getParty()">getParty</a></code>&nbsp;in class&nbsp;<code><a href="../party/Role.html" title="class in org.ivoa.dm.dataset.party">Role</a></code></dd>
@@ -304,7 +311,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setParty(org.ivoa.dm.dataset.party.Individual)">
 <h3>setParty</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setParty</span><wbr><span class="parameters">(<a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a>&nbsp;pParty)</span></div>
-<div class="block">Defines party Attribute</div>
+<div class="block">Set party Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pParty</code> - value to set</dd>
@@ -315,6 +322,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withParty(org.ivoa.dm.dataset.party.Individual)">
 <h3>withParty</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Contact.html" title="class in org.ivoa.dm.dataset.dataset">Contact</a></span>&nbsp;<span class="element-name">withParty</span><wbr><span class="parameters">(<a href="../party/Individual.html" title="class in org.ivoa.dm.dataset.party">Individual</a>&nbsp;pParty)</span></div>
+<div class="block">fluent setter for party Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pParty</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Contact</dd>
+</dl>
 </section>
 </li>
 <li>

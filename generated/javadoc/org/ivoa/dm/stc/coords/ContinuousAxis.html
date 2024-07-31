@@ -186,7 +186,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Axis.html" title="class in org.ivoa.dm.stc.coords">Axis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createContinuousAxis(java.util.function.Consumer)" class="member-name-link">createContinuousAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="ContinuousAxis.ContinuousAxisBuilder.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis.ContinuousAxisBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -198,17 +200,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCyclic()" class="member-name-link">getCyclic</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns cyclic Attribute</div>
+<div class="block">Returns cyclic Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDomainMax()" class="member-name-link">getDomainMax</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns domainMax Attribute</div>
+<div class="block">Returns domainMax Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDomainMin()" class="member-name-link">getDomainMin</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns domainMin Attribute</div>
+<div class="block">Returns domainMin Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -219,17 +221,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCyclic(java.lang.Boolean)" class="member-name-link">setCyclic</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pCyclic)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines cyclic Attribute</div>
+<div class="block">Set cyclic Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDomainMax(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setDomainMax</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMax)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines domainMax Attribute</div>
+<div class="block">Set domainMax Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDomainMin(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setDomainMin</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMin)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines domainMin Attribute</div>
+<div class="block">Set domainMin Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.coords.ContinuousAxis)" class="member-name-link">updateUsing</a><wbr>(<a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a>&nbsp;other)</code></div>
@@ -238,13 +240,19 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCyclic(java.lang.Boolean)" class="member-name-link">withCyclic</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pCyclic)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for cyclic Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDomainMax(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withDomainMax</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMax)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for domainMax Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDomainMin(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withDomainMin</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMin)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for domainMin Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -373,9 +381,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Axis.html" title="class in org.ivoa.dm.stc.coords">Axis</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Axis.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Axis.html" title="class in org.ivoa.dm.stc.coords">Axis</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -394,7 +405,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getDomainMin()">
 <h3>getDomainMin</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getDomainMin</span>()</div>
-<div class="block">Returns domainMin Attribute</div>
+<div class="block">Returns domainMin Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>domainMin Attribute</dd>
@@ -405,7 +416,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setDomainMin(org.ivoa.dm.ivoa.Quantity)">
 <h3>setDomainMin</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDomainMin</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMin)</span></div>
-<div class="block">Defines domainMin Attribute</div>
+<div class="block">Set domainMin Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pDomainMin</code> - value to set</dd>
@@ -416,13 +427,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withDomainMin(org.ivoa.dm.ivoa.Quantity)">
 <h3>withDomainMin</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></span>&nbsp;<span class="element-name">withDomainMin</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMin)</span></div>
+<div class="block">fluent setter for domainMin Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pDomainMin</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ContinuousAxis</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getDomainMax()">
 <h3>getDomainMax</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getDomainMax</span>()</div>
-<div class="block">Returns domainMax Attribute</div>
+<div class="block">Returns domainMax Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>domainMax Attribute</dd>
@@ -433,7 +451,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setDomainMax(org.ivoa.dm.ivoa.Quantity)">
 <h3>setDomainMax</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDomainMax</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMax)</span></div>
-<div class="block">Defines domainMax Attribute</div>
+<div class="block">Set domainMax Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pDomainMax</code> - value to set</dd>
@@ -444,13 +462,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withDomainMax(org.ivoa.dm.ivoa.Quantity)">
 <h3>withDomainMax</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></span>&nbsp;<span class="element-name">withDomainMax</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pDomainMax)</span></div>
+<div class="block">fluent setter for domainMax Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pDomainMax</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ContinuousAxis</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCyclic()">
 <h3>getCyclic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getCyclic</span>()</div>
-<div class="block">Returns cyclic Attribute</div>
+<div class="block">Returns cyclic Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cyclic Attribute</dd>
@@ -461,7 +486,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setCyclic(java.lang.Boolean)">
 <h3>setCyclic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCyclic</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pCyclic)</span></div>
-<div class="block">Defines cyclic Attribute</div>
+<div class="block">Set cyclic Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCyclic</code> - value to set</dd>
@@ -472,6 +497,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withCyclic(java.lang.Boolean)">
 <h3>withCyclic</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ContinuousAxis.html" title="class in org.ivoa.dm.stc.coords">ContinuousAxis</a></span>&nbsp;<span class="element-name">withCyclic</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pCyclic)</span></div>
+<div class="block">fluent setter for cyclic Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCyclic</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ContinuousAxis</dd>
+</dl>
 </section>
 </li>
 <li>

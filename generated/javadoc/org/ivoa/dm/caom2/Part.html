@@ -198,7 +198,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CaomEntity.html" title="class in org.ivoa.dm.caom2">CaomEntity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createPart(java.util.function.Consumer)" class="member-name-link">createPart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Part.PartBuilder.html" title="class in org.ivoa.dm.caom2">Part.PartBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -215,12 +217,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns name Attribute</div>
+<div class="block">Returns name Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProductType()" class="member-name-link">getProductType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns productType Attribute</div>
+<div class="block">Returns productType Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -246,12 +248,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines name Attribute</div>
+<div class="block">Set name Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setProductType(org.ivoa.dm.caom2.ProductType)" class="member-name-link">setProductType</a><wbr>(<a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a>&nbsp;pProductType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines productType Attribute</div>
+<div class="block">Set productType Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.Part)" class="member-name-link">updateUsing</a><wbr>(<a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a>&nbsp;other)</code></div>
@@ -260,10 +262,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withName(java.lang.String)" class="member-name-link">withName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for name Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProductType(org.ivoa.dm.caom2.ProductType)" class="member-name-link">withProductType</a><wbr>(<a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a>&nbsp;pProductType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for productType Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -443,9 +449,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CaomEntity.html" title="class in org.ivoa.dm.caom2">CaomEntity</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CaomEntity.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="CaomEntity.html" title="class in org.ivoa.dm.caom2">CaomEntity</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -464,7 +473,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">Returns name Attribute</div>
+<div class="block">Returns name Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name Attribute</dd>
@@ -475,7 +484,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</span></div>
-<div class="block">Defines name Attribute</div>
+<div class="block">Set name Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pName</code> - value to set</dd>
@@ -486,13 +495,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="withName(java.lang.String)">
 <h3>withName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a></span>&nbsp;<span class="element-name">withName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</span></div>
+<div class="block">fluent setter for name Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pName</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Part</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getProductType()">
 <h3>getProductType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a></span>&nbsp;<span class="element-name">getProductType</span>()</div>
-<div class="block">Returns productType Attribute</div>
+<div class="block">Returns productType Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productType Attribute</dd>
@@ -503,7 +519,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="setProductType(org.ivoa.dm.caom2.ProductType)">
 <h3>setProductType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setProductType</span><wbr><span class="parameters">(<a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a>&nbsp;pProductType)</span></div>
-<div class="block">Defines productType Attribute</div>
+<div class="block">Set productType Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pProductType</code> - value to set</dd>
@@ -514,6 +530,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="withProductType(org.ivoa.dm.caom2.ProductType)">
 <h3>withProductType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Part.html" title="class in org.ivoa.dm.caom2">Part</a></span>&nbsp;<span class="element-name">withProductType</span><wbr><span class="parameters">(<a href="ProductType.html" title="class in org.ivoa.dm.caom2">ProductType</a>&nbsp;pProductType)</span></div>
+<div class="block">fluent setter for productType Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pProductType</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Part</dd>
+</dl>
 </section>
 </li>
 <li>

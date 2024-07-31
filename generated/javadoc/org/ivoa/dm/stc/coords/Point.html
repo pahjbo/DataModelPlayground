@@ -86,6 +86,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="annotations">@Embeddable
+@MappedSuperclass
 @VoDml(id="coords:Point",
        role=dataType)
 </span><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Point</span>
@@ -138,14 +139,16 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCoordSys()" class="member-name-link">getCoordSys</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns coordSys Attribute</div>
+<div class="block">Returns coordSys Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -156,7 +159,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCoordSys(org.ivoa.dm.stc.coords.SpaceSys)" class="member-name-link">setCoordSys</a><wbr>(<a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a>&nbsp;pCoordSys)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines coordSys Attribute</div>
+<div class="block">Set coordSys Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateClonedReferences()" class="member-name-link">updateClonedReferences</a>()</code></div>
@@ -170,7 +173,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCoordSys(org.ivoa.dm.stc.coords.SpaceSys)" class="member-name-link">withCoordSys</a><wbr>(<a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a>&nbsp;pCoordSys)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for coordSys Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -221,9 +226,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Coordinate.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -253,7 +261,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getCoordSys()">
 <h3>getCoordSys</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a></span>&nbsp;<span class="element-name">getCoordSys</span>()</div>
-<div class="block">Returns coordSys Attribute</div>
+<div class="block">Returns coordSys Attribute.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="Coordinate.html#getCoordSys()">getCoordSys</a></code>&nbsp;in class&nbsp;<code><a href="Coordinate.html" title="class in org.ivoa.dm.stc.coords">Coordinate</a></code></dd>
@@ -266,7 +274,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setCoordSys(org.ivoa.dm.stc.coords.SpaceSys)">
 <h3>setCoordSys</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCoordSys</span><wbr><span class="parameters">(<a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a>&nbsp;pCoordSys)</span></div>
-<div class="block">Defines coordSys Attribute</div>
+<div class="block">Set coordSys Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCoordSys</code> - value to set</dd>
@@ -277,6 +285,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withCoordSys(org.ivoa.dm.stc.coords.SpaceSys)">
 <h3>withCoordSys</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Point.html" title="class in org.ivoa.dm.stc.coords">Point</a></span>&nbsp;<span class="element-name">withCoordSys</span><wbr><span class="parameters">(<a href="SpaceSys.html" title="class in org.ivoa.dm.stc.coords">SpaceSys</a>&nbsp;pCoordSys)</span></div>
+<div class="block">fluent setter for coordSys Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCoordSys</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Point</dd>
+</dl>
 </section>
 </li>
 <li>

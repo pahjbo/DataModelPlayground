@@ -213,7 +213,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createParamHTTP(java.util.function.Consumer)" class="member-name-link">createParamHTTP</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="ParamHTTP.ParamHTTPBuilder.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP.ParamHTTPBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -230,17 +232,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQueryType()" class="member-name-link">getQueryType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns queryType Attribute</div>
+<div class="block">Returns queryType Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResultType()" class="member-name-link">getResultType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns resultType Attribute</div>
+<div class="block">Returns resultType Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTestQuery()" class="member-name-link">getTestQuery</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns testQuery Attribute</div>
+<div class="block">Returns testQuery Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -266,17 +268,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setQueryType(org.ivoa.dm.registry.vodataservice.HTTPQueryType%5B%5D)" class="member-name-link">setQueryType</a><wbr>(<a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]&nbsp;pQueryType)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines queryType Attribute</div>
+<div class="block">Set queryType Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResultType(java.lang.String)" class="member-name-link">setResultType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pResultType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines resultType Attribute</div>
+<div class="block">Set resultType Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTestQuery(java.lang.String)" class="member-name-link">setTestQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQuery)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines testQuery Attribute</div>
+<div class="block">Set testQuery Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.vodataservice.ParamHTTP)" class="member-name-link">updateUsing</a><wbr>(<a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a>&nbsp;other)</code></div>
@@ -285,13 +287,19 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withQueryType(org.ivoa.dm.registry.vodataservice.HTTPQueryType%5B%5D)" class="member-name-link">withQueryType</a><wbr>(<a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]&nbsp;pQueryType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for queryType Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withResultType(java.lang.String)" class="member-name-link">withResultType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pResultType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for resultType Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTestQuery(java.lang.String)" class="member-name-link">withTestQuery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQuery)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for testQuery Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -559,9 +567,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../voresource/Interface.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -580,7 +591,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getQueryType()">
 <h3>getQueryType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]</span>&nbsp;<span class="element-name">getQueryType</span>()</div>
-<div class="block">Returns queryType Attribute</div>
+<div class="block">Returns queryType Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>queryType Attribute</dd>
@@ -591,7 +602,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setQueryType(org.ivoa.dm.registry.vodataservice.HTTPQueryType[])">
 <h3>setQueryType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setQueryType</span><wbr><span class="parameters">(<a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]&nbsp;pQueryType)</span></div>
-<div class="block">Defines queryType Attribute</div>
+<div class="block">Set queryType Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pQueryType</code> - value to set</dd>
@@ -602,13 +613,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withQueryType(org.ivoa.dm.registry.vodataservice.HTTPQueryType[])">
 <h3>withQueryType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></span>&nbsp;<span class="element-name">withQueryType</span><wbr><span class="parameters">(<a href="HTTPQueryType.html" title="enum class in org.ivoa.dm.registry.vodataservice">HTTPQueryType</a>[]&nbsp;pQueryType)</span></div>
+<div class="block">fluent setter for queryType Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pQueryType</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ParamHTTP</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getResultType()">
 <h3>getResultType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getResultType</span>()</div>
-<div class="block">Returns resultType Attribute</div>
+<div class="block">Returns resultType Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resultType Attribute</dd>
@@ -619,7 +637,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setResultType(java.lang.String)">
 <h3>setResultType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setResultType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pResultType)</span></div>
-<div class="block">Defines resultType Attribute</div>
+<div class="block">Set resultType Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pResultType</code> - value to set</dd>
@@ -630,13 +648,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withResultType(java.lang.String)">
 <h3>withResultType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></span>&nbsp;<span class="element-name">withResultType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pResultType)</span></div>
+<div class="block">fluent setter for resultType Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pResultType</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ParamHTTP</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getTestQuery()">
 <h3>getTestQuery</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTestQuery</span>()</div>
-<div class="block">Returns testQuery Attribute</div>
+<div class="block">Returns testQuery Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>testQuery Attribute</dd>
@@ -647,7 +672,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setTestQuery(java.lang.String)">
 <h3>setTestQuery</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTestQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQuery)</span></div>
-<div class="block">Defines testQuery Attribute</div>
+<div class="block">Set testQuery Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pTestQuery</code> - value to set</dd>
@@ -658,6 +683,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withTestQuery(java.lang.String)">
 <h3>withTestQuery</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParamHTTP.html" title="class in org.ivoa.dm.registry.vodataservice">ParamHTTP</a></span>&nbsp;<span class="element-name">withTestQuery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQuery)</span></div>
+<div class="block">fluent setter for testQuery Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTestQuery</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>ParamHTTP</dd>
+</dl>
 </section>
 </li>
 <li>

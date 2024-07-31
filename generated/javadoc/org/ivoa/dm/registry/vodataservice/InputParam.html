@@ -201,7 +201,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="BaseParam.html" title="class in org.ivoa.dm.registry.vodataservice">BaseParam</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createInputParam(java.util.function.Consumer)" class="member-name-link">createInputParam</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="InputParam.InputParamBuilder.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam.InputParamBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -213,17 +215,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDataType()" class="member-name-link">getDataType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns dataType Attribute</div>
+<div class="block">Returns dataType Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStd()" class="member-name-link">getStd</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns std Attribute</div>
+<div class="block">Returns std Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUse()" class="member-name-link">getUse</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns use Attribute</div>
+<div class="block">Returns use Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -234,17 +236,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDataType(org.ivoa.dm.registry.vodataservice.DataType)" class="member-name-link">setDataType</a><wbr>(<a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a>&nbsp;pDataType)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines dataType Attribute</div>
+<div class="block">Set dataType Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStd(java.lang.Boolean)" class="member-name-link">setStd</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pStd)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines std Attribute</div>
+<div class="block">Set std Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUse(org.ivoa.dm.registry.vodataservice.ParamUse)" class="member-name-link">setUse</a><wbr>(<a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a>&nbsp;pUse)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines use Attribute</div>
+<div class="block">Set use Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.vodataservice.InputParam)" class="member-name-link">updateUsing</a><wbr>(<a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a>&nbsp;other)</code></div>
@@ -253,13 +255,19 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDataType(org.ivoa.dm.registry.vodataservice.DataType)" class="member-name-link">withDataType</a><wbr>(<a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a>&nbsp;pDataType)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for dataType Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStd(java.lang.Boolean)" class="member-name-link">withStd</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pStd)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for std Attribute.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withUse(org.ivoa.dm.registry.vodataservice.ParamUse)" class="member-name-link">withUse</a><wbr>(<a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a>&nbsp;pUse)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for use Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -428,9 +436,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="BaseParam.html" title="class in org.ivoa.dm.registry.vodataservice">BaseParam</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="BaseParam.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="BaseParam.html" title="class in org.ivoa.dm.registry.vodataservice">BaseParam</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -449,7 +460,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getDataType()">
 <h3>getDataType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></span>&nbsp;<span class="element-name">getDataType</span>()</div>
-<div class="block">Returns dataType Attribute</div>
+<div class="block">Returns dataType Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>dataType Attribute</dd>
@@ -460,7 +471,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setDataType(org.ivoa.dm.registry.vodataservice.DataType)">
 <h3>setDataType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setDataType</span><wbr><span class="parameters">(<a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a>&nbsp;pDataType)</span></div>
-<div class="block">Defines dataType Attribute</div>
+<div class="block">Set dataType Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pDataType</code> - value to set</dd>
@@ -471,13 +482,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withDataType(org.ivoa.dm.registry.vodataservice.DataType)">
 <h3>withDataType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></span>&nbsp;<span class="element-name">withDataType</span><wbr><span class="parameters">(<a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a>&nbsp;pDataType)</span></div>
+<div class="block">fluent setter for dataType Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pDataType</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>InputParam</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getUse()">
 <h3>getUse</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a></span>&nbsp;<span class="element-name">getUse</span>()</div>
-<div class="block">Returns use Attribute</div>
+<div class="block">Returns use Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>use Attribute</dd>
@@ -488,7 +506,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setUse(org.ivoa.dm.registry.vodataservice.ParamUse)">
 <h3>setUse</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUse</span><wbr><span class="parameters">(<a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a>&nbsp;pUse)</span></div>
-<div class="block">Defines use Attribute</div>
+<div class="block">Set use Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pUse</code> - value to set</dd>
@@ -499,13 +517,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withUse(org.ivoa.dm.registry.vodataservice.ParamUse)">
 <h3>withUse</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></span>&nbsp;<span class="element-name">withUse</span><wbr><span class="parameters">(<a href="ParamUse.html" title="enum class in org.ivoa.dm.registry.vodataservice">ParamUse</a>&nbsp;pUse)</span></div>
+<div class="block">fluent setter for use Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pUse</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>InputParam</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getStd()">
 <h3>getStd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStd</span>()</div>
-<div class="block">Returns std Attribute</div>
+<div class="block">Returns std Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>std Attribute</dd>
@@ -516,7 +541,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setStd(java.lang.Boolean)">
 <h3>setStd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setStd</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pStd)</span></div>
-<div class="block">Defines std Attribute</div>
+<div class="block">Set std Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pStd</code> - value to set</dd>
@@ -527,6 +552,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withStd(java.lang.Boolean)">
 <h3>withStd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InputParam.html" title="class in org.ivoa.dm.registry.vodataservice">InputParam</a></span>&nbsp;<span class="element-name">withStd</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;pStd)</span></div>
+<div class="block">fluent setter for std Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pStd</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>InputParam</dd>
+</dl>
 </section>
 </li>
 <li>

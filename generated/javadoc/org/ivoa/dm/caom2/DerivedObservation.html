@@ -204,7 +204,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CaomEntity.html" title="class in org.ivoa.dm.caom2">CaomEntity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DerivedObservation.html" title="class in org.ivoa.dm.caom2">DerivedObservation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createDerivedObservation(java.util.function.Consumer)" class="member-name-link">createDerivedObservation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="DerivedObservation.DerivedObservationBuilder.html" title="class in org.ivoa.dm.caom2">DerivedObservation.DerivedObservationBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -216,7 +218,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMembers()" class="member-name-link">getMembers</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns members Attribute</div>
+<div class="block">Returns members Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -227,7 +229,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMembers(java.util.List)" class="member-name-link">setMembers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;&nbsp;pMembers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines members Attribute</div>
+<div class="block">Set members Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.caom2.DerivedObservation)" class="member-name-link">updateUsing</a><wbr>(<a href="DerivedObservation.html" title="class in org.ivoa.dm.caom2">DerivedObservation</a>&nbsp;other)</code></div>
@@ -236,7 +238,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DerivedObservation.html" title="class in org.ivoa.dm.caom2">DerivedObservation</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMembers(java.util.List)" class="member-name-link">withMembers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;&nbsp;pMembers)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for members Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -432,9 +436,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CaomEntity.html" title="class in org.ivoa.dm.caom2">CaomEntity</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Observation.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Observation.html" title="class in org.ivoa.dm.caom2">Observation</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -453,7 +460,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="getMembers()">
 <h3>getMembers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;</span>&nbsp;<span class="element-name">getMembers</span>()</div>
-<div class="block">Returns members Attribute</div>
+<div class="block">Returns members Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>members Attribute</dd>
@@ -464,7 +471,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="setMembers(java.util.List)">
 <h3>setMembers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMembers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;&nbsp;pMembers)</span></div>
-<div class="block">Defines members Attribute</div>
+<div class="block">Set members Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pMembers</code> - value to set</dd>
@@ -475,6 +482,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="Uuid.htm
 <section class="detail" id="withMembers(java.util.List)">
 <h3>withMembers</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DerivedObservation.html" title="class in org.ivoa.dm.caom2">DerivedObservation</a></span>&nbsp;<span class="element-name">withMembers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ObservationURI.html" title="class in org.ivoa.dm.caom2">ObservationURI</a>&gt;&nbsp;pMembers)</span></div>
+<div class="block">fluent setter for members Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMembers</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DerivedObservation</dd>
+</dl>
 </section>
 </li>
 <li>

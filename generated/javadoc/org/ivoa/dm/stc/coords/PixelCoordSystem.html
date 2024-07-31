@@ -171,7 +171,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CoordSys.html" title="class in org.ivoa.dm.stc.coords">CoordSys</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PixelCoordSystem.html" title="class in org.ivoa.dm.stc.coords">PixelCoordSystem</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createPixelCoordSystem(java.util.function.Consumer)" class="member-name-link">createPixelCoordSystem</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="PixelCoordSystem.PixelCoordSystemBuilder.html" title="class in org.ivoa.dm.stc.coords">PixelCoordSystem.PixelCoordSystemBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -183,7 +185,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPixelSpace()" class="member-name-link">getPixelSpace</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns pixelSpace Attribute</div>
+<div class="block">Returns pixelSpace Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -194,7 +196,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPixelSpace(org.ivoa.dm.stc.coords.PixelSpace)" class="member-name-link">setPixelSpace</a><wbr>(<a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a>&nbsp;pPixelSpace)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines pixelSpace Attribute</div>
+<div class="block">Set pixelSpace Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.coords.PixelCoordSystem)" class="member-name-link">updateUsing</a><wbr>(<a href="PixelCoordSystem.html" title="class in org.ivoa.dm.stc.coords">PixelCoordSystem</a>&nbsp;other)</code></div>
@@ -203,7 +205,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PixelCoordSystem.html" title="class in org.ivoa.dm.stc.coords">PixelCoordSystem</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPixelSpace(org.ivoa.dm.stc.coords.PixelSpace)" class="member-name-link">withPixelSpace</a><wbr>(<a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a>&nbsp;pPixelSpace)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for pixelSpace Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -307,9 +311,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CoordSys.html" title="class in org.ivoa.dm.stc.coords">CoordSys</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="CoordSys.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="CoordSys.html" title="class in org.ivoa.dm.stc.coords">CoordSys</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -328,7 +335,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getPixelSpace()">
 <h3>getPixelSpace</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a></span>&nbsp;<span class="element-name">getPixelSpace</span>()</div>
-<div class="block">Returns pixelSpace Attribute</div>
+<div class="block">Returns pixelSpace Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>pixelSpace Attribute</dd>
@@ -339,7 +346,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setPixelSpace(org.ivoa.dm.stc.coords.PixelSpace)">
 <h3>setPixelSpace</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPixelSpace</span><wbr><span class="parameters">(<a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a>&nbsp;pPixelSpace)</span></div>
-<div class="block">Defines pixelSpace Attribute</div>
+<div class="block">Set pixelSpace Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pPixelSpace</code> - value to set</dd>
@@ -350,6 +357,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withPixelSpace(org.ivoa.dm.stc.coords.PixelSpace)">
 <h3>withPixelSpace</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PixelCoordSystem.html" title="class in org.ivoa.dm.stc.coords">PixelCoordSystem</a></span>&nbsp;<span class="element-name">withPixelSpace</span><wbr><span class="parameters">(<a href="PixelSpace.html" title="class in org.ivoa.dm.stc.coords">PixelSpace</a>&nbsp;pPixelSpace)</span></div>
+<div class="block">fluent setter for pixelSpace Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pPixelSpace</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>PixelCoordSystem</dd>
+</dl>
 </section>
 </li>
 <li>

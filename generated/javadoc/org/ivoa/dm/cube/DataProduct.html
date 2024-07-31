@@ -167,7 +167,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="DataProduct.html" title="class in org.ivoa.dm.cube">DataProduct</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
@@ -187,7 +189,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMappings()" class="member-name-link">getMappings</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns mappings Attribute</div>
+<div class="block">Returns mappings Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -218,7 +220,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMappings(org.ivoa.dm.cube.Mappings)" class="member-name-link">setMappings</a><wbr>(<a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a>&nbsp;pMappings)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines mappings Attribute</div>
+<div class="block">Set mappings Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateClonedReferences()" class="member-name-link">updateClonedReferences</a>()</code></div>
@@ -232,7 +234,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataProduct.html" title="class in org.ivoa.dm.cube">DataProduct</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMappings(org.ivoa.dm.cube.Mappings)" class="member-name-link">withMappings</a><wbr>(<a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a>&nbsp;pMappings)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for mappings Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -356,6 +360,11 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DataProduct.html" title="class in org.ivoa.dm.cube">DataProduct</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -436,7 +445,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getMappings()">
 <h3>getMappings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a></span>&nbsp;<span class="element-name">getMappings</span>()</div>
-<div class="block">Returns mappings Attribute</div>
+<div class="block">Returns mappings Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>mappings Attribute</dd>
@@ -447,7 +456,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setMappings(org.ivoa.dm.cube.Mappings)">
 <h3>setMappings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMappings</span><wbr><span class="parameters">(<a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a>&nbsp;pMappings)</span></div>
-<div class="block">Defines mappings Attribute</div>
+<div class="block">Set mappings Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pMappings</code> - value to set</dd>
@@ -458,6 +467,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withMappings(org.ivoa.dm.cube.Mappings)">
 <h3>withMappings</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataProduct.html" title="class in org.ivoa.dm.cube">DataProduct</a></span>&nbsp;<span class="element-name">withMappings</span><wbr><span class="parameters">(<a href="Mappings.html" title="class in org.ivoa.dm.cube">Mappings</a>&nbsp;pMappings)</span></div>
+<div class="block">fluent setter for mappings Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMappings</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DataProduct</dd>
+</dl>
 </section>
 </li>
 <li>

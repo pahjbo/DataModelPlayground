@@ -179,7 +179,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DerivedElement.html" title="class in org.ivoa.dm.dataset.experiment">DerivedElement</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createDerivedScalar(java.util.function.Consumer)" class="member-name-link">createDerivedScalar</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="DerivedScalar.DerivedScalarBuilder.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar.DerivedScalarBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -191,12 +193,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns name Attribute</div>
+<div class="block">Returns name Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns value Attribute</div>
+<div class="block">Returns value Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -207,12 +209,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines name Attribute</div>
+<div class="block">Set name Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setValue(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">setValue</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines value Attribute</div>
+<div class="block">Set value Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.dataset.experiment.DerivedScalar)" class="member-name-link">updateUsing</a><wbr>(<a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a>&nbsp;other)</code></div>
@@ -221,10 +223,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withName(java.lang.String)" class="member-name-link">withName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for name Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withValue(org.ivoa.dm.ivoa.Quantity)" class="member-name-link">withValue</a><wbr>(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for value Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -337,9 +343,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DerivedElement.html" title="class in org.ivoa.dm.dataset.experiment">DerivedElement</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DerivedElement.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="DerivedElement.html" title="class in org.ivoa.dm.dataset.experiment">DerivedElement</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -358,7 +367,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">Returns name Attribute</div>
+<div class="block">Returns name Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name Attribute</dd>
@@ -369,7 +378,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</span></div>
-<div class="block">Defines name Attribute</div>
+<div class="block">Set name Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pName</code> - value to set</dd>
@@ -380,13 +389,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withName(java.lang.String)">
 <h3>withName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a></span>&nbsp;<span class="element-name">withName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pName)</span></div>
+<div class="block">fluent setter for name Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pName</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DerivedScalar</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block">Returns value Attribute</div>
+<div class="block">Returns value Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>value Attribute</dd>
@@ -397,7 +413,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setValue(org.ivoa.dm.ivoa.Quantity)">
 <h3>setValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pValue)</span></div>
-<div class="block">Defines value Attribute</div>
+<div class="block">Set value Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pValue</code> - value to set</dd>
@@ -408,6 +424,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withValue(org.ivoa.dm.ivoa.Quantity)">
 <h3>withValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DerivedScalar.html" title="class in org.ivoa.dm.dataset.experiment">DerivedScalar</a></span>&nbsp;<span class="element-name">withValue</span><wbr><span class="parameters">(<a href="../../ivoa/Quantity.html" title="class in org.ivoa.dm.ivoa">Quantity</a>&nbsp;pValue)</span></div>
+<div class="block">fluent setter for value Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pValue</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>DerivedScalar</dd>
+</dl>
 </section>
 </li>
 <li>

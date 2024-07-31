@@ -179,7 +179,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LookupEntry.html" title="class in org.ivoa.dm.stc.trans">LookupEntry</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createNumericEntry(java.util.function.Consumer)" class="member-name-link">createNumericEntry</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="NumericEntry.NumericEntryBuilder.html" title="class in org.ivoa.dm.stc.trans">NumericEntry.NumericEntryBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -191,12 +193,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getNativeValue()" class="member-name-link">getNativeValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns nativeValue Attribute</div>
+<div class="block">Returns nativeValue Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetValue()" class="member-name-link">getTargetValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns targetValue Attribute</div>
+<div class="block">Returns targetValue Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -207,12 +209,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setNativeValue(java.lang.Double)" class="member-name-link">setNativeValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pNativeValue)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines nativeValue Attribute</div>
+<div class="block">Set nativeValue Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTargetValue(java.lang.Double)" class="member-name-link">setTargetValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pTargetValue)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines targetValue Attribute</div>
+<div class="block">Set targetValue Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.stc.trans.NumericEntry)" class="member-name-link">updateUsing</a><wbr>(<a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a>&nbsp;other)</code></div>
@@ -221,10 +223,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withNativeValue(java.lang.Double)" class="member-name-link">withNativeValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pNativeValue)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for nativeValue Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTargetValue(java.lang.Double)" class="member-name-link">withTargetValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pTargetValue)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for targetValue Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -339,9 +345,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LookupEntry.html" title="class in org.ivoa.dm.stc.trans">LookupEntry</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="LookupEntry.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="LookupEntry.html" title="class in org.ivoa.dm.stc.trans">LookupEntry</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -360,7 +369,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getNativeValue()">
 <h3>getNativeValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getNativeValue</span>()</div>
-<div class="block">Returns nativeValue Attribute</div>
+<div class="block">Returns nativeValue Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>nativeValue Attribute</dd>
@@ -371,7 +380,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setNativeValue(java.lang.Double)">
 <h3>setNativeValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setNativeValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pNativeValue)</span></div>
-<div class="block">Defines nativeValue Attribute</div>
+<div class="block">Set nativeValue Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pNativeValue</code> - value to set</dd>
@@ -382,13 +391,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withNativeValue(java.lang.Double)">
 <h3>withNativeValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a></span>&nbsp;<span class="element-name">withNativeValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pNativeValue)</span></div>
+<div class="block">fluent setter for nativeValue Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pNativeValue</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>NumericEntry</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getTargetValue()">
 <h3>getTargetValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a></span>&nbsp;<span class="element-name">getTargetValue</span>()</div>
-<div class="block">Returns targetValue Attribute</div>
+<div class="block">Returns targetValue Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>targetValue Attribute</dd>
@@ -399,7 +415,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setTargetValue(java.lang.Double)">
 <h3>setTargetValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTargetValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pTargetValue)</span></div>
-<div class="block">Defines targetValue Attribute</div>
+<div class="block">Set targetValue Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pTargetValue</code> - value to set</dd>
@@ -410,6 +426,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withTargetValue(java.lang.Double)">
 <h3>withTargetValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="NumericEntry.html" title="class in org.ivoa.dm.stc.trans">NumericEntry</a></span>&nbsp;<span class="element-name">withTargetValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;pTargetValue)</span></div>
+<div class="block">fluent setter for targetValue Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTargetValue</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>NumericEntry</dd>
+</dl>
 </section>
 </li>
 <li>

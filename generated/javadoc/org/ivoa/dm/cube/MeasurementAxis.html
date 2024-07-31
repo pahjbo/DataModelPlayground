@@ -150,14 +150,16 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="DataAxis.html" title="class in org.ivoa.dm.cube">DataAxis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMeasure()" class="member-name-link">getMeasure</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns measure Attribute</div>
+<div class="block">Returns measure Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -168,7 +170,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMeasure(org.ivoa.dm.measurement.Measure)" class="member-name-link">setMeasure</a><wbr>(<a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a>&nbsp;pMeasure)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines measure Attribute</div>
+<div class="block">Set measure Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.cube.MeasurementAxis)" class="member-name-link">updateUsing</a><wbr>(<a href="MeasurementAxis.html" title="class in org.ivoa.dm.cube">MeasurementAxis</a>&nbsp;other)</code></div>
@@ -177,7 +179,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MeasurementAxis.html" title="class in org.ivoa.dm.cube">MeasurementAxis</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMeasure(org.ivoa.dm.measurement.Measure)" class="member-name-link">withMeasure</a><wbr>(<a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a>&nbsp;pMeasure)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for measure Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -256,9 +260,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="DataAxis.html" title="class in org.ivoa.dm.cube">DataAxis</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DataAxis.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="DataAxis.html" title="class in org.ivoa.dm.cube">DataAxis</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -277,7 +284,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getMeasure()">
 <h3>getMeasure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></span>&nbsp;<span class="element-name">getMeasure</span>()</div>
-<div class="block">Returns measure Attribute</div>
+<div class="block">Returns measure Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>measure Attribute</dd>
@@ -288,7 +295,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setMeasure(org.ivoa.dm.measurement.Measure)">
 <h3>setMeasure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMeasure</span><wbr><span class="parameters">(<a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a>&nbsp;pMeasure)</span></div>
-<div class="block">Defines measure Attribute</div>
+<div class="block">Set measure Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pMeasure</code> - value to set</dd>
@@ -299,6 +306,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withMeasure(org.ivoa.dm.measurement.Measure)">
 <h3>withMeasure</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MeasurementAxis.html" title="class in org.ivoa.dm.cube">MeasurementAxis</a></span>&nbsp;<span class="element-name">withMeasure</span><wbr><span class="parameters">(<a href="../measurement/Measure.html" title="class in org.ivoa.dm.measurement">Measure</a>&nbsp;pMeasure)</span></div>
+<div class="block">fluent setter for measure Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMeasure</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>MeasurementAxis</dd>
+</dl>
 </section>
 </li>
 <li>

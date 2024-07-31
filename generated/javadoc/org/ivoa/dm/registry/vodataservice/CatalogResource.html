@@ -217,7 +217,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../voresource/Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CatalogResource.html" title="class in org.ivoa.dm.registry.vodataservice">CatalogResource</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createCatalogResource(java.util.function.Consumer)" class="member-name-link">createCatalogResource</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="CatalogResource.CatalogResourceBuilder.html" title="class in org.ivoa.dm.registry.vodataservice">CatalogResource.CatalogResourceBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -229,7 +231,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTableset()" class="member-name-link">getTableset</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns tableset Attribute</div>
+<div class="block">Returns tableset Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -240,7 +242,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTableset(org.ivoa.dm.registry.vodataservice.TableSet)" class="member-name-link">setTableset</a><wbr>(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;pTableset)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines tableset Attribute</div>
+<div class="block">Set tableset Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.vodataservice.CatalogResource)" class="member-name-link">updateUsing</a><wbr>(<a href="CatalogResource.html" title="class in org.ivoa.dm.registry.vodataservice">CatalogResource</a>&nbsp;other)</code></div>
@@ -249,7 +251,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CatalogResource.html" title="class in org.ivoa.dm.registry.vodataservice">CatalogResource</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTableset(org.ivoa.dm.registry.vodataservice.TableSet)" class="member-name-link">withTableset</a><wbr>(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;pTableset)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for tableset Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -464,9 +468,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../voresource/Resource.html" title="class in org.ivoa.dm.registry.voresource">Resource</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="DataResource.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="DataResource.html" title="class in org.ivoa.dm.registry.vodataservice">DataResource</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -485,7 +492,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getTableset()">
 <h3>getTableset</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a></span>&nbsp;<span class="element-name">getTableset</span>()</div>
-<div class="block">Returns tableset Attribute</div>
+<div class="block">Returns tableset Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>tableset Attribute</dd>
@@ -496,7 +503,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setTableset(org.ivoa.dm.registry.vodataservice.TableSet)">
 <h3>setTableset</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTableset</span><wbr><span class="parameters">(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;pTableset)</span></div>
-<div class="block">Defines tableset Attribute</div>
+<div class="block">Set tableset Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pTableset</code> - value to set</dd>
@@ -507,6 +514,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withTableset(org.ivoa.dm.registry.vodataservice.TableSet)">
 <h3>withTableset</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CatalogResource.html" title="class in org.ivoa.dm.registry.vodataservice">CatalogResource</a></span>&nbsp;<span class="element-name">withTableset</span><wbr><span class="parameters">(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;pTableset)</span></div>
+<div class="block">fluent setter for tableset Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTableset</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>CatalogResource</dd>
+</dl>
 </section>
 </li>
 <li>

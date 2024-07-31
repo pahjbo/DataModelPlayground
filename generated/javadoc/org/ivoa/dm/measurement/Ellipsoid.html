@@ -177,7 +177,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createEllipsoid(java.util.function.Consumer)" class="member-name-link">createEllipsoid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Ellipsoid.EllipsoidBuilder.html" title="class in org.ivoa.dm.measurement">Ellipsoid.EllipsoidBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -189,12 +191,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPosAngle()" class="member-name-link">getPosAngle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns posAngle Attribute</div>
+<div class="block">Returns posAngle Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSemiAxis()" class="member-name-link">getSemiAxis</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns semiAxis Attribute</div>
+<div class="block">Returns semiAxis Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -205,12 +207,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setPosAngle(org.ivoa.dm.ivoa.RealQuantity%5B%5D)" class="member-name-link">setPosAngle</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pPosAngle)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines posAngle Attribute</div>
+<div class="block">Set posAngle Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSemiAxis(org.ivoa.dm.ivoa.RealQuantity%5B%5D)" class="member-name-link">setSemiAxis</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pSemiAxis)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines semiAxis Attribute</div>
+<div class="block">Set semiAxis Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.measurement.Ellipsoid)" class="member-name-link">updateUsing</a><wbr>(<a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a>&nbsp;other)</code></div>
@@ -219,10 +221,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPosAngle(org.ivoa.dm.ivoa.RealQuantity%5B%5D)" class="member-name-link">withPosAngle</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pPosAngle)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for posAngle Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSemiAxis(org.ivoa.dm.ivoa.RealQuantity%5B%5D)" class="member-name-link">withSemiAxis</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pSemiAxis)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for semiAxis Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -340,9 +346,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Uncertainty.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -361,7 +370,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getSemiAxis()">
 <h3>getSemiAxis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]</span>&nbsp;<span class="element-name">getSemiAxis</span>()</div>
-<div class="block">Returns semiAxis Attribute</div>
+<div class="block">Returns semiAxis Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>semiAxis Attribute</dd>
@@ -372,7 +381,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setSemiAxis(org.ivoa.dm.ivoa.RealQuantity[])">
 <h3>setSemiAxis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setSemiAxis</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pSemiAxis)</span></div>
-<div class="block">Defines semiAxis Attribute</div>
+<div class="block">Set semiAxis Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pSemiAxis</code> - value to set</dd>
@@ -383,13 +392,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withSemiAxis(org.ivoa.dm.ivoa.RealQuantity[])">
 <h3>withSemiAxis</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a></span>&nbsp;<span class="element-name">withSemiAxis</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pSemiAxis)</span></div>
+<div class="block">fluent setter for semiAxis Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pSemiAxis</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Ellipsoid</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getPosAngle()">
 <h3>getPosAngle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]</span>&nbsp;<span class="element-name">getPosAngle</span>()</div>
-<div class="block">Returns posAngle Attribute</div>
+<div class="block">Returns posAngle Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>posAngle Attribute</dd>
@@ -400,7 +416,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setPosAngle(org.ivoa.dm.ivoa.RealQuantity[])">
 <h3>setPosAngle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setPosAngle</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pPosAngle)</span></div>
-<div class="block">Defines posAngle Attribute</div>
+<div class="block">Set posAngle Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pPosAngle</code> - value to set</dd>
@@ -411,6 +427,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withPosAngle(org.ivoa.dm.ivoa.RealQuantity[])">
 <h3>withPosAngle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Ellipsoid.html" title="class in org.ivoa.dm.measurement">Ellipsoid</a></span>&nbsp;<span class="element-name">withPosAngle</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>[]&nbsp;pPosAngle)</span></div>
+<div class="block">fluent setter for posAngle Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pPosAngle</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Ellipsoid</dd>
+</dl>
 </section>
 </li>
 <li>

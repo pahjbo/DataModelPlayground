@@ -161,14 +161,16 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract <a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#forceLoad()" class="member-name-link">forceLoad</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getError()" class="member-name-link">getError</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns error Attribute</div>
+<div class="block">Returns error Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
@@ -176,7 +178,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getUcd()" class="member-name-link">getUcd</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns ucd Attribute</div>
+<div class="block">Returns ucd Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getXmlId()" class="member-name-link">getXmlId</a>()</code></div>
@@ -195,12 +197,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setError(org.ivoa.dm.measurement.Error)" class="member-name-link">setError</a><wbr>(<a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a>&nbsp;pError)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines error Attribute</div>
+<div class="block">Set error Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setUcd(java.lang.String)" class="member-name-link">setUcd</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pUcd)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines ucd Attribute</div>
+<div class="block">Set ucd Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setXmlId(java.lang.String)" class="member-name-link">setXmlId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -217,10 +219,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withError(org.ivoa.dm.measurement.Error)" class="member-name-link">withError</a><wbr>(<a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a>&nbsp;pError)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for error Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withUcd(java.lang.String)" class="member-name-link">withUcd</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pUcd)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for ucd Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -354,6 +360,11 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type"><a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -378,7 +389,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getUcd()">
 <h3>getUcd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getUcd</span>()</div>
-<div class="block">Returns ucd Attribute</div>
+<div class="block">Returns ucd Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>ucd Attribute</dd>
@@ -389,7 +400,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setUcd(java.lang.String)">
 <h3>setUcd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setUcd</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pUcd)</span></div>
-<div class="block">Defines ucd Attribute</div>
+<div class="block">Set ucd Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pUcd</code> - value to set</dd>
@@ -400,13 +411,20 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withUcd(java.lang.String)">
 <h3>withUcd</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></span>&nbsp;<span class="element-name">withUcd</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pUcd)</span></div>
+<div class="block">fluent setter for ucd Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pUcd</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Measure</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getError()">
 <h3>getError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a></span>&nbsp;<span class="element-name">getError</span>()</div>
-<div class="block">Returns error Attribute</div>
+<div class="block">Returns error Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>error Attribute</dd>
@@ -417,7 +435,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setError(org.ivoa.dm.measurement.Error)">
 <h3>setError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setError</span><wbr><span class="parameters">(<a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a>&nbsp;pError)</span></div>
-<div class="block">Defines error Attribute</div>
+<div class="block">Set error Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pError</code> - value to set</dd>
@@ -428,6 +446,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withError(org.ivoa.dm.measurement.Error)">
 <h3>withError</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Measure.html" title="class in org.ivoa.dm.measurement">Measure</a></span>&nbsp;<span class="element-name">withError</span><wbr><span class="parameters">(<a href="Error.html" title="class in org.ivoa.dm.measurement">Error</a>&nbsp;pError)</span></div>
+<div class="block">fluent setter for error Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pError</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Measure</dd>
+</dl>
 </section>
 </li>
 <li>

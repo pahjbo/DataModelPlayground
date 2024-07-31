@@ -174,7 +174,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataAxis.html" title="class in org.ivoa.dm.cube">DataAxis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="PixelAxis.html" title="class in org.ivoa.dm.cube">PixelAxis</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createPixelAxis(java.util.function.Consumer)" class="member-name-link">createPixelAxis</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="PixelAxis.PixelAxisBuilder.html" title="class in org.ivoa.dm.cube">PixelAxis.PixelAxisBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -186,7 +188,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCoord()" class="member-name-link">getCoord</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns coord Attribute</div>
+<div class="block">Returns coord Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -197,7 +199,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCoord(org.ivoa.dm.stc.coords.PixelIndex)" class="member-name-link">setCoord</a><wbr>(<a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a>&nbsp;pCoord)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines coord Attribute</div>
+<div class="block">Set coord Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.cube.PixelAxis)" class="member-name-link">updateUsing</a><wbr>(<a href="PixelAxis.html" title="class in org.ivoa.dm.cube">PixelAxis</a>&nbsp;other)</code></div>
@@ -206,7 +208,9 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="PixelAxis.html" title="class in org.ivoa.dm.cube">PixelAxis</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCoord(org.ivoa.dm.stc.coords.PixelIndex)" class="member-name-link">withCoord</a><wbr>(<a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a>&nbsp;pCoord)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for coord Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -311,9 +315,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataAxis.html" title="class in org.ivoa.dm.cube">DataAxis</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ImageAxis.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="ImageAxis.html" title="class in org.ivoa.dm.cube">ImageAxis</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -332,7 +339,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="getCoord()">
 <h3>getCoord</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a></span>&nbsp;<span class="element-name">getCoord</span>()</div>
-<div class="block">Returns coord Attribute</div>
+<div class="block">Returns coord Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>coord Attribute</dd>
@@ -343,7 +350,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="setCoord(org.ivoa.dm.stc.coords.PixelIndex)">
 <h3>setCoord</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setCoord</span><wbr><span class="parameters">(<a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a>&nbsp;pCoord)</span></div>
-<div class="block">Defines coord Attribute</div>
+<div class="block">Set coord Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pCoord</code> - value to set</dd>
@@ -354,6 +361,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <section class="detail" id="withCoord(org.ivoa.dm.stc.coords.PixelIndex)">
 <h3>withCoord</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="PixelAxis.html" title="class in org.ivoa.dm.cube">PixelAxis</a></span>&nbsp;<span class="element-name">withCoord</span><wbr><span class="parameters">(<a href="../stc/coords/PixelIndex.html" title="class in org.ivoa.dm.stc.coords">PixelIndex</a>&nbsp;pCoord)</span></div>
+<div class="block">fluent setter for coord Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pCoord</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>PixelAxis</dd>
+</dl>
 </section>
 </li>
 <li>

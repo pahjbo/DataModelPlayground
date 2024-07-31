@@ -180,7 +180,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="SimpleDataType.html" title="class in org.ivoa.dm.registry.vodataservice">SimpleDataType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createSimpleDataType(java.util.function.Consumer)" class="member-name-link">createSimpleDataType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="SimpleDataType.SimpleDataTypeBuilder.html" title="class in org.ivoa.dm.registry.vodataservice">SimpleDataType.SimpleDataTypeBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -192,7 +194,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVal()" class="member-name-link">getVal</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns val Attribute</div>
+<div class="block">Returns val Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -203,7 +205,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVal(org.ivoa.dm.registry.vodataservice.SimpleDataType_enum)" class="member-name-link">setVal</a><wbr>(<a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a>&nbsp;pVal)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines val Attribute</div>
+<div class="block">Set val Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.registry.vodataservice.SimpleDataType)" class="member-name-link">updateUsing</a><wbr>(<a href="SimpleDataType.html" title="class in org.ivoa.dm.registry.vodataservice">SimpleDataType</a>&nbsp;other)</code></div>
@@ -212,7 +214,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SimpleDataType.html" title="class in org.ivoa.dm.registry.vodataservice">SimpleDataType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withVal(org.ivoa.dm.registry.vodataservice.SimpleDataType_enum)" class="member-name-link">withVal</a><wbr>(<a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a>&nbsp;pVal)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for val Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -348,9 +352,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="DataType.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="DataType.html" title="class in org.ivoa.dm.registry.vodataservice">DataType</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -369,7 +376,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getVal()">
 <h3>getVal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a></span>&nbsp;<span class="element-name">getVal</span>()</div>
-<div class="block">Returns val Attribute</div>
+<div class="block">Returns val Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>val Attribute</dd>
@@ -380,7 +387,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setVal(org.ivoa.dm.registry.vodataservice.SimpleDataType_enum)">
 <h3>setVal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVal</span><wbr><span class="parameters">(<a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a>&nbsp;pVal)</span></div>
-<div class="block">Defines val Attribute</div>
+<div class="block">Set val Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pVal</code> - value to set</dd>
@@ -391,6 +398,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withVal(org.ivoa.dm.registry.vodataservice.SimpleDataType_enum)">
 <h3>withVal</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleDataType.html" title="class in org.ivoa.dm.registry.vodataservice">SimpleDataType</a></span>&nbsp;<span class="element-name">withVal</span><wbr><span class="parameters">(<a href="SimpleDataType_enum.html" title="enum class in org.ivoa.dm.registry.vodataservice">SimpleDataType_enum</a>&nbsp;pVal)</span></div>
+<div class="block">fluent setter for val Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVal</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>SimpleDataType</dd>
+</dl>
 </section>
 </li>
 <li>

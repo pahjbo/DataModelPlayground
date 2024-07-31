@@ -175,7 +175,9 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#copyMe()" class="member-name-link">copyMe</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createBounds1D(java.util.function.Consumer)" class="member-name-link">createBounds1D</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;<a href="Bounds1D.Bounds1DBuilder.html" title="class in org.ivoa.dm.measurement">Bounds1D.Bounds1DBuilder</a>&gt;&nbsp;f)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -187,12 +189,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHiLimit()" class="member-name-link">getHiLimit</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns hiLimit Attribute</div>
+<div class="block">Returns hiLimit Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLoLimit()" class="member-name-link">getLoLimit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns loLimit Attribute</div>
+<div class="block">Returns loLimit Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#jpaClone(jakarta.persistence.EntityManager)" class="member-name-link">jpaClone</a><wbr>(jakarta.persistence.EntityManager&nbsp;em)</code></div>
@@ -203,12 +205,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setHiLimit(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">setHiLimit</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pHiLimit)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines hiLimit Attribute</div>
+<div class="block">Set hiLimit Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLoLimit(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">setLoLimit</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pLoLimit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Defines loLimit Attribute</div>
+<div class="block">Set loLimit Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#updateUsing(org.ivoa.dm.measurement.Bounds1D)" class="member-name-link">updateUsing</a><wbr>(<a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a>&nbsp;other)</code></div>
@@ -217,10 +219,14 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withHiLimit(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">withHiLimit</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pHiLimit)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for hiLimit Attribute.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLoLimit(org.ivoa.dm.ivoa.RealQuantity)" class="member-name-link">withLoLimit</a><wbr>(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pLoLimit)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">fluent setter for loLimit Attribute.</div>
+</div>
 </div>
 </div>
 </div>
@@ -329,9 +335,12 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="copyMe()">
 <h3>copyMe</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></span>&nbsp;<span class="element-name">copyMe</span>()</div>
+<div class="block">make a clone of the object taking into account current polymorhic type.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Uncertainty.html#copyMe()">copyMe</a></code>&nbsp;in class&nbsp;<code><a href="Uncertainty.html" title="class in org.ivoa.dm.measurement">Uncertainty</a></code></dd>
+<dt>Returns:</dt>
+<dd>the cloned object.</dd>
 </dl>
 </section>
 </li>
@@ -350,7 +359,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="getLoLimit()">
 <h3>getLoLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></span>&nbsp;<span class="element-name">getLoLimit</span>()</div>
-<div class="block">Returns loLimit Attribute</div>
+<div class="block">Returns loLimit Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>loLimit Attribute</dd>
@@ -361,7 +370,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setLoLimit(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>setLoLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setLoLimit</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pLoLimit)</span></div>
-<div class="block">Defines loLimit Attribute</div>
+<div class="block">Set loLimit Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pLoLimit</code> - value to set</dd>
@@ -372,13 +381,20 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withLoLimit(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>withLoLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a></span>&nbsp;<span class="element-name">withLoLimit</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pLoLimit)</span></div>
+<div class="block">fluent setter for loLimit Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pLoLimit</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Bounds1D</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getHiLimit()">
 <h3>getHiLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a></span>&nbsp;<span class="element-name">getHiLimit</span>()</div>
-<div class="block">Returns hiLimit Attribute</div>
+<div class="block">Returns hiLimit Attribute.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>hiLimit Attribute</dd>
@@ -389,7 +405,7 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="setHiLimit(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>setHiLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setHiLimit</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pHiLimit)</span></div>
-<div class="block">Defines hiLimit Attribute</div>
+<div class="block">Set hiLimit Attribute.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pHiLimit</code> - value to set</dd>
@@ -400,6 +416,13 @@ implements org.ivoa.vodml.jpa.JPAManipulations</span></div>
 <section class="detail" id="withHiLimit(org.ivoa.dm.ivoa.RealQuantity)">
 <h3>withHiLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Bounds1D.html" title="class in org.ivoa.dm.measurement">Bounds1D</a></span>&nbsp;<span class="element-name">withHiLimit</span><wbr><span class="parameters">(<a href="../ivoa/RealQuantity.html" title="class in org.ivoa.dm.ivoa">RealQuantity</a>&nbsp;pHiLimit)</span></div>
+<div class="block">fluent setter for hiLimit Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pHiLimit</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Bounds1D</dd>
+</dl>
 </section>
 </li>
 <li>
