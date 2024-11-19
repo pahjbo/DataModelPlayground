@@ -648,7 +648,7 @@
       <!--imported nodes-->
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e559"
+            id="d1759e559"
             source="VOResource:Organisation"
             target="VOResource:Resource">
          <data key="k3">
@@ -660,7 +660,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e583"
+            id="d1759e583"
             source="VOResource:Service"
             target="VOResource:Resource">
          <data key="k3">
@@ -672,7 +672,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e763"
+            id="d1759e763"
             source="VOResource:WebBrowser"
             target="VOResource:Interface">
          <data key="k3">
@@ -684,7 +684,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e769"
+            id="d1759e769"
             source="VOResource:WebService"
             target="VOResource:Interface">
          <data key="k3">
@@ -696,7 +696,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e292"
+            id="d1759e292"
             source="VOResource:Resource"
             target="VOResource:Curation">
          <data key="k3">
@@ -712,7 +712,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e301"
+            id="d1759e301"
             source="VOResource:Resource"
             target="VOResource:Content">
          <data key="k3">
@@ -728,7 +728,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e350"
+            id="d1759e350"
             source="VOResource:Curation"
             target="VOResource:Creator">
          <data key="k3">
@@ -744,7 +744,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e359"
+            id="d1759e359"
             source="VOResource:Curation"
             target="VOResource:Contact">
          <data key="k3">
@@ -760,7 +760,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e524"
+            id="d1759e524"
             source="VOResource:Content"
             target="VOResource:Relationship">
          <data key="k3">
@@ -776,7 +776,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e594"
+            id="d1759e594"
             source="VOResource:Service"
             target="VOResource:Capability">
          <data key="k3">
@@ -792,7 +792,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e634"
+            id="d1759e634"
             source="VOResource:Capability"
             target="VOResource:Interface">
          <data key="k3">
@@ -808,7 +808,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e674"
+            id="d1759e674"
             source="VOResource:Interface"
             target="VOResource:AccessURL">
          <data key="k3">
@@ -824,7 +824,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e683"
+            id="d1759e683"
             source="VOResource:Interface"
             target="VOResource:MirrorURL">
          <data key="k3">
@@ -840,7 +840,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d2131e692"
+            id="d1759e692"
             source="VOResource:Interface"
             target="VOResource:SecurityMethod">
          <data key="k3">

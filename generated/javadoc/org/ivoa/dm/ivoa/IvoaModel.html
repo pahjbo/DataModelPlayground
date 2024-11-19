@@ -35,6 +35,7 @@ loadScripts(document, 'script');</script>
 <li><a href="package-summary.html">Package</a></li>
 <li class="nav-bar-cell1-rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html#class">Help</a></li>
 </ul>
@@ -44,13 +45,13 @@ loadScripts(document, 'script');</script>
 <ul class="sub-nav-list">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested-class-summary">Nested</a>&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-summary">Method</a></li>
 </ul>
 <ul class="sub-nav-list">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field-detail">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor-detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method-detail">Method</a></li>
 </ul>
@@ -85,6 +86,8 @@ loadScripts(document, 'script');</script>
 </span><span class="modifiers">public class </span><span class="element-name type-name-label">IvoaModel</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in org.ivoa.dm.ivoa">IvoaModel</a>&gt;</span></div>
+<div class="block">The container class for the ivoa Model.
+ This is the main reference data model containing primitive types used in other data models.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -99,7 +102,26 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="IvoaModel.References.html" class="type-name-link" title="class in org.ivoa.dm.ivoa">IvoaModel.References</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">A container class for the references in the model.</div>
+</div>
+</div>
+</section>
+</li>
+<!-- =========== FIELD SUMMARY =========== -->
+<li>
+<section class="field-summary" id="field-summary">
+<h2>Field Summary</h2>
+<div class="caption"><span>Fields</span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Field</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>static final org.ivoa.vodml.ModelDescription</code></div>
+<div class="col-second even-row-color"><code><a href="#modelDescription" class="member-name-link">modelDescription</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">the description.</div>
+</div>
 </div>
 </section>
 </li>
@@ -112,7 +134,9 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">IvoaModel</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">default constructor.</div>
+</div>
 </div>
 </section>
 </li>
@@ -129,45 +153,48 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static jakarta.xml.bind.JAXBContext</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#contextFactory()" class="member-name-link">contextFactory</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">the context factory for the model.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createContext()" class="member-name-link">createContext</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.ivoa.vodml.ModelDescription</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#description()" class="member-name-link">description</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.ivoa.vodml.ModelDescription</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#descriptor()" class="member-name-link">descriptor</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Return the model description in non-static fashion.</div>
+<div class="block">create a context in preparation for cloning.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getContent(java.lang.Class)" class="member-name-link">getContent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;c)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get the content of the given type.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasReferences()" class="member-name-link">hasReferences</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#jsonMapper()" class="member-name-link">jsonMapper</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">if the model has references.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isInVocabulary(java.lang.String,java.lang.String)" class="member-name-link">isInVocabulary</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vocabulary)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Test if a term is in the vocabulary.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#jsonMapper()" class="member-name-link">jsonMapper</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Return a Jackson objectMapper suitable for JSON serialzation.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.ivoa.vodml.ModelManagement&lt;<a href="IvoaModel.html" title="class in org.ivoa.dm.ivoa">IvoaModel</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#management()" class="member-name-link">management</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>org.ivoa.vodml.ModelManagement&lt;<a href="IvoaModel.html" title="class in org.ivoa.dm.ivoa">IvoaModel</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#management()" class="member-name-link">management</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">generate management interface instance for model.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processReferences()" class="member-name-link">processReferences</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pu_name()" class="member-name-link">pu_name</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#processReferences()" class="member-name-link">processReferences</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#pu_name()" class="member-name-link">pu_name</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">The persistence unit name for the model.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#writeXMLSchema()" class="member-name-link">writeXMLSchema</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -180,6 +207,21 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 </section>
 <section class="details">
 <ul class="details-list">
+<!-- ============ FIELD DETAIL =========== -->
+<li>
+<section class="field-details" id="field-detail">
+<h2>Field Details</h2>
+<ul class="member-list">
+<li>
+<section class="detail" id="modelDescription">
+<h3>modelDescription</h3>
+<div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type">org.ivoa.vodml.ModelDescription</span>&nbsp;<span class="element-name">modelDescription</span></div>
+<div class="block">the description.</div>
+</section>
+</li>
+</ul>
+</section>
+</li>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <li>
 <section class="constructor-details" id="constructor-detail">
@@ -189,6 +231,7 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <section class="detail" id="&lt;init&gt;()">
 <h3>IvoaModel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">IvoaModel</span>()</div>
+<div class="block">default constructor.</div>
 </section>
 </li>
 </ul>
@@ -200,9 +243,33 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
+<section class="detail" id="isInVocabulary(java.lang.String,java.lang.String)">
+<h3>isInVocabulary</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isInVocabulary</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;vocabulary)</span></div>
+<div class="block">Test if a term is in the vocabulary.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - the value to test</dd>
+<dd><code>vocabulary</code> - the uri for the vocabulary.</dd>
+<dt>Returns:</dt>
+<dd>true if the term is in the vocabulary.</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getContent(java.lang.Class)">
 <h3>getContent</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;T&gt;</span>&nbsp;<span class="element-name">getContent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;c)</span></div>
+<div class="block">Get the content of the given type.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><code>T</code> - The type of the content</dd>
+<dt>Parameters:</dt>
+<dd><code>c</code> - the class of the content.</dd>
+<dt>Returns:</dt>
+<dd>the content.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -219,6 +286,11 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <section class="detail" id="hasReferences()">
 <h3>hasReferences</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasReferences</span>()</div>
+<div class="block">if the model has references.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>true if the model has references.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -226,9 +298,12 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <h3>contextFactory</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">jakarta.xml.bind.JAXBContext</span>&nbsp;<span class="element-name">contextFactory</span>()
                                                    throws <span class="exceptions">jakarta.xml.bind.JAXBException</span></div>
+<div class="block">the context factory for the model.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>the JAXBContext.</dd>
 <dt>Throws:</dt>
-<dd><code>jakarta.xml.bind.JAXBException</code></dd>
+<dd><code>jakarta.xml.bind.JAXBException</code> - if there is a problem.</dd>
 </dl>
 </section>
 </li>
@@ -237,12 +312,10 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 <h3>pu_name</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">pu_name</span>()</div>
 <div class="block">The persistence unit name for the model.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="writeXMLSchema()">
-<h3>writeXMLSchema</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">writeXMLSchema</span>()</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the name.</dd>
+</dl>
 </section>
 </li>
 <li>
@@ -270,29 +343,10 @@ implements org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in
 </section>
 </li>
 <li>
-<section class="detail" id="description()">
-<h3>description</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.ivoa.vodml.ModelDescription</span>&nbsp;<span class="element-name">description</span>()</div>
-</section>
-</li>
-<li>
-<section class="detail" id="descriptor()">
-<h3>descriptor</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">org.ivoa.vodml.ModelDescription</span>&nbsp;<span class="element-name">descriptor</span>()</div>
-<div class="block">Return the model description in non-static fashion.
- overrides @see org.ivoa.vodml.VodmlModel#descriptor()</div>
-<dl class="notes">
-<dt>Specified by:</dt>
-<dd><code>descriptor</code>&nbsp;in interface&nbsp;<code>org.ivoa.vodml.VodmlModel&lt;<a href="IvoaModel.html" title="class in org.ivoa.dm.ivoa">IvoaModel</a>&gt;</code></dd>
-<dt>Returns:</dt>
-<dd>the model description.</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="createContext()">
 <h3>createContext</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">createContext</span>()</div>
+<div class="block">create a context in preparation for cloning.</div>
 </section>
 </li>
 </ul>
