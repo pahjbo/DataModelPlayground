@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.vodml
 
 plugins {
-    id("net.ivoa.vo-dml.vodmltools") version "0.5.3"
+    id("net.ivoa.vo-dml.vodmltools") version "0.5.11"
     application
     `maven-publish`
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
@@ -14,8 +14,12 @@ version = "0.1-SNAPSHOT"
 vodml {
     vodmlDir.set(file("vo-dml"))
     vodslDir.set(file("models"))
-    vodmlFiles.setFrom(files (vodmlDir.asFileTree.matching(PatternSet().include("*.vo-dml.xml").exclude("Provenance*","PDL*")))) // provenance breaks the "no aggregation" rules too often...
-    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("*.vodml-binding.xml").exclude("Provenance*","PDL*"))))
+    vodmlFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("VO*.vo-dml.xml")),vodmlDir.files("SIA-v1.2.vo-dml.xml",
+        "TAPRegExt-v1.0.vo-dml.xml")))
+    bindingFiles.setFrom(files(vodmlDir.files("VOSI.vodml-binding.xml","Registry.vodml-binding.xml")))
+
+//    vodmlFiles.setFrom(files (vodmlDir.asFileTree.matching(PatternSet().include("*.vo-dml.xml").exclude("Provenance*","PDL*")))) // provenance breaks the "no aggregation" rules too often...
+//    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("*.vodml-binding.xml").exclude("Provenance*","PDL*"))))
 
 //    vodmlFiles.setFrom(files (vodmlDir.file("Provenance.vo-dml.xml"), vodmlDir.file("IVOA-v1.0.vo-dml.xml"))) // if you want to operate on single model
 //    bindingFiles.setFrom(files(vodmlDir.asFileTree.matching(PatternSet().include("Prov*.vodml-binding.xml")),vodmlDir.file("ivoa_base.vodml-binding.xml")))
@@ -35,6 +39,7 @@ tasks.test {
 }
 
 dependencies {
+    implementation("org.javastro.ivoa.vo-dml:ivoa-base:1.1-SNAPSHOT")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.1")
 

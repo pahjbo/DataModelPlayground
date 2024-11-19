@@ -1,6 +1,6 @@
 site_name: Model Documentation
 docs_dir: doc
-repo_url: 'https://github.com/pahjbo/DataModelTemplate'
+repo_url: 'https://github.com/pahjbo/DataModelPlayground'
 
 theme:
   name: material

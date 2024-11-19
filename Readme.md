@@ -16,6 +16,9 @@ gradle vodmlDoc
 ```
 which will create files in [doc/generated](doc/generated)
 
+"site" documentation is published to [github pages](https://pahjbo.github.io/DataModelPlayground/)
+
+
 If you want an IDE for editing the vodsl look [here](https://github.com/ivoa/ProposalDM/wiki/Installing-the-Eclipse-VODSL-editor) for instructions.
 
 Fork, branch, play!
