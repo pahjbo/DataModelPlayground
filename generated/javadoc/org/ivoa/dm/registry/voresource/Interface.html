@@ -166,12 +166,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Creates a new Interface</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,java.util.List)" class="member-name-link">Interface</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;testQueryString,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;role,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AccessURL.html" title="class in org.ivoa.dm.registry.voresource">AccessURL</a>&gt;&nbsp;accessURL,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.util.List,java.util.List,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">Interface</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AccessURL.html" title="class in org.ivoa.dm.registry.voresource">AccessURL</a>&gt;&nbsp;accessURL,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MirrorURL.html" title="class in org.ivoa.dm.registry.voresource">MirrorURL</a>&gt;&nbsp;mirrorURL,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SecurityMethod.html" title="class in org.ivoa.dm.registry.voresource">SecurityMethod</a>&gt;&nbsp;securityMethod)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SecurityMethod.html" title="class in org.ivoa.dm.registry.voresource">SecurityMethod</a>&gt;&nbsp;securityMethod,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;testQueryString,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;role)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -512,44 +512,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.util.List,java.util.List,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.util.List,java.util.List,java.util.List,java.lang.String,java.lang.String,java.lang.String)">
 <h3>Interface</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Interface</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;testQueryString,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;role,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AccessURL.html" title="class in org.ivoa.dm.registry.voresource">AccessURL</a>&gt;&nbsp;accessURL,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Interface</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AccessURL.html" title="class in org.ivoa.dm.registry.voresource">AccessURL</a>&gt;&nbsp;accessURL,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MirrorURL.html" title="class in org.ivoa.dm.registry.voresource">MirrorURL</a>&gt;&nbsp;mirrorURL,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SecurityMethod.html" title="class in org.ivoa.dm.registry.voresource">SecurityMethod</a>&gt;&nbsp;securityMethod)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SecurityMethod.html" title="class in org.ivoa.dm.registry.voresource">SecurityMethod</a>&gt;&nbsp;securityMethod,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;testQueryString,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;role)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>testQueryString</code> - Test data for exercising the service.
-                                 
-                                   This contains data that can be passed to the interface to
-                                   retrieve a non-empty result.  This can be used by validators
-                                   within test suites.
-                 
-                                   Exactly how agents should use the data contained in
-                                   the testQueryString depends on the concrete interface class.
-                                   For interfaces employing the HTTP GET method, however,
-                                   this will typically be urlencoded parameters (as for
-                                   the application/x-www-form-urlencoded media type).</dd>
-<dd><code>version</code> - The version of a standard interface specification that this 
-                                interface complies with.  Most VO standards indicate the
-                                version in the standardID attribute of the capability.  For
-                                these standards, the version attribute should not be used.</dd>
-<dd><code>role</code> - A tag name that identifies the role the interface plays
-                                in the particular capability.  If the value is equal to
-                                'std' or begins with 'std:', then the interface refers
-                                to a standard interface defined by the standard
-                                referred to by the capability's standardID attribute.  
-                              
-                                For an interface complying with some registered
-                                standard (i.e. has a legal standardID), the role can be
-                                matched against interface roles enumerated in standard 
-                                resource record.  The interface descriptions in
-                                the standard record can provide default descriptions 
-                                so that such details need not be repeated here.</dd>
 <dd><code>accessURL</code> - The URL (or base URL) that a client uses to access the
                                   service.  How this URL is to be interpreted and used 
                                   depends on the specific Interface subclass
@@ -581,6 +554,33 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    Services not requiring authentication must provide
                                    at least one interface definition without a 
                                    securityMethod defined.</dd>
+<dd><code>testQueryString</code> - Test data for exercising the service.
+                                 
+                                   This contains data that can be passed to the interface to
+                                   retrieve a non-empty result.  This can be used by validators
+                                   within test suites.
+                 
+                                   Exactly how agents should use the data contained in
+                                   the testQueryString depends on the concrete interface class.
+                                   For interfaces employing the HTTP GET method, however,
+                                   this will typically be urlencoded parameters (as for
+                                   the application/x-www-form-urlencoded media type).</dd>
+<dd><code>version</code> - The version of a standard interface specification that this 
+                                interface complies with.  Most VO standards indicate the
+                                version in the standardID attribute of the capability.  For
+                                these standards, the version attribute should not be used.</dd>
+<dd><code>role</code> - A tag name that identifies the role the interface plays
+                                in the particular capability.  If the value is equal to
+                                'std' or begins with 'std:', then the interface refers
+                                to a standard interface defined by the standard
+                                referred to by the capability's standardID attribute.  
+                              
+                                For an interface complying with some registered
+                                standard (i.e. has a legal standardID), the role can be
+                                matched against interface roles enumerated in standard 
+                                resource record.  The interface descriptions in
+                                the standard record can provide default descriptions 
+                                so that such details need not be repeated here.</dd>
 </dl>
 </section>
 </li>
@@ -634,111 +634,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>other</code> - the object to be copied.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getTestQueryString()">
-<h3>getTestQueryString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTestQueryString</span>()</div>
-<div class="block">Returns testQueryString Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>testQueryString Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setTestQueryString(java.lang.String)">
-<h3>setTestQueryString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTestQueryString</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQueryString)</span></div>
-<div class="block">Set testQueryString Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pTestQueryString</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withTestQueryString(java.lang.String)">
-<h3>withTestQueryString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withTestQueryString</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQueryString)</span></div>
-<div class="block">fluent setter for testQueryString Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pTestQueryString</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Interface</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getVersion()">
-<h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
-<div class="block">Returns version Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>version Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVersion(java.lang.String)">
-<h3>setVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pVersion)</span></div>
-<div class="block">Set version Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pVersion</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withVersion(java.lang.String)">
-<h3>withVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pVersion)</span></div>
-<div class="block">fluent setter for version Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pVersion</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Interface</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getRole()">
-<h3>getRole</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRole</span>()</div>
-<div class="block">Returns role Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>role Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setRole(java.lang.String)">
-<h3>setRole</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRole</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRole)</span></div>
-<div class="block">Set role Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pRole</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withRole(java.lang.String)">
-<h3>withRole</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withRole</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRole)</span></div>
-<div class="block">fluent setter for role Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pRole</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Interface</dd>
 </dl>
 </section>
 </li>
@@ -907,6 +802,111 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dt>Parameters:</dt>
 <dd><code>_p</code> - org.ivoa.dm.registry.voresource.SecurityMethod to update
  the match is done via the database key</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTestQueryString()">
+<h3>getTestQueryString</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getTestQueryString</span>()</div>
+<div class="block">Returns testQueryString Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>testQueryString Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTestQueryString(java.lang.String)">
+<h3>setTestQueryString</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setTestQueryString</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQueryString)</span></div>
+<div class="block">Set testQueryString Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTestQueryString</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withTestQueryString(java.lang.String)">
+<h3>withTestQueryString</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withTestQueryString</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pTestQueryString)</span></div>
+<div class="block">fluent setter for testQueryString Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pTestQueryString</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Interface</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVersion()">
+<h3>getVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
+<div class="block">Returns version Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>version Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVersion(java.lang.String)">
+<h3>setVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pVersion)</span></div>
+<div class="block">Set version Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVersion</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withVersion(java.lang.String)">
+<h3>withVersion</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pVersion)</span></div>
+<div class="block">fluent setter for version Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVersion</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Interface</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRole()">
+<h3>getRole</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRole</span>()</div>
+<div class="block">Returns role Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>role Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setRole(java.lang.String)">
+<h3>setRole</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRole</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRole)</span></div>
+<div class="block">Set role Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pRole</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withRole(java.lang.String)">
+<h3>withRole</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a></span>&nbsp;<span class="element-name">withRole</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pRole)</span></div>
+<div class="block">fluent setter for role Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pRole</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Interface</dd>
 </dl>
 </section>
 </li>

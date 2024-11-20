@@ -170,10 +170,10 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Creates a new ForeignKey</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String,java.util.List)" class="member-name-link">ForeignKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;targetTable,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.String,java.util.List,java.lang.String,java.lang.String)" class="member-name-link">ForeignKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;targetTable,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;fkColumn,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;utype,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;fkColumn)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;utype)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -390,18 +390,21 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.String,java.lang.String,java.lang.String,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.lang.String,java.util.List,java.lang.String,java.lang.String)">
 <h3>ForeignKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">ForeignKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;targetTable,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;fkColumn,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;utype,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;fkColumn)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;utype)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetTable</code> - The fully qualified name (including catalogue and schema, as
                                 applicable) of the table that can be joined with the 
                                 table containing this foreign key.</dd>
+<dd><code>fkColumn</code> - A pair of column names, one from this table and one
+                                from the target table that should be used to join the
+                                tables in a query.</dd>
 <dd><code>description</code> - A free-text description of what this key points to
                                    and what the relationship means.</dd>
 <dd><code>utype</code> - An identifier for a concept in a data model that
@@ -410,9 +413,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    The form of the utype string depends on the data
                                    model; common forms are sequences of dotted identifiers
                                    (e.g., in SSA) or URIs (e.g., in RegTAP).</dd>
-<dd><code>fkColumn</code> - A pair of column names, one from this table and one
-                                from the target table that should be used to join the
-                                tables in a query.</dd>
 </dl>
 </section>
 </li>
@@ -494,6 +494,62 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
+<section class="detail" id="getFkColumn()">
+<h3>getFkColumn</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;</span>&nbsp;<span class="element-name">getFkColumn</span>()</div>
+<div class="block">Returns fkColumn composition as an immutable list.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>fkColumn composition.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setFkColumn(java.util.List)">
+<h3>setFkColumn</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFkColumn</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;pFkColumn)</span></div>
+<div class="block">Defines whole fkColumn composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pFkColumn</code> - composition to set.</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addToFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
+<h3>addToFkColumn</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;p)</span></div>
+<div class="block">Add a org.ivoa.dm.registry.vodataservice.FKColumn to the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to add</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="removeFromFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
+<h3>removeFromFkColumn</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;p)</span></div>
+<div class="block">Remove a org.ivoa.dm.registry.vodataservice.FKColumn from the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to remove</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="replaceInFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
+<h3>replaceInFkColumn</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replaceInFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;_p)</span></div>
+<div class="block">update a org.ivoa.dm.registry.vodataservice.FKColumn in the composition.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>_p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to update
+ the match is done via the database key</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getDescription()">
 <h3>getDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDescription</span>()</div>
@@ -560,62 +616,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dd><code>pUtype</code> - value to set</dd>
 <dt>Returns:</dt>
 <dd>ForeignKey</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getFkColumn()">
-<h3>getFkColumn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;</span>&nbsp;<span class="element-name">getFkColumn</span>()</div>
-<div class="block">Returns fkColumn composition as an immutable list.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>fkColumn composition.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setFkColumn(java.util.List)">
-<h3>setFkColumn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setFkColumn</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&gt;&nbsp;pFkColumn)</span></div>
-<div class="block">Defines whole fkColumn composition.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pFkColumn</code> - composition to set.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="addToFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
-<h3>addToFkColumn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addToFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;p)</span></div>
-<div class="block">Add a org.ivoa.dm.registry.vodataservice.FKColumn to the composition.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to add</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="removeFromFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
-<h3>removeFromFkColumn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">removeFromFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;p)</span></div>
-<div class="block">Remove a org.ivoa.dm.registry.vodataservice.FKColumn from the composition.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to remove</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="replaceInFkColumn(org.ivoa.dm.registry.vodataservice.FKColumn)">
-<h3>replaceInFkColumn</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">replaceInFkColumn</span><wbr><span class="parameters">(<a href="FKColumn.html" title="class in org.ivoa.dm.registry.vodataservice">FKColumn</a>&nbsp;_p)</span></div>
-<div class="block">update a org.ivoa.dm.registry.vodataservice.FKColumn in the composition.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>_p</code> - org.ivoa.dm.registry.vodataservice.FKColumn to update
- the match is done via the database key</dd>
 </dl>
 </section>
 </li>

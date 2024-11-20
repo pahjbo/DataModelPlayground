@@ -152,7 +152,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-org.ivoa.dm.registry.vodataservice.DataResource">Fields inherited from class&nbsp;org.ivoa.dm.registry.vodataservice.<a href="DataResource.html" title="class in org.ivoa.dm.registry.vodataservice">DataResource</a></h3>
-<code><a href="DataResource.html#coverage">coverage</a>, <a href="DataResource.html#facility">facility</a>, <a href="DataResource.html#instrument">instrument</a></code></div>
+<code><a href="DataResource.html#coverage">coverage</a>, <a href="DataResource.html#facility">facility</a>, <a href="DataResource.html#instrument">instrument</a>, <a href="DataResource.html#productTypeServed">productTypeServed</a></code></div>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-org.ivoa.dm.registry.voresource.Service">Fields inherited from class&nbsp;org.ivoa.dm.registry.voresource.<a href="../voresource/Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a></h3>
 <code><a href="../voresource/Service.html#capability">capability</a>, <a href="../voresource/Service.html#rights">rights</a></code></div>
@@ -182,10 +182,11 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Constructor from supertype instance.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.vodataservice.TableSet,java.util.List,java.util.List,org.ivoa.dm.registry.vodataservice.Coverage,java.util.List,java.util.List,java.util.List,java.lang.String,org.ivoa.dm.registry.voresource.ShortName,org.ivoa.dm.registry.voresource.IdentifierURI,java.util.List,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.Resource_status,java.lang.String,org.ivoa.dm.registry.voresource.Curation,org.ivoa.dm.registry.voresource.Content)" class="member-name-link">CatalogResource</a><wbr>(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;tableset,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.vodataservice.TableSet,java.util.List,java.util.List,org.ivoa.dm.registry.vodataservice.Coverage,java.util.List,java.util.List,java.util.List,java.util.List,java.lang.String,org.ivoa.dm.registry.voresource.ShortName,org.ivoa.dm.registry.voresource.IdentifierURI,java.util.List,org.ivoa.dm.registry.voresource.Curation,org.ivoa.dm.registry.voresource.Content,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.Resource_status,java.lang.String)" class="member-name-link">CatalogResource</a><wbr>(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;tableset,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;facility,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;instrument,
  <a href="Coverage.html" title="class in org.ivoa.dm.registry.vodataservice">Coverage</a>&nbsp;coverage,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productTypeServed,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;rights,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Capability.html" title="class in org.ivoa.dm.registry.voresource">Capability</a>&gt;&nbsp;capability,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
@@ -193,12 +194,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
  <a href="../voresource/ShortName.html" title="class in org.ivoa.dm.registry.voresource">ShortName</a>&nbsp;shortName,
  <a href="../voresource/IdentifierURI.html" title="class in org.ivoa.dm.registry.voresource">IdentifierURI</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;altIdentifier,
+ <a href="../voresource/Curation.html" title="class in org.ivoa.dm.registry.voresource">Curation</a>&nbsp;curation,
+ <a href="../voresource/Content.html" title="class in org.ivoa.dm.registry.voresource">Content</a>&nbsp;content,
  <a href="../voresource/UTCTimestamp.html" title="class in org.ivoa.dm.registry.voresource">UTCTimestamp</a>&nbsp;created,
  <a href="../voresource/UTCTimestamp.html" title="class in org.ivoa.dm.registry.voresource">UTCTimestamp</a>&nbsp;updated,
  <a href="../voresource/Resource_status.html" title="enum class in org.ivoa.dm.registry.voresource">Resource_status</a>&nbsp;status,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
- <a href="../voresource/Curation.html" title="class in org.ivoa.dm.registry.voresource">Curation</a>&nbsp;curation,
- <a href="../voresource/Content.html" title="class in org.ivoa.dm.registry.voresource">Content</a>&nbsp;content)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -261,7 +262,7 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.ivoa.dm.registry.vodataservice.DataResource">Methods inherited from class&nbsp;org.ivoa.dm.registry.vodataservice.<a href="DataResource.html" title="class in org.ivoa.dm.registry.vodataservice">DataResource</a></h3>
-<code><a href="DataResource.html#createDataResource(java.util.function.Consumer)">createDataResource</a>, <a href="DataResource.html#getCoverage()">getCoverage</a>, <a href="DataResource.html#getFacility()">getFacility</a>, <a href="DataResource.html#getInstrument()">getInstrument</a>, <a href="DataResource.html#setCoverage(org.ivoa.dm.registry.vodataservice.Coverage)">setCoverage</a>, <a href="DataResource.html#setFacility(java.util.List)">setFacility</a>, <a href="DataResource.html#setInstrument(java.util.List)">setInstrument</a>, <a href="DataResource.html#updateUsing(org.ivoa.dm.registry.vodataservice.DataResource)">updateUsing</a>, <a href="DataResource.html#withCoverage(org.ivoa.dm.registry.vodataservice.Coverage)">withCoverage</a>, <a href="DataResource.html#withFacility(java.util.List)">withFacility</a>, <a href="DataResource.html#withInstrument(java.util.List)">withInstrument</a></code></div>
+<code><a href="DataResource.html#createDataResource(java.util.function.Consumer)">createDataResource</a>, <a href="DataResource.html#getCoverage()">getCoverage</a>, <a href="DataResource.html#getFacility()">getFacility</a>, <a href="DataResource.html#getInstrument()">getInstrument</a>, <a href="DataResource.html#getProductTypeServed()">getProductTypeServed</a>, <a href="DataResource.html#setCoverage(org.ivoa.dm.registry.vodataservice.Coverage)">setCoverage</a>, <a href="DataResource.html#setFacility(java.util.List)">setFacility</a>, <a href="DataResource.html#setInstrument(java.util.List)">setInstrument</a>, <a href="DataResource.html#setProductTypeServed(java.util.List)">setProductTypeServed</a>, <a href="DataResource.html#updateUsing(org.ivoa.dm.registry.vodataservice.DataResource)">updateUsing</a>, <a href="DataResource.html#withCoverage(org.ivoa.dm.registry.vodataservice.Coverage)">withCoverage</a>, <a href="DataResource.html#withFacility(java.util.List)">withFacility</a>, <a href="DataResource.html#withInstrument(java.util.List)">withInstrument</a>, <a href="DataResource.html#withProductTypeServed(java.util.List)">withProductTypeServed</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-org.ivoa.dm.registry.voresource.Service">Methods inherited from class&nbsp;org.ivoa.dm.registry.voresource.<a href="../voresource/Service.html" title="class in org.ivoa.dm.registry.voresource">Service</a></h3>
 <code><a href="../voresource/Service.html#addToCapability(org.ivoa.dm.registry.voresource.Capability)">addToCapability</a>, <a href="../voresource/Service.html#createService(java.util.function.Consumer)">createService</a>, <a href="../voresource/Service.html#getCapability()">getCapability</a>, <a href="../voresource/Service.html#getRights()">getRights</a>, <a href="../voresource/Service.html#removeFromCapability(org.ivoa.dm.registry.voresource.Capability)">removeFromCapability</a>, <a href="../voresource/Service.html#replaceInCapability(org.ivoa.dm.registry.voresource.Capability)">replaceInCapability</a>, <a href="../voresource/Service.html#setCapability(java.util.List)">setCapability</a>, <a href="../voresource/Service.html#setRights(java.util.List)">setRights</a>, <a href="../voresource/Service.html#updateUsing(org.ivoa.dm.registry.voresource.Service)">updateUsing</a>, <a href="../voresource/Service.html#withRights(java.util.List)">withRights</a></code></div>
@@ -320,12 +321,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.vodataservice.TableSet,java.util.List,java.util.List,org.ivoa.dm.registry.vodataservice.Coverage,java.util.List,java.util.List,java.util.List,java.lang.String,org.ivoa.dm.registry.voresource.ShortName,org.ivoa.dm.registry.voresource.IdentifierURI,java.util.List,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.Resource_status,java.lang.String,org.ivoa.dm.registry.voresource.Curation,org.ivoa.dm.registry.voresource.Content)">
+<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.vodataservice.TableSet,java.util.List,java.util.List,org.ivoa.dm.registry.vodataservice.Coverage,java.util.List,java.util.List,java.util.List,java.util.List,java.lang.String,org.ivoa.dm.registry.voresource.ShortName,org.ivoa.dm.registry.voresource.IdentifierURI,java.util.List,org.ivoa.dm.registry.voresource.Curation,org.ivoa.dm.registry.voresource.Content,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.UTCTimestamp,org.ivoa.dm.registry.voresource.Resource_status,java.lang.String)">
 <h3>CatalogResource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CatalogResource</span><wbr><span class="parameters">(<a href="TableSet.html" title="class in org.ivoa.dm.registry.vodataservice">TableSet</a>&nbsp;tableset,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;facility,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/ResourceName.html" title="class in org.ivoa.dm.registry.voresource">ResourceName</a>&gt;&nbsp;instrument,
  <a href="Coverage.html" title="class in org.ivoa.dm.registry.vodataservice">Coverage</a>&nbsp;coverage,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;productTypeServed,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Rights.html" title="class in org.ivoa.dm.registry.voresource">Rights</a>&gt;&nbsp;rights,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Capability.html" title="class in org.ivoa.dm.registry.voresource">Capability</a>&gt;&nbsp;capability,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
@@ -333,12 +335,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
  <a href="../voresource/ShortName.html" title="class in org.ivoa.dm.registry.voresource">ShortName</a>&nbsp;shortName,
  <a href="../voresource/IdentifierURI.html" title="class in org.ivoa.dm.registry.voresource">IdentifierURI</a>&nbsp;identifier,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;altIdentifier,
+ <a href="../voresource/Curation.html" title="class in org.ivoa.dm.registry.voresource">Curation</a>&nbsp;curation,
+ <a href="../voresource/Content.html" title="class in org.ivoa.dm.registry.voresource">Content</a>&nbsp;content,
  <a href="../voresource/UTCTimestamp.html" title="class in org.ivoa.dm.registry.voresource">UTCTimestamp</a>&nbsp;created,
  <a href="../voresource/UTCTimestamp.html" title="class in org.ivoa.dm.registry.voresource">UTCTimestamp</a>&nbsp;updated,
  <a href="../voresource/Resource_status.html" title="enum class in org.ivoa.dm.registry.voresource">Resource_status</a>&nbsp;status,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version,
- <a href="../voresource/Curation.html" title="class in org.ivoa.dm.registry.voresource">Curation</a>&nbsp;curation,
- <a href="../voresource/Content.html" title="class in org.ivoa.dm.registry.voresource">Content</a>&nbsp;content)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;version)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -352,6 +354,14 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                       managed by a resource.</dd>
 <dd><code>coverage</code> - Extent of the content of the resource over space, time, 
                                       and frequency.</dd>
+<dd><code>productTypeServed</code> - Collections of data products (e.g., images or spectra)
+                                                or services serving them define the type of products
+                                                they contain or serve here.  This information is intended
+                                                to enable global product discovery.  Hence, services
+                                                failing to define their product type(s) may be skipped
+                                                by clients in global discovery.  Product type names must
+                                                be taken from the IVOA vocabulary
+                                                http://www.ivoa.net/rdf/product-type.</dd>
 <dd><code>rights</code> - Information about rights held in and over the resource.
                                        
                                         Mainly for compatibility with DataCite, this element
@@ -403,6 +413,10 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    scheme, e.g., DOI or bibcode.  Always use the an URI scheme
                                    here, e.g., doi:10.1016/j.epsl.2011.11.037.  For bibcodes,
                                    use a form like bibcode:2008ivoa.spec.0222P.</dd>
+<dd><code>curation</code> - Information regarding the general curation of the resource
+                              .</dd>
+<dd><code>content</code> - Information regarding the general content of the resource
+                              .</dd>
 <dd><code>created</code> - The UTC date and time this resource metadata description
                                was created. 
                               
@@ -424,10 +438,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                 attribute of their schema's root (xs:schema) element.
                                 Clients may assume version 1.0 if this attribute is 
                                 missing.</dd>
-<dd><code>curation</code> - Information regarding the general curation of the resource
-                              .</dd>
-<dd><code>content</code> - Information regarding the general content of the resource
-                              .</dd>
 </dl>
 </section>
 </li>

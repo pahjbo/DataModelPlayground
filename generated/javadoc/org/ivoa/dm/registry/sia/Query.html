@@ -165,16 +165,16 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Creates a new Query</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.lang.Integer,java.lang.String,org.ivoa.dm.registry.sia.SkyPos,org.ivoa.dm.registry.sia.SkySize)" class="member-name-link">Query</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;verb,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;extras,
- <a href="SkyPos.html" title="class in org.ivoa.dm.registry.sia">SkyPos</a>&nbsp;pos,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;size)</code></div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.sia.Query)" class="member-name-link">Query</a><wbr>(<a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;other)</code></div>
 <div class="col-last odd-row-color">
-<div class="block">full parameter constructor.</div>
-</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.sia.Query)" class="member-name-link">Query</a><wbr>(<a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;other)</code></div>
-<div class="col-last even-row-color">
 <div class="block">Copy Constructor.</div>
+</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.sia.SkyPos,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.String)" class="member-name-link">Query</a><wbr>(<a href="SkyPos.html" title="class in org.ivoa.dm.registry.sia">SkyPos</a>&nbsp;pos,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;size,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;verb,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;extras)</code></div>
+<div class="col-last even-row-color">
+<div class="block">full parameter constructor.</div>
 </div>
 </div>
 </section>
@@ -378,15 +378,19 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.lang.Integer,java.lang.String,org.ivoa.dm.registry.sia.SkyPos,org.ivoa.dm.registry.sia.SkySize)">
+<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.sia.SkyPos,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.String)">
 <h3>Query</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Query</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;verb,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;extras,
- <a href="SkyPos.html" title="class in org.ivoa.dm.registry.sia">SkyPos</a>&nbsp;pos,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;size)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Query</span><wbr><span class="parameters">(<a href="SkyPos.html" title="class in org.ivoa.dm.registry.sia">SkyPos</a>&nbsp;pos,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;size,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;verb,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;extras)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
+<dd><code>pos</code> - the center position of the rectangular region that 
+                                    should be used as part of the query to the SIA service.</dd>
+<dd><code>size</code> - the rectangular size of the region that should be 
+                                    used as part of the query to the SIA service.</dd>
 <dd><code>verb</code> - the verbosity level to use where 0 means the bare
                                     minimum set of columns and 3 means the full set of 
                                     available columns.</dd>
@@ -396,10 +400,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                  
                                     this value should be in the form of name=value
                                     pairs delimited with ampersands.</dd>
-<dd><code>pos</code> - the center position of the rectangular region that 
-                                    should be used as part of the query to the SIA service.</dd>
-<dd><code>size</code> - the rectangular size of the region that should be 
-                                    used as part of the query to the SIA service.</dd>
 </dl>
 </section>
 </li>
@@ -442,76 +442,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>other</code> - the object to be copied.</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getVerb()">
-<h3>getVerb</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getVerb</span>()</div>
-<div class="block">Returns verb Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>verb Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setVerb(java.lang.Integer)">
-<h3>setVerb</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVerb</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pVerb)</span></div>
-<div class="block">Set verb Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pVerb</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withVerb(java.lang.Integer)">
-<h3>withVerb</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a></span>&nbsp;<span class="element-name">withVerb</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pVerb)</span></div>
-<div class="block">fluent setter for verb Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pVerb</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Query</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getExtras()">
-<h3>getExtras</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getExtras</span>()</div>
-<div class="block">Returns extras Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>extras Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setExtras(java.lang.String)">
-<h3>setExtras</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setExtras</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pExtras)</span></div>
-<div class="block">Set extras Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pExtras</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withExtras(java.lang.String)">
-<h3>withExtras</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a></span>&nbsp;<span class="element-name">withExtras</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pExtras)</span></div>
-<div class="block">fluent setter for extras Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pExtras</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>Query</dd>
 </dl>
 </section>
 </li>
@@ -580,6 +510,76 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pSize</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Query</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getVerb()">
+<h3>getVerb</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getVerb</span>()</div>
+<div class="block">Returns verb Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>verb Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setVerb(java.lang.Integer)">
+<h3>setVerb</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setVerb</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pVerb)</span></div>
+<div class="block">Set verb Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVerb</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withVerb(java.lang.Integer)">
+<h3>withVerb</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a></span>&nbsp;<span class="element-name">withVerb</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;pVerb)</span></div>
+<div class="block">fluent setter for verb Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pVerb</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>Query</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getExtras()">
+<h3>getExtras</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getExtras</span>()</div>
+<div class="block">Returns extras Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>extras Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setExtras(java.lang.String)">
+<h3>setExtras</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setExtras</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pExtras)</span></div>
+<div class="block">Set extras Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pExtras</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withExtras(java.lang.String)">
+<h3>withExtras</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a></span>&nbsp;<span class="element-name">withExtras</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;pExtras)</span></div>
+<div class="block">fluent setter for extras Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pExtras</code> - value to set</dd>
 <dt>Returns:</dt>
 <dd>Query</dd>
 </dl>

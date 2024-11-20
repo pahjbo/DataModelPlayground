@@ -4034,12 +4034,6 @@ link ForeignKey "../ForeignKey"</code></pre>
 <td>The approximate size of the table in rows. This is not expected to be exact. For instance, the estimates on table sizes databases keep for query planning purposes are suitable for this field.</td>
 </tr>
 <tr>
-<td>type</td>
-<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
-<td></td>
-<td>A name for the role this table plays. Recognized values include “output”, indicating this table is output from a query; “base_table”, indicating a table whose records represent the main subjects of its schema; and “view”, indicating that the table represents a useful combination or subset of other tables. Other values are allowed.</td>
-</tr>
-<tr>
 <td>column</td>
 <td><a href="../TableParam/" title="objectType">TableParam</a></td>
 <td>0 or more</td>
@@ -4050,6 +4044,12 @@ link ForeignKey "../ForeignKey"</code></pre>
 <td><a href="../ForeignKey/" title="objectType">ForeignKey</a></td>
 <td>0 or more</td>
 <td>A description of a foreign keys, one or more columns from the current table that can be used to join with another table.</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
+<td></td>
+<td>A name for the role this table plays. Recognized values include “output”, indicating this table is output from a query; “base_table”, indicating a table whose records represent the main subjects of its schema; and “view”, indicating that the table represents a useful combination or subset of other tables. Other values are allowed.</td>
 </tr>
 </tbody>
 </table>

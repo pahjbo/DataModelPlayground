@@ -112,7 +112,7 @@
       </node>
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d1541e18"
+            id="d574e18"
             source="VOSITables:tableset"
             target="VODataService:TableSet">
          <data key="k3">
@@ -124,7 +124,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d1541e24"
+            id="d574e24"
             source="VOSITables:atable"
             target="VODataService:Table">
          <data key="k3">

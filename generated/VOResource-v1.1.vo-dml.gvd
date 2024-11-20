@@ -19,6 +19,27 @@ digraph GVmap {
 	shape=record
 	fontsize=8
 	style=filled] 
+    
+  "ivoa:datetime" [
+    URL="#datetime"
+    label = "{ivoa:datetime}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "ivoa:string" [
+    URL="#string"
+    label = "{ivoa:string}"
+    fillcolor="grey"
+    ] ;
+      
+    
+  "ivoa:anyURI" [
+    URL="#anyURI"
+    label = "{ivoa:anyURI}"
+    fillcolor="grey"
+    ] ;
+      
     "VOResource:UTCTimestamp"[
     URL="../VOResource/UTCTimestamp"
     label = "{&lt;&lt;primitive type&gt;&gt;\nUTCTimestamp}"
@@ -167,7 +188,12 @@ digraph GVmap {
   
  
     edge [color="red", arrowtail="none", arrowhead="empty"]
-    "VOResource:Organisation" -> "VOResource:Resource" ;
+    "VOResource:UTCTimestamp" -> "ivoa:datetime" ;
+  "VOResource:AuthorityID" -> "ivoa:string" ;
+  "VOResource:ResourceKey" -> "ivoa:string" ;
+  "VOResource:IdentifierURI" -> "ivoa:anyURI" ;
+  "VOResource:ShortName" -> "ivoa:string" ;
+  "VOResource:Organisation" -> "VOResource:Resource" ;
   "VOResource:Service" -> "VOResource:Resource" ;
   "VOResource:WebBrowser" -> "VOResource:Interface" ;
   "VOResource:WebService" -> "VOResource:Interface" ;

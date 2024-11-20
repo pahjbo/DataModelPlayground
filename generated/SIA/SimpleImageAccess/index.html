@@ -4014,6 +4014,18 @@ link Query "../Query"</code></pre>
 <td>The class of image service: Cutout, Mosaic, Atlas, Pointed</td>
 </tr>
 <tr>
+<td>maxQueryRegionSize</td>
+<td><a href="../SkySize/" title="objectType">SkySize</a></td>
+<td>optional</td>
+<td>The maximum image query region size, expressed in decimal degrees. Not providing this element or specifying a value of 360 degrees indicates that there is no limit and the entire data collection (entire sky) can be queried. Not providing a value is the prefered way to indicate that there is no limit.</td>
+</tr>
+<tr>
+<td>maxImageExtent</td>
+<td><a href="../SkySize/" title="objectType">SkySize</a></td>
+<td>optional</td>
+<td>An upper bound on a region of the sky that can be covered by returned images. That is, no image returned by this service will cover more than this limit. Not providing this element or specifying a value of 360 degrees indicates that there is no fundamental limit to the region covered by a returned image. When the imageServiceType is “Cutout” or “Mosaic”, this represents the largest area that can be requested. In this case, the “no limit” value means that all-sky images can be requested. When the type is “Atlas” or “Pointed”, it should be a region that most closely encloses largest images in the archive, and the ”no limit” value means that the archive contains all-sky (or nearly so) images. Not providing a value is the prefered way to indicate that there is no limit.</td>
+</tr>
+<tr>
 <td>maxImageSize</td>
 <td><a href="../../ivoa/integer/" title="primitiveType integer - An integer number (from Z).">ivoa:integer</a></td>
 <td>optional</td>
@@ -4030,18 +4042,6 @@ link Query "../Query"</code></pre>
 <td><a href="../../ivoa/integer/" title="primitiveType integer - An integer number (from Z).">ivoa:integer</a></td>
 <td>optional</td>
 <td>The largest number of records that the Image Query web method will return. Not providing this value means that there is no effective limit. This does not refer to the total number of images in the archive but rather maximum number of records the service is capable of returning. A limit that is greater than the number of images available in the archive is equivalent to their being no effective limit. (See RM, Hanisch 2007.)</td>
-</tr>
-<tr>
-<td>maxQueryRegionSize</td>
-<td><a href="../SkySize/" title="objectType">SkySize</a></td>
-<td>optional</td>
-<td>The maximum image query region size, expressed in decimal degrees. Not providing this element or specifying a value of 360 degrees indicates that there is no limit and the entire data collection (entire sky) can be queried. Not providing a value is the prefered way to indicate that there is no limit.</td>
-</tr>
-<tr>
-<td>maxImageExtent</td>
-<td><a href="../SkySize/" title="objectType">SkySize</a></td>
-<td>optional</td>
-<td>An upper bound on a region of the sky that can be covered by returned images. That is, no image returned by this service will cover more than this limit. Not providing this element or specifying a value of 360 degrees indicates that there is no fundamental limit to the region covered by a returned image. When the imageServiceType is “Cutout” or “Mosaic”, this represents the largest area that can be requested. In this case, the “no limit” value means that all-sky images can be requested. When the type is “Atlas” or “Pointed”, it should be a region that most closely encloses largest images in the archive, and the ”no limit” value means that the archive contains all-sky (or nearly so) images. Not providing a value is the prefered way to indicate that there is no limit.</td>
 </tr>
 <tr>
 <td>testQuery</td>

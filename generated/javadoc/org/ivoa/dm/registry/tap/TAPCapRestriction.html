@@ -132,10 +132,10 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Creates a new TAPCapRestriction</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.lang.String,java.lang.String,java.util.List)" class="member-name-link">TAPCapRestriction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.List,java.lang.String,java.util.List,java.lang.String)" class="member-name-link">TAPCapRestriction</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -208,12 +208,12 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(java.util.List,java.lang.String,java.lang.String,java.util.List)">
+<section class="detail" id="&lt;init&gt;(java.util.List,java.lang.String,java.util.List,java.lang.String)">
 <h3>TAPCapRestriction</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">TAPCapRestriction</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -231,13 +231,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    Use of this optional element is especially encouraged when
                                    this capability is non-standard and is one of several 
                                    capabilities listed.</dd>
-<dd><code>standardID</code> - A URI identifier for a standard service. 
-                              
-                                This provides a unique way to refer to a service
-                                specification standard, such as a Simple Image Access service.
-                                The use of an IVOA identifier here implies that a
-                                VOResource description of the standard is registered and 
-                                accessible.</dd>
 <dd><code>interface_</code> - a description of how to call the service to access
                                    this capability
                                  
@@ -252,6 +245,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    given in addition to a WebService interface would simply 
                                    provide an interactive, human-targeted interface to the 
                                    underlying WebService interface.</dd>
+<dd><code>standardID</code> - A URI identifier for a standard service. 
+                              
+                                This provides a unique way to refer to a service
+                                specification standard, such as a Simple Image Access service.
+                                The use of an IVOA identifier here implies that a
+                                VOResource description of the standard is registered and 
+                                accessible.</dd>
 </dl>
 </section>
 </li>

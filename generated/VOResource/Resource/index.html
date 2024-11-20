@@ -4024,6 +4024,18 @@ link Content "../Content"</code></pre>
 <td>A reference to this resource in a non-IVOA identifier scheme, e.g., DOI or bibcode. Always use the an URI scheme here, e.g., doi:10.1016/j.epsl.2011.11.037. For bibcodes, use a form like bibcode:2008ivoa.spec.0222P.</td>
 </tr>
 <tr>
+<td>curation</td>
+<td><a href="../Curation/" title="objectType">Curation</a></td>
+<td></td>
+<td>Information regarding the general curation of the resource</td>
+</tr>
+<tr>
+<td>content</td>
+<td><a href="../Content/" title="objectType">Content</a></td>
+<td></td>
+<td>Information regarding the general content of the resource</td>
+</tr>
+<tr>
 <td>created</td>
 <td><a href="../UTCTimestamp/" title="primitiveType UTCTimestamp - A timestamp that is compliant with ISO8601 and fixes the timezone indicator, if present, to 'Z' (UTC). VOResource writers should always include the timezone marker. VOResource readers must interpret timestamps without a timezone marker as UTC.">UTCTimestamp</a></td>
 <td></td>
@@ -4046,18 +4058,6 @@ link Content "../Content"</code></pre>
 <td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
 <td></td>
 <td>The VOResource XML schema version against which this instance was written. Implementors should set this to the value of the version attribute of their schema's root (xs:schema) element. Clients may assume version 1.0 if this attribute is missing.</td>
-</tr>
-<tr>
-<td>curation</td>
-<td><a href="../Curation/" title="objectType">Curation</a></td>
-<td></td>
-<td>Information regarding the general curation of the resource</td>
-</tr>
-<tr>
-<td>content</td>
-<td><a href="../Content/" title="objectType">Content</a></td>
-<td></td>
-<td>Information regarding the general content of the resource</td>
 </tr>
 </tbody>
 </table>

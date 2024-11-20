@@ -20,6 +20,13 @@ digraph GVmap {
 	fontsize=8
 	style=filled] 
     
+  "ivoa:string" [
+    URL="#string"
+    label = "{ivoa:string}"
+    fillcolor="grey"
+    ] ;
+      
+    
   "VOResource:Resource" [
     URL="#Resource"
     label = "{VOResource:Resource}"
@@ -149,7 +156,7 @@ digraph GVmap {
     ] ;
   "VODataService:DataResource" [
     URL="../VODataService/DataResource"
-    label = "{DataResource|+facility : VOResource:ResourceName\l+instrument : VOResource:ResourceName\l}"
+    label = "{DataResource|+facility : VOResource:ResourceName\l+instrument : VOResource:ResourceName\l+productTypeServed : ivoa:string\l}"
     fillcolor="/set312/1"
     ] ;
   "VODataService:DataService" [
@@ -205,7 +212,9 @@ digraph GVmap {
   
  
     edge [color="red", arrowtail="none", arrowhead="empty"]
-    "VODataService:SimpleDataType" -> "VODataService:DataType" ;
+    "VODataService:ArrayShape" -> "ivoa:string" ;
+  "VODataService:FloatInterval" -> "ivoa:string" ;
+  "VODataService:SimpleDataType" -> "VODataService:DataType" ;
   "VODataService:TableDataType" -> "VODataService:DataType" ;
   "VODataService:VOTableType" -> "VODataService:TableDataType" ;
   "VODataService:TAPDataType" -> "VODataService:TableDataType" ;

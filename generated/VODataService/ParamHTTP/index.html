@@ -4015,16 +4015,16 @@ link InputParam "../InputParam"</code></pre>
 <td>The MIME media type of a document returned in the HTTP response.</td>
 </tr>
 <tr>
-<td>testQuery</td>
-<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
-<td>optional</td>
-<td>An ampersand-delimited list of arguments that can be used to test this service interface; when provided as the input to this interface, it will produce a legal, non-null response. When the interface supports GET, then the full query URL is formed by the concatenation of the base URL (given by the accessURL) and the value given by this testQuery element.</td>
-</tr>
-<tr>
 <td>param</td>
 <td><a href="../InputParam/" title="objectType">InputParam</a></td>
 <td>0 or more</td>
 <td>A description of a input parameter that can be provided as a name=value argument to the service.</td>
+</tr>
+<tr>
+<td>testQuery</td>
+<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
+<td>optional</td>
+<td>An ampersand-delimited list of arguments that can be used to test this service interface; when provided as the input to this interface, it will produce a legal, non-null response. When the interface supports GET, then the full query URL is formed by the concatenation of the base URL (given by the accessURL) and the value given by this testQuery element.</td>
 </tr>
 </tbody>
 </table>

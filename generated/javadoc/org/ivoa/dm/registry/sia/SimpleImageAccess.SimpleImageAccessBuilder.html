@@ -230,6 +230,45 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="maxQueryRegionSize">
+<h3>maxQueryRegionSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">maxQueryRegionSize</span></div>
+<div class="block">The maximum image query region size, expressed in 
+                                          decimal degrees.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no limit and the entire data collection 
+                                          (entire sky) can be queried. 
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="maxImageExtent">
+<h3>maxImageExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">maxImageExtent</span></div>
+<div class="block">An upper bound on a region of the sky that can 
+                                          be covered by returned images.  That is, no image
+                                          returned by this service will cover more than 
+                                          this limit.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no fundamental limit to the region covered 
+                                          by a returned image.  
+                                       
+                                          When the imageServiceType is “Cutout” or “Mosaic”, 
+                                          this represents the largest area that can be requested.
+                                          In this case, the “no limit” value means that all-sky
+                                          images can be requested.  When the type is “Atlas” or
+                                          “Pointed”, it should be a region that most closely 
+                                          encloses largest images in the archive, and the ”no
+                                          limit” value means that the archive contains all-sky 
+                                          (or nearly so) images.  
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</div>
+</section>
+</li>
+<li>
 <section class="detail" id="maxImageSize">
 <h3>maxImageSize</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">maxImageSize</span></div>
@@ -290,45 +329,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="maxQueryRegionSize">
-<h3>maxQueryRegionSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">maxQueryRegionSize</span></div>
-<div class="block">The maximum image query region size, expressed in 
-                                          decimal degrees.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no limit and the entire data collection 
-                                          (entire sky) can be queried. 
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="maxImageExtent">
-<h3>maxImageExtent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">maxImageExtent</span></div>
-<div class="block">An upper bound on a region of the sky that can 
-                                          be covered by returned images.  That is, no image
-                                          returned by this service will cover more than 
-                                          this limit.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no fundamental limit to the region covered 
-                                          by a returned image.  
-                                       
-                                          When the imageServiceType is “Cutout” or “Mosaic”, 
-                                          this represents the largest area that can be requested.
-                                          In this case, the “no limit” value means that all-sky
-                                          images can be requested.  When the type is “Atlas” or
-                                          “Pointed”, it should be a region that most closely 
-                                          encloses largest images in the archive, and the ”no
-                                          limit” value means that the archive contains all-sky 
-                                          (or nearly so) images.  
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="testQuery">
 <h3>testQuery</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a></span>&nbsp;<span class="element-name">testQuery</span></div>
@@ -364,19 +364,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="standardID">
-<h3>standardID</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">standardID</span></div>
-<div class="block">A URI identifier for a standard service. 
-                              
-                                This provides a unique way to refer to a service
-                                specification standard, such as a Simple Image Access service.
-                                The use of an IVOA identifier here implies that a
-                                VOResource description of the standard is registered and 
-                                accessible.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="interface_">
 <h3>interface_</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;</span>&nbsp;<span class="element-name">interface_</span></div>
@@ -394,6 +381,19 @@ loadScripts(document, 'script');</script>
                                    given in addition to a WebService interface would simply 
                                    provide an interactive, human-targeted interface to the 
                                    underlying WebService interface.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="standardID">
+<h3>standardID</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">standardID</span></div>
+<div class="block">A URI identifier for a standard service. 
+                              
+                                This provides a unique way to refer to a service
+                                specification standard, such as a Simple Image Access service.
+                                The use of an IVOA identifier here implies that a
+                                VOResource description of the standard is registered and 
+                                accessible.</div>
 </section>
 </li>
 </ul>

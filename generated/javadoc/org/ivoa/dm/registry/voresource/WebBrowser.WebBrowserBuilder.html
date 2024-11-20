@@ -179,51 +179,6 @@ loadScripts(document, 'script');</script>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="testQueryString">
-<h3>testQueryString</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">testQueryString</span></div>
-<div class="block">Test data for exercising the service.
-                                 
-                                   This contains data that can be passed to the interface to
-                                   retrieve a non-empty result.  This can be used by validators
-                                   within test suites.
-                 
-                                   Exactly how agents should use the data contained in
-                                   the testQueryString depends on the concrete interface class.
-                                   For interfaces employing the HTTP GET method, however,
-                                   this will typically be urlencoded parameters (as for
-                                   the application/x-www-form-urlencoded media type).</div>
-</section>
-</li>
-<li>
-<section class="detail" id="version">
-<h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">version</span></div>
-<div class="block">The version of a standard interface specification that this 
-                                interface complies with.  Most VO standards indicate the
-                                version in the standardID attribute of the capability.  For
-                                these standards, the version attribute should not be used.</div>
-</section>
-</li>
-<li>
-<section class="detail" id="role">
-<h3>role</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">role</span></div>
-<div class="block">A tag name that identifies the role the interface plays
-                                in the particular capability.  If the value is equal to
-                                'std' or begins with 'std:', then the interface refers
-                                to a standard interface defined by the standard
-                                referred to by the capability's standardID attribute.  
-                              
-                                For an interface complying with some registered
-                                standard (i.e. has a legal standardID), the role can be
-                                matched against interface roles enumerated in standard 
-                                resource record.  The interface descriptions in
-                                the standard record can provide default descriptions 
-                                so that such details need not be repeated here.</div>
-</section>
-</li>
-<li>
 <section class="detail" id="accessURL">
 <h3>accessURL</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="AccessURL.html" title="class in org.ivoa.dm.registry.voresource">AccessURL</a>&gt;</span>&nbsp;<span class="element-name">accessURL</span></div>
@@ -270,6 +225,51 @@ loadScripts(document, 'script');</script>
                                    Services not requiring authentication must provide
                                    at least one interface definition without a 
                                    securityMethod defined.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="testQueryString">
+<h3>testQueryString</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">testQueryString</span></div>
+<div class="block">Test data for exercising the service.
+                                 
+                                   This contains data that can be passed to the interface to
+                                   retrieve a non-empty result.  This can be used by validators
+                                   within test suites.
+                 
+                                   Exactly how agents should use the data contained in
+                                   the testQueryString depends on the concrete interface class.
+                                   For interfaces employing the HTTP GET method, however,
+                                   this will typically be urlencoded parameters (as for
+                                   the application/x-www-form-urlencoded media type).</div>
+</section>
+</li>
+<li>
+<section class="detail" id="version">
+<h3>version</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">version</span></div>
+<div class="block">The version of a standard interface specification that this 
+                                interface complies with.  Most VO standards indicate the
+                                version in the standardID attribute of the capability.  For
+                                these standards, the version attribute should not be used.</div>
+</section>
+</li>
+<li>
+<section class="detail" id="role">
+<h3>role</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">role</span></div>
+<div class="block">A tag name that identifies the role the interface plays
+                                in the particular capability.  If the value is equal to
+                                'std' or begins with 'std:', then the interface refers
+                                to a standard interface defined by the standard
+                                referred to by the capability's standardID attribute.  
+                              
+                                For an interface complying with some registered
+                                standard (i.e. has a legal standardID), the role can be
+                                matched against interface roles enumerated in standard 
+                                resource record.  The interface descriptions in
+                                the standard record can provide default descriptions 
+                                so that such details need not be repeated here.</div>
 </section>
 </li>
 </ul>

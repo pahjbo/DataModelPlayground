@@ -4006,6 +4006,12 @@ link FKColumn "../FKColumn"</code></pre>
 <td>The fully qualified name (including catalogue and schema, as applicable) of the table that can be joined with the table containing this foreign key.</td>
 </tr>
 <tr>
+<td>fkColumn</td>
+<td><a href="../FKColumn/" title="objectType">FKColumn</a></td>
+<td>1 or more</td>
+<td>A pair of column names, one from this table and one from the target table that should be used to join the tables in a query.</td>
+</tr>
+<tr>
 <td>description</td>
 <td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
 <td>optional</td>
@@ -4016,12 +4022,6 @@ link FKColumn "../FKColumn"</code></pre>
 <td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
 <td>optional</td>
 <td>An identifier for a concept in a data model that the association enabled by this key represents. The form of the utype string depends on the data model; common forms are sequences of dotted identifiers (e.g., in SSA) or URIs (e.g., in RegTAP).</td>
-</tr>
-<tr>
-<td>fkColumn</td>
-<td><a href="../FKColumn/" title="objectType">FKColumn</a></td>
-<td>1 or more</td>
-<td>A pair of column names, one from this table and one from the target table that should be used to join the tables in a query.</td>
 </tr>
 </tbody>
 </table>

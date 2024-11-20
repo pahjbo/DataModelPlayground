@@ -4012,16 +4012,16 @@ link Interface "../Interface"</code></pre>
 <td>A human-readable description of what this capability provides as part of the over-all service Use of this optional element is especially encouraged when this capability is non-standard and is one of several capabilities listed.</td>
 </tr>
 <tr>
-<td>standardID</td>
-<td><a href="../../ivoa/anyURI/" title="primitiveType anyURI - Represents a URI in the same way as the datatype of the same nam in XML Schema is used.">ivoa:anyURI</a></td>
-<td></td>
-<td>A URI identifier for a standard service. This provides a unique way to refer to a service specification standard, such as a Simple Image Access service. The use of an IVOA identifier here implies that a VOResource description of the standard is registered and accessible.</td>
-</tr>
-<tr>
 <td>interface</td>
 <td><a href="../Interface/" title="objectType">Interface</a></td>
 <td>0 or more</td>
 <td>a description of how to call the service to access this capability Since the Interface type is abstract, one must describe the interface using a subclass of Interface, denoting it via xsi:type. Multiple occurences can describe different interfaces to the logically same capability, i.e. data or functionality. That is, the inputs accepted and the output provides should be logically the same. For example, a WebBrowser interface given in addition to a WebService interface would simply provide an interactive, human-targeted interface to the underlying WebService interface.</td>
+</tr>
+<tr>
+<td>standardID</td>
+<td><a href="../../ivoa/anyURI/" title="primitiveType anyURI - Represents a URI in the same way as the datatype of the same nam in XML Schema is used.">ivoa:anyURI</a></td>
+<td></td>
+<td>A URI identifier for a standard service. This provides a unique way to refer to a service specification standard, such as a Simple Image Access service. The use of an IVOA identifier here implies that a VOResource description of the standard is registered and accessible.</td>
 </tr>
 </tbody>
 </table>

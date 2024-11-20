@@ -4001,18 +4001,6 @@ link SkySize "../SkySize"</code></pre>
 </thead>
 <tbody>
 <tr>
-<td>verb</td>
-<td><a href="../../ivoa/integer/" title="primitiveType integer - An integer number (from Z).">ivoa:integer</a></td>
-<td>optional</td>
-<td>the verbosity level to use where 0 means the bare minimum set of columns and 3 means the full set of available columns.</td>
-</tr>
-<tr>
-<td>extras</td>
-<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
-<td>optional</td>
-<td>any extra (particularly non-standard) parameters that must be provided (apart from what is part of base URL given by the accessURL element). this value should be in the form of name=value pairs delimited with ampersands.</td>
-</tr>
-<tr>
 <td>pos</td>
 <td><a href="../SkyPos/" title="objectType">SkyPos</a></td>
 <td>optional</td>
@@ -4023,6 +4011,18 @@ link SkySize "../SkySize"</code></pre>
 <td><a href="../SkySize/" title="objectType">SkySize</a></td>
 <td>optional</td>
 <td>the rectangular size of the region that should be used as part of the query to the SIA service.</td>
+</tr>
+<tr>
+<td>verb</td>
+<td><a href="../../ivoa/integer/" title="primitiveType integer - An integer number (from Z).">ivoa:integer</a></td>
+<td>optional</td>
+<td>the verbosity level to use where 0 means the bare minimum set of columns and 3 means the full set of available columns.</td>
+</tr>
+<tr>
+<td>extras</td>
+<td><a href="../../ivoa/string/" title="primitiveType string - A string, represented as an array of characters treated as a single, primitive value. Ala Java, a string can not be updated, that is any update leads to a different string. However in contrast to Java we assume that two strings that are identical in all their constitutent characters are the same. I.e. string has value type semantics.">ivoa:string</a></td>
+<td>optional</td>
+<td>any extra (particularly non-standard) parameters that must be provided (apart from what is part of base URL given by the accessURL element). this value should be in the form of name=value pairs delimited with ampersands.</td>
 </tr>
 </tbody>
 </table>

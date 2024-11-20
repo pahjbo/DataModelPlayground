@@ -185,17 +185,17 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Creates a new SimpleImageAccess</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.sia.ImageServiceType,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.Query,java.util.List,java.lang.String,java.lang.String,java.util.List)" class="member-name-link">SimpleImageAccess</a><wbr>(<a href="ImageServiceType.html" title="enum class in org.ivoa.dm.registry.sia">ImageServiceType</a>&nbsp;imageServiceType,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.sia.ImageServiceType,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.Query,java.util.List,java.lang.String,java.util.List,java.lang.String)" class="member-name-link">SimpleImageAccess</a><wbr>(<a href="ImageServiceType.html" title="enum class in org.ivoa.dm.registry.sia">ImageServiceType</a>&nbsp;imageServiceType,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxImageSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxFileSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRecords,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;testQuery,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_)</code></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">full parameter constructor.</div>
 </div>
@@ -203,13 +203,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <div class="col-last even-row-color">
 <div class="block">Copy Constructor.</div>
 </div>
-<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.voresource.Capability,org.ivoa.dm.registry.sia.ImageServiceType,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.Query)" class="member-name-link">SimpleImageAccess</a><wbr>(<a href="../voresource/Capability.html" title="class in org.ivoa.dm.registry.voresource">Capability</a>&nbsp;superinstance,
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.ivoa.dm.registry.voresource.Capability,org.ivoa.dm.registry.sia.ImageServiceType,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.Query)" class="member-name-link">SimpleImageAccess</a><wbr>(<a href="../voresource/Capability.html" title="class in org.ivoa.dm.registry.voresource">Capability</a>&nbsp;superinstance,
  <a href="ImageServiceType.html" title="enum class in org.ivoa.dm.registry.sia">ImageServiceType</a>&nbsp;imageServiceType,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxImageSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxFileSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRecords,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;testQuery)</code></div>
 <div class="col-last odd-row-color">
 <div class="block">Constructor from supertype instance.</div>
@@ -558,24 +558,51 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.sia.ImageServiceType,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.Query,java.util.List,java.lang.String,java.lang.String,java.util.List)">
+<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.sia.ImageServiceType,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.Query,java.util.List,java.lang.String,java.util.List,java.lang.String)">
 <h3>SimpleImageAccess</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SimpleImageAccess</span><wbr><span class="parameters">(<a href="ImageServiceType.html" title="enum class in org.ivoa.dm.registry.sia">ImageServiceType</a>&nbsp;imageServiceType,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxImageSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxFileSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRecords,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;testQuery,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Validation.html" title="class in org.ivoa.dm.registry.voresource">Validation</a>&gt;&nbsp;validationLevel,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID,
- <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_)</span></div>
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../voresource/Interface.html" title="class in org.ivoa.dm.registry.voresource">Interface</a>&gt;&nbsp;interface_,
+ <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;standardID)</span></div>
 <div class="block">full parameter constructor.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>imageServiceType</code> - The class of image service: Cutout, Mosaic, Atlas, Pointed
                                       .</dd>
+<dd><code>maxQueryRegionSize</code> - The maximum image query region size, expressed in 
+                                          decimal degrees.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no limit and the entire data collection 
+                                          (entire sky) can be queried. 
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</dd>
+<dd><code>maxImageExtent</code> - An upper bound on a region of the sky that can 
+                                          be covered by returned images.  That is, no image
+                                          returned by this service will cover more than 
+                                          this limit.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no fundamental limit to the region covered 
+                                          by a returned image.  
+                                       
+                                          When the imageServiceType is “Cutout” or “Mosaic”, 
+                                          this represents the largest area that can be requested.
+                                          In this case, the “no limit” value means that all-sky
+                                          images can be requested.  When the type is “Atlas” or
+                                          “Pointed”, it should be a region that most closely 
+                                          encloses largest images in the archive, and the ”no
+                                          limit” value means that the archive contains all-sky 
+                                          (or nearly so) images.  
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</dd>
 <dd><code>maxImageSize</code> - A measure of the largest image the service
                                           can produce given as the maximum number of
                                           pixels along the first or second axes.
@@ -618,33 +645,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                          archive is equivalent to their being no effective 
                                          limit.  (See RM, Hanisch 2007.)
                                       .</dd>
-<dd><code>maxQueryRegionSize</code> - The maximum image query region size, expressed in 
-                                          decimal degrees.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no limit and the entire data collection 
-                                          (entire sky) can be queried. 
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</dd>
-<dd><code>maxImageExtent</code> - An upper bound on a region of the sky that can 
-                                          be covered by returned images.  That is, no image
-                                          returned by this service will cover more than 
-                                          this limit.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no fundamental limit to the region covered 
-                                          by a returned image.  
-                                       
-                                          When the imageServiceType is “Cutout” or “Mosaic”, 
-                                          this represents the largest area that can be requested.
-                                          In this case, the “no limit” value means that all-sky
-                                          images can be requested.  When the type is “Atlas” or
-                                          “Pointed”, it should be a region that most closely 
-                                          encloses largest images in the archive, and the ”no
-                                          limit” value means that the archive contains all-sky 
-                                          (or nearly so) images.  
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</dd>
 <dd><code>testQuery</code> - a set of query parameters that is expected
                                          to produce at least one matched record which
                                          can be used to test the service.</dd>
@@ -662,13 +662,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    Use of this optional element is especially encouraged when
                                    this capability is non-standard and is one of several 
                                    capabilities listed.</dd>
-<dd><code>standardID</code> - A URI identifier for a standard service. 
-                              
-                                This provides a unique way to refer to a service
-                                specification standard, such as a Simple Image Access service.
-                                The use of an IVOA identifier here implies that a
-                                VOResource description of the standard is registered and 
-                                accessible.</dd>
 <dd><code>interface_</code> - a description of how to call the service to access
                                    this capability
                                  
@@ -683,6 +676,13 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                    given in addition to a WebService interface would simply 
                                    provide an interactive, human-targeted interface to the 
                                    underlying WebService interface.</dd>
+<dd><code>standardID</code> - A URI identifier for a standard service. 
+                              
+                                This provides a unique way to refer to a service
+                                specification standard, such as a Simple Image Access service.
+                                The use of an IVOA identifier here implies that a
+                                VOResource description of the standard is registered and 
+                                accessible.</dd>
 </dl>
 </section>
 </li>
@@ -698,15 +698,15 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 </section>
 </li>
 <li>
-<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.voresource.Capability,org.ivoa.dm.registry.sia.ImageServiceType,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.Query)">
+<section class="detail" id="&lt;init&gt;(org.ivoa.dm.registry.voresource.Capability,org.ivoa.dm.registry.sia.ImageServiceType,org.ivoa.dm.registry.sia.SkySize,org.ivoa.dm.registry.sia.SkySize,java.lang.Integer,java.lang.Integer,java.lang.Integer,org.ivoa.dm.registry.sia.Query)">
 <h3>SimpleImageAccess</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">SimpleImageAccess</span><wbr><span class="parameters">(<a href="../voresource/Capability.html" title="class in org.ivoa.dm.registry.voresource">Capability</a>&nbsp;superinstance,
  <a href="ImageServiceType.html" title="enum class in org.ivoa.dm.registry.sia">ImageServiceType</a>&nbsp;imageServiceType,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
+ <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxImageSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxFileSize,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxRecords,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxQueryRegionSize,
- <a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;maxImageExtent,
  <a href="Query.html" title="class in org.ivoa.dm.registry.sia">Query</a>&nbsp;testQuery)</span></div>
 <div class="block">Constructor from supertype instance.</div>
 <dl class="notes">
@@ -714,6 +714,33 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dd><code>superinstance</code> - The supertype.</dd>
 <dd><code>imageServiceType</code> - The class of image service: Cutout, Mosaic, Atlas, Pointed
                                       .</dd>
+<dd><code>maxQueryRegionSize</code> - The maximum image query region size, expressed in 
+                                          decimal degrees.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no limit and the entire data collection 
+                                          (entire sky) can be queried. 
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</dd>
+<dd><code>maxImageExtent</code> - An upper bound on a region of the sky that can 
+                                          be covered by returned images.  That is, no image
+                                          returned by this service will cover more than 
+                                          this limit.  Not providing this element or 
+                                          specifying a value of 360 degrees indicates that 
+                                          there is no fundamental limit to the region covered 
+                                          by a returned image.  
+                                       
+                                          When the imageServiceType is “Cutout” or “Mosaic”, 
+                                          this represents the largest area that can be requested.
+                                          In this case, the “no limit” value means that all-sky
+                                          images can be requested.  When the type is “Atlas” or
+                                          “Pointed”, it should be a region that most closely 
+                                          encloses largest images in the archive, and the ”no
+                                          limit” value means that the archive contains all-sky 
+                                          (or nearly so) images.  
+                                       
+                                          Not providing a value is the prefered way to indicate
+                                          that there is no limit.</dd>
 <dd><code>maxImageSize</code> - A measure of the largest image the service
                                           can produce given as the maximum number of
                                           pixels along the first or second axes.
@@ -756,33 +783,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
                                          archive is equivalent to their being no effective 
                                          limit.  (See RM, Hanisch 2007.)
                                       .</dd>
-<dd><code>maxQueryRegionSize</code> - The maximum image query region size, expressed in 
-                                          decimal degrees.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no limit and the entire data collection 
-                                          (entire sky) can be queried. 
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</dd>
-<dd><code>maxImageExtent</code> - An upper bound on a region of the sky that can 
-                                          be covered by returned images.  That is, no image
-                                          returned by this service will cover more than 
-                                          this limit.  Not providing this element or 
-                                          specifying a value of 360 degrees indicates that 
-                                          there is no fundamental limit to the region covered 
-                                          by a returned image.  
-                                       
-                                          When the imageServiceType is “Cutout” or “Mosaic”, 
-                                          this represents the largest area that can be requested.
-                                          In this case, the “no limit” value means that all-sky
-                                          images can be requested.  When the type is “Atlas” or
-                                          “Pointed”, it should be a region that most closely 
-                                          encloses largest images in the archive, and the ”no
-                                          limit” value means that the archive contains all-sky 
-                                          (or nearly so) images.  
-                                       
-                                          Not providing a value is the prefered way to indicate
-                                          that there is no limit.</dd>
 <dd><code>testQuery</code> - a set of query parameters that is expected
                                          to produce at least one matched record which
                                          can be used to test the service.</dd>
@@ -851,6 +851,76 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pImageServiceType</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>SimpleImageAccess</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxQueryRegionSize()">
+<h3>getMaxQueryRegionSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">getMaxQueryRegionSize</span>()</div>
+<div class="block">Returns maxQueryRegionSize Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>maxQueryRegionSize Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaxQueryRegionSize(org.ivoa.dm.registry.sia.SkySize)">
+<h3>setMaxQueryRegionSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxQueryRegionSize</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxQueryRegionSize)</span></div>
+<div class="block">Set maxQueryRegionSize Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMaxQueryRegionSize</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withMaxQueryRegionSize(org.ivoa.dm.registry.sia.SkySize)">
+<h3>withMaxQueryRegionSize</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleImageAccess.html" title="class in org.ivoa.dm.registry.sia">SimpleImageAccess</a></span>&nbsp;<span class="element-name">withMaxQueryRegionSize</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxQueryRegionSize)</span></div>
+<div class="block">fluent setter for maxQueryRegionSize Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMaxQueryRegionSize</code> - value to set</dd>
+<dt>Returns:</dt>
+<dd>SimpleImageAccess</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxImageExtent()">
+<h3>getMaxImageExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">getMaxImageExtent</span>()</div>
+<div class="block">Returns maxImageExtent Attribute.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>maxImageExtent Attribute</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaxImageExtent(org.ivoa.dm.registry.sia.SkySize)">
+<h3>setMaxImageExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxImageExtent</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxImageExtent)</span></div>
+<div class="block">Set maxImageExtent Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMaxImageExtent</code> - value to set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withMaxImageExtent(org.ivoa.dm.registry.sia.SkySize)">
+<h3>withMaxImageExtent</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleImageAccess.html" title="class in org.ivoa.dm.registry.sia">SimpleImageAccess</a></span>&nbsp;<span class="element-name">withMaxImageExtent</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxImageExtent)</span></div>
+<div class="block">fluent setter for maxImageExtent Attribute.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>pMaxImageExtent</code> - value to set</dd>
 <dt>Returns:</dt>
 <dd>SimpleImageAccess</dd>
 </dl>
@@ -956,76 +1026,6 @@ implements org.ivoa.vodml.jpa.JPAManipulationsForObjectType&lt;<a href="https://
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>pMaxRecords</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>SimpleImageAccess</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxQueryRegionSize()">
-<h3>getMaxQueryRegionSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">getMaxQueryRegionSize</span>()</div>
-<div class="block">Returns maxQueryRegionSize Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>maxQueryRegionSize Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMaxQueryRegionSize(org.ivoa.dm.registry.sia.SkySize)">
-<h3>setMaxQueryRegionSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxQueryRegionSize</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxQueryRegionSize)</span></div>
-<div class="block">Set maxQueryRegionSize Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pMaxQueryRegionSize</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withMaxQueryRegionSize(org.ivoa.dm.registry.sia.SkySize)">
-<h3>withMaxQueryRegionSize</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleImageAccess.html" title="class in org.ivoa.dm.registry.sia">SimpleImageAccess</a></span>&nbsp;<span class="element-name">withMaxQueryRegionSize</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxQueryRegionSize)</span></div>
-<div class="block">fluent setter for maxQueryRegionSize Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pMaxQueryRegionSize</code> - value to set</dd>
-<dt>Returns:</dt>
-<dd>SimpleImageAccess</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getMaxImageExtent()">
-<h3>getMaxImageExtent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a></span>&nbsp;<span class="element-name">getMaxImageExtent</span>()</div>
-<div class="block">Returns maxImageExtent Attribute.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>maxImageExtent Attribute</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setMaxImageExtent(org.ivoa.dm.registry.sia.SkySize)">
-<h3>setMaxImageExtent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMaxImageExtent</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxImageExtent)</span></div>
-<div class="block">Set maxImageExtent Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pMaxImageExtent</code> - value to set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withMaxImageExtent(org.ivoa.dm.registry.sia.SkySize)">
-<h3>withMaxImageExtent</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SimpleImageAccess.html" title="class in org.ivoa.dm.registry.sia">SimpleImageAccess</a></span>&nbsp;<span class="element-name">withMaxImageExtent</span><wbr><span class="parameters">(<a href="SkySize.html" title="class in org.ivoa.dm.registry.sia">SkySize</a>&nbsp;pMaxImageExtent)</span></div>
-<div class="block">fluent setter for maxImageExtent Attribute.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>pMaxImageExtent</code> - value to set</dd>
 <dt>Returns:</dt>
 <dd>SimpleImageAccess</dd>
 </dl>
