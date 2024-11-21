@@ -161,7 +161,7 @@
       </node>
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e43"
+            id="d385e43"
             source="SIA:SimpleImageAccess"
             target="VOResource:Capability">
          <data key="k3">
@@ -173,7 +173,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e54"
+            id="d385e54"
             source="SIA:SimpleImageAccess"
             target="SIA:SkySize">
          <data key="k3">
@@ -189,7 +189,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e63"
+            id="d385e63"
             source="SIA:SimpleImageAccess"
             target="SIA:SkySize">
          <data key="k3">
@@ -205,7 +205,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e99"
+            id="d385e99"
             source="SIA:SimpleImageAccess"
             target="SIA:Query">
          <data key="k3">
@@ -221,7 +221,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e157"
+            id="d385e157"
             source="SIA:Query"
             target="SIA:SkyPos">
          <data key="k3">
@@ -237,7 +237,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d957e166"
+            id="d385e166"
             source="SIA:Query"
             target="SIA:SkySize">
          <data key="k3">

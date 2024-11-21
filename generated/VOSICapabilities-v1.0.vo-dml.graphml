@@ -71,7 +71,7 @@
       </node>
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d789e18"
+            id="d217e18"
             source="VOSIcap:capabilities"
             target="VOResource:Capability">
          <data key="k3">

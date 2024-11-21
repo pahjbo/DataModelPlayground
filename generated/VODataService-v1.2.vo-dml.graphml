@@ -823,7 +823,7 @@
       </node>
       <!--edges-->
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e23"
+            id="d27e23"
             source="VODataService:ArrayShape"
             target="ivoa:string">
          <data key="k3">
@@ -835,7 +835,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e29"
+            id="d27e29"
             source="VODataService:FloatInterval"
             target="ivoa:string">
          <data key="k3">
@@ -847,7 +847,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e316"
+            id="d27e316"
             source="VODataService:SimpleDataType"
             target="VODataService:DataType">
          <data key="k3">
@@ -859,7 +859,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e331"
+            id="d27e331"
             source="VODataService:TableDataType"
             target="VODataService:DataType">
          <data key="k3">
@@ -871,7 +871,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e338"
+            id="d27e338"
             source="VODataService:VOTableType"
             target="VODataService:TableDataType">
          <data key="k3">
@@ -883,7 +883,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e353"
+            id="d27e353"
             source="VODataService:TAPDataType"
             target="VODataService:TableDataType">
          <data key="k3">
@@ -895,7 +895,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e368"
+            id="d27e368"
             source="VODataService:TAPType"
             target="VODataService:TAPDataType">
          <data key="k3">
@@ -907,7 +907,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e383"
+            id="d27e383"
             source="VODataService:DataCollection"
             target="VOResource:Resource">
          <data key="k3">
@@ -919,7 +919,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e574"
+            id="d27e574"
             source="VODataService:DataResource"
             target="VOResource:Service">
          <data key="k3">
@@ -931,7 +931,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e618"
+            id="d27e618"
             source="VODataService:DataService"
             target="VODataService:DataResource">
          <data key="k3">
@@ -943,7 +943,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e624"
+            id="d27e624"
             source="VODataService:ParamHTTP"
             target="VOResource:Interface">
          <data key="k3">
@@ -955,7 +955,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e666"
+            id="d27e666"
             source="VODataService:CatalogResource"
             target="VODataService:DataResource">
          <data key="k3">
@@ -967,7 +967,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e682"
+            id="d27e682"
             source="VODataService:CatalogService"
             target="VODataService:CatalogResource">
          <data key="k3">
@@ -979,7 +979,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e813"
+            id="d27e813"
             source="VODataService:TableParam"
             target="VODataService:BaseParam">
          <data key="k3">
@@ -991,7 +991,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e846"
+            id="d27e846"
             source="VODataService:InputParam"
             target="VODataService:BaseParam">
          <data key="k3">
@@ -1003,7 +1003,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e421"
+            id="d27e421"
             source="VODataService:DataCollection"
             target="VODataService:Coverage">
          <data key="k3">
@@ -1019,7 +1019,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e430"
+            id="d27e430"
             source="VODataService:DataCollection"
             target="VODataService:TableSet">
          <data key="k3">
@@ -1035,7 +1035,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e439"
+            id="d27e439"
             source="VODataService:DataCollection"
             target="VOResource:AccessURL">
          <data key="k3">
@@ -1051,7 +1051,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e512"
+            id="d27e512"
             source="VODataService:TableSet"
             target="VODataService:TableSchema">
          <data key="k3">
@@ -1067,7 +1067,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e561"
+            id="d27e561"
             source="VODataService:TableSchema"
             target="VODataService:Table">
          <data key="k3">
@@ -1083,7 +1083,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e594"
+            id="d27e594"
             source="VODataService:DataResource"
             target="VODataService:Coverage">
          <data key="k3">
@@ -1099,7 +1099,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e644"
+            id="d27e644"
             source="VODataService:ParamHTTP"
             target="VODataService:InputParam">
          <data key="k3">
@@ -1115,7 +1115,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e668"
+            id="d27e668"
             source="VODataService:CatalogResource"
             target="VODataService:TableSet">
          <data key="k3">
@@ -1131,7 +1131,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e733"
+            id="d27e733"
             source="VODataService:Table"
             target="VODataService:TableParam">
          <data key="k3">
@@ -1147,7 +1147,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e742"
+            id="d27e742"
             source="VODataService:Table"
             target="VODataService:ForeignKey">
          <data key="k3">
@@ -1163,7 +1163,7 @@
          </data>
       </edge>
       <edge xmlns:y="http://www.yworks.com/xml/graphml"
-            id="d599e888"
+            id="d27e888"
             source="VODataService:ForeignKey"
             target="VODataService:FKColumn">
          <data key="k3">
